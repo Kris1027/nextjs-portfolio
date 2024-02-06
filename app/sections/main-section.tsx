@@ -1,18 +1,20 @@
+import { useDarkMode } from "../theme/dark-mode-context";
 import Image from "next/image";
 import GithubImg from "../../public/github.png";
+import SectionWrapper from "../components/section-wrapper";
+import Heading from "../components/heading";
 
 import { BsMoonStarsFill } from "react-icons/bs";
 import { FaSun } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
-import { useDarkMode } from "../theme/dark-mode-context";
 
 export default function MainSection() {
   const { darkMode, setDarkMode } = useDarkMode();
 
   return (
-    <section className="min-h-screen px-10 bg-white dark:bg-black">
+    <SectionWrapper>
       <nav className="py-10 mb-12 flex justify-between">
         <h1 className="text-xl dark:text-blue-300">Kris1027</h1>
         <ul className="flex items-center">
@@ -38,7 +40,7 @@ export default function MainSection() {
         <h2 className="text-5xl py-2 text-teal-600 font-bold">
           Krzysztof Obarzanek
         </h2>
-        <h3 className="text-2xl py-2 dark:text-gray-500">Frontend developer</h3>
+        <Heading>Frontend developer</Heading>
         <p className="text-md py-5 leading-8 text-gray-800 dark:text-gray-600 lg:w-1/2 mx-auto">
           Since November 2022, I&apos;ve been diving into frontend development,
           fueled by a passion for creating captivating digital experiences. From
@@ -77,6 +79,6 @@ export default function MainSection() {
       <div className="relative rounded-full w-80 h-80 lg:w-96 lg:h-96 mx-auto mt-20 overflow-hidden shadow-lg shadow-zinc-800 dark:shadow-zinc-600">
         <Image src={GithubImg} alt="image from github" fill />
       </div>
-    </section>
+    </SectionWrapper>
   );
 }
