@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "code-new-roman";
+  src: url("../public/Code\ New\ Roman.otf");
+}
