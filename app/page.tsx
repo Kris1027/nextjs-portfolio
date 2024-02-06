@@ -44,22 +44,43 @@ export default function Home() {
             Frontend developer
           </h3>
           <p className="text-md py-5 leading-8 text-gray-800 dark:text-gray-600">
-            Freelancer providing services for programming and design content
-            needs. Join me down below and let&apos;s get cracking!
+            Since November 2022, I&apos;ve been diving into frontend
+            development, fueled by a passion for creating captivating digital
+            experiences. From mastering HTML, CSS, and JavaScript to exploring
+            advanced technologies like React and TypeScript, I&apos;m dedicated
+            to continuous learning. Despite challenges, I persistently push
+            forward, always seeking new techniques and best practices. I
+            prioritize design principles and usability, striving to strike the
+            perfect balance between form and function. As I continue my journey,
+            I&apos;m excited to collaborate, contribute, and grow in this
+            dynamic field.
           </p>
         </div>
         <div className="text-5xl flex justify-center gap-16 text-gray-600">
-          <FaLinkedin className="cursor-pointer" />
-          <FaGithub className="cursor-pointer" />
-          <FaInstagramSquare className="cursor-pointer" />
+          <a
+            href="https://www.linkedin.com/in/krzysztof-obarzanek-6b8803254/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaLinkedin />
+          </a>
+          <a
+            href="https://github.com/Kris1027"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaGithub />
+          </a>
+          <a
+            href="https://www.instagram.com/krzy1027/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaInstagramSquare />
+          </a>
         </div>
         <div className="relative rounded-full w-80 h-80 mx-auto mt-20 overflow-hidden">
-          <Image
-            src={GithubImg}
-            alt="image from github"
-            layout="fill"
-            objectFit="cover"
-          />
+          <Image src={GithubImg} alt="image from github" fill />
         </div>
       </section>
     </main>
