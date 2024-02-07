@@ -41,7 +41,7 @@ export default function MainSection() {
           Krzysztof Obarzanek
         </h2>
         <Heading>Frontend developer</Heading>
-        <p className="text-sm md:text-lg py-5 leading-8 text-gray-800 dark:text-gray-600 lg:w-1/2 mx-auto">
+        <p className="text-sm md:text-lg pb-5 leading-8 text-gray-800 dark:text-gray-600 lg:w-1/2 mx-auto">
           Since November <span className="text-green-500">2022</span>, I&apos;ve
           been diving into frontend development, fueled by a passion for
           creating captivating digital experiences. From mastering{" "}
