@@ -41,16 +41,22 @@ export default function MainSection() {
           Krzysztof Obarzanek
         </h2>
         <Heading>Frontend developer</Heading>
-        <p className="text-md py-5 leading-8 text-gray-800 dark:text-gray-600 lg:w-1/2 mx-auto">
-          Since November 2022, I&apos;ve been diving into frontend development,
-          fueled by a passion for creating captivating digital experiences. From
-          mastering HTML, CSS, and JavaScript to exploring advanced technologies
-          like React and TypeScript, I&apos;m dedicated to continuous learning.
-          Despite challenges, I persistently push forward, always seeking new
-          techniques and best practices. I prioritize design principles and
-          usability, striving to strike the perfect balance between form and
-          function. As I continue my journey, I&apos;m excited to collaborate,
-          contribute, and grow in this dynamic field.
+        <p className="text-sm md:text-lg py-5 leading-8 text-gray-800 dark:text-gray-600 lg:w-1/2 mx-auto">
+          Since November <span className="text-green-500">2022</span>, I&apos;ve
+          been diving into frontend development, fueled by a passion for
+          creating captivating digital experiences. From mastering{" "}
+          <span className="text-orange-500">HTML</span>,{" "}
+          <span className="text-blue-500">CSS</span>, and{" "}
+          <span className="text-yellow-500">JavaScript</span> to exploring
+          advanced technologies like{" "}
+          <span className="text-blue-600">React</span> and{" "}
+          <span className="text-blue-500">TypeScript</span>, I&apos;m dedicated
+          to continuous learning. Despite challenges, I persistently push
+          forward, always seeking new techniques and best practices. I
+          prioritize design principles and usability, striving to strike the
+          perfect balance between form and function. As I continue my journey,
+          I&apos;m excited to collaborate, contribute, and grow in this dynamic
+          field.
         </p>
       </div>
       <div className="text-5xl flex justify-center gap-16 text-gray-600">
@@ -58,6 +64,7 @@ export default function MainSection() {
           href="https://www.linkedin.com/in/krzysztof-obarzanek-6b8803254/"
           target="_blank"
           rel="noopener noreferrer"
+          className="hover:text-blue-500 hover:scale-110"
         >
           <FaLinkedin />
         </a>
@@ -65,6 +72,7 @@ export default function MainSection() {
           href="https://github.com/Kris1027"
           target="_blank"
           rel="noopener noreferrer"
+          className="hover:text-gray-900 hover:scale-110"
         >
           <FaGithub />
         </a>
@@ -72,6 +80,7 @@ export default function MainSection() {
           href="https://www.instagram.com/krzy1027/"
           target="_blank"
           rel="noopener noreferrer"
+          className="hover:text-red-500 hover:scale-110"
         >
           <FaInstagramSquare />
         </a>
