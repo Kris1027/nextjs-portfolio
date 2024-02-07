@@ -9,6 +9,7 @@ import { FaSun } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
+import Paragraph from "../components/paragraph";
 
 export default function MainSection() {
   const { darkMode, setDarkMode } = useDarkMode();
@@ -36,12 +37,12 @@ export default function MainSection() {
           </li>
         </ul>
       </nav>
-      <div className="text-center p-10">
-        <h2 className="text-5xl py-2 text-teal-600 font-bold">
+      <div>
+        <h2 className="text-5xl py-2 text-teal-600 font-bold text-center">
           Krzysztof Obarzanek
         </h2>
         <Heading>Frontend developer</Heading>
-        <p className="text-sm md:text-lg pb-5 leading-8 text-gray-800 dark:text-gray-600 lg:w-1/2 mx-auto">
+        <Paragraph>
           Since November <span className="text-green-500">2022</span>, I&apos;ve
           been diving into frontend development, fueled by a passion for
           creating captivating digital experiences. From mastering{" "}
@@ -57,7 +58,7 @@ export default function MainSection() {
           perfect balance between form and function. As I continue my journey,
           I&apos;m excited to collaborate, contribute, and grow in this dynamic
           field.
-        </p>
+        </Paragraph>
       </div>
       <div className="text-5xl flex justify-center gap-16 text-gray-600">
         <a
