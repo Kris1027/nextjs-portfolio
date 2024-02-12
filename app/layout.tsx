@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import ThemeProvider from "./theme/theme-provider";
+import Navigation from "./components/navigation";
 
 export const metadata: Metadata = {
   title: "Kris Portfolio",
@@ -15,6 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="font-CNR">
+        <Navigation />
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
