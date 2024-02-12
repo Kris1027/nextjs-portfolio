@@ -1,5 +1,4 @@
 import Heading from "../components/heading";
-import SectionWrapper from "../components/section-wrapper";
 
 import { FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
@@ -23,7 +22,7 @@ import { FaPython } from "react-icons/fa";
 
 export default function SkillSection() {
   return (
-    <SectionWrapper>
+    <section className="p-10 bg-white dark:bg-black">
       <Heading>Know technologies</Heading>
       <div className="text-5xl flex flex-wrap justify-center gap-16 text-gray-600 pb-10">
         <FaHtml5 className="hover:text-orange-500 hover:scale-110" />
@@ -51,6 +50,6 @@ export default function SkillSection() {
         <FaVuejs className="hover:text-green-500 hover:scale-110" />
         <FaPython className="hover:text-yellow-500 hover:scale-110" />
       </div>
-    </SectionWrapper>
+    </section>
   );
 }

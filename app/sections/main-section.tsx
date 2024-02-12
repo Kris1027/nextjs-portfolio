@@ -1,7 +1,5 @@
-import { useDarkMode } from "../theme/dark-mode-context";
 import Image from "next/image";
 import GithubImg from "../../public/github.png";
-import SectionWrapper from "../components/section-wrapper";
 import Heading from "../components/heading";
 
 import { FaLinkedin } from "react-icons/fa";
@@ -11,7 +9,7 @@ import Paragraph from "../components/paragraph";
 
 export default function MainSection() {
   return (
-    <SectionWrapper>
+    <section className="p-10 bg-white dark:bg-black">
       <div>
         <h1 className="text-5xl py-2 text-teal-600 font-bold text-center">
           Krzysztof Obarzanek
@@ -64,6 +62,6 @@ export default function MainSection() {
       <div className="relative rounded-full w-80 h-80 lg:w-96 lg:h-96 mx-auto mt-20 overflow-hidden shadow-lg shadow-zinc-800 dark:shadow-zinc-600">
         <Image src={GithubImg} alt="image from github" fill />
       </div>
-    </SectionWrapper>
+    </section>
   );
 }

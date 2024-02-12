@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Heading from "../components/heading";
 import Paragraph from "../components/paragraph";
-import SectionWrapper from "../components/section-wrapper";
 import { type StaticImageData } from "next/image";
 
 import HummerMushroomsImg from "../../public/hummer-mushrooms.png";
@@ -50,7 +49,7 @@ export default function ProjectsSection() {
   ];
 
   return (
-    <SectionWrapper>
+    <section className="p-10 bg-white dark:bg-black">
       <Heading>Projects</Heading>
       <Paragraph>Here are some of the projects I&apos;ve worked on.</Paragraph>
       <div className="flex flex-wrap gap-10 justify-center w-full">
@@ -93,6 +92,6 @@ export default function ProjectsSection() {
           </div>
         ))}
       </div>
-    </SectionWrapper>
+    </section>
   );
 }
