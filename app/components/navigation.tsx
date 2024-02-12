@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useMediaQuery } from "./util/useMediaQuery";
@@ -7,6 +6,7 @@ import { useDarkMode } from "../theme/dark-mode-context";
 
 import { BsMoonStarsFill } from "react-icons/bs";
 import { FaSun } from "react-icons/fa";
+import Link from "next/link";
 
 const navMotion = {
   visible: {
@@ -33,22 +33,22 @@ export default function Navigation() {
 
   return (
     <nav className={darkMode ? "dark" : ""}>
-      <div className="flex justify-between p-10 bg-white dark:bg-black text-gray-800 dark:text-gray-300">
+      <div className="flex justify-between p-10 bg-white dark:bg-black text-gray-800 dark:text-gray-300 fixed w-full z-40">
         {/* Desktop menu */}
         {matches && (
           <div>
             <ul className="flex text-lg gap-16">
               <li>
-                <Link href="#">Home</Link>
+                <Link href="/">Home</Link>
               </li>
               <li>
-                <Link href="#">About</Link>
+                <a href="#about">About</a>
               </li>
               <li>
-                <Link href="#">Projects</Link>
+                <a href="#skills">Skills</a>
               </li>
               <li>
-                <Link href="#">Courses</Link>
+                <a href="#projects">Projects</a>
               </li>
             </ul>
           </div>
@@ -91,24 +91,40 @@ export default function Navigation() {
 
         {/* Mobile menu */}
         {toggled && !matches && (
-          <div className="fixed flex justify-center items-center bg-white dark:bg-black bottom-0 left-0 w-full h-screen z-40 ">
+          <div className="fixed flex justify-center items-center bg-white dark:bg-black bottom-0 left-0 w-full h-screen z-40">
             <motion.div
               variants={navMotion}
               animate="visible"
               initial="hidden"
               className="flex flex-col gap-24 text-lg items-center dark:text-gray-300"
             >
-              <motion.a variants={itemMotion} href="#">
+              <motion.a
+                variants={itemMotion}
+                href="#"
+                onClick={() => setToggled((prevToggle) => !prevToggle)}
+              >
                 Home
               </motion.a>
-              <motion.a variants={itemMotion} href="#">
+              <motion.a
+                variants={itemMotion}
+                href="#about"
+                onClick={() => setToggled((prevToggle) => !prevToggle)}
+              >
                 About
               </motion.a>
-              <motion.a variants={itemMotion} href="#">
-                Projects
+              <motion.a
+                variants={itemMotion}
+                href="#skills"
+                onClick={() => setToggled((prevToggle) => !prevToggle)}
+              >
+                Skills
               </motion.a>
-              <motion.a variants={itemMotion} href="#">
-                Courses
+              <motion.a
+                variants={itemMotion}
+                href="#projects"
+                onClick={() => setToggled((prevToggle) => !prevToggle)}
+              >
+                Projects
               </motion.a>
             </motion.div>
           </div>

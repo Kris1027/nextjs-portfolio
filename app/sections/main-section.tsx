@@ -9,7 +9,7 @@ import Paragraph from "../components/paragraph";
 
 export default function MainSection() {
   return (
-    <section className="p-10 bg-white dark:bg-black">
+    <section className="p-10 pt-40 bg-white dark:bg-black" id="about">
       <div>
         <h1 className="text-5xl py-2 text-teal-600 font-bold text-center">
           Krzysztof Obarzanek

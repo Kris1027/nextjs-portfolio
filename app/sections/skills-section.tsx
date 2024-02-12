@@ -20,9 +20,9 @@ import { FaAngular } from "react-icons/fa";
 import { FaVuejs } from "react-icons/fa";
 import { FaPython } from "react-icons/fa";
 
-export default function SkillSection() {
+export default function SkillsSection() {
   return (
-    <section className="p-10 bg-white dark:bg-black">
+    <section className="p-10 bg-white dark:bg-black" id="skills">
       <Heading>Know technologies</Heading>
       <div className="text-5xl flex flex-wrap justify-center gap-16 text-gray-600 pb-10">
         <FaHtml5 className="hover:text-orange-500 hover:scale-110" />

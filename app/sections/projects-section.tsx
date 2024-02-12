@@ -49,7 +49,7 @@ export default function ProjectsSection() {
   ];
 
   return (
-    <section className="p-10 bg-white dark:bg-black">
+    <section className="p-10 bg-white dark:bg-black" id="projects">
       <Heading>Projects</Heading>
       <Paragraph>Here are some of the projects I&apos;ve worked on.</Paragraph>
       <div className="flex flex-wrap gap-10 justify-center w-full">
