@@ -15,10 +15,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-CNR">
-        <Navigation />
-        <ThemeProvider>{children}</ThemeProvider>
-      </body>
+      <ThemeProvider>
+        <body className="font-CNR">
+          <Navigation />
+          {children}
+        </body>
+      </ThemeProvider>
     </html>
   );
 }
