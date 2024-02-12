@@ -6,7 +6,6 @@ import { useDarkMode } from "../theme/dark-mode-context";
 
 import { BsMoonStarsFill } from "react-icons/bs";
 import { FaSun } from "react-icons/fa";
-import Link from "next/link";
 
 const navMotion = {
   visible: {
@@ -38,9 +37,6 @@ export default function Navigation() {
         {matches && (
           <div>
             <ul className="flex text-lg gap-16">
-              <li>
-                <Link href="/">Home</Link>
-              </li>
               <li>
                 <a href="#about">About</a>
               </li>
@@ -98,13 +94,6 @@ export default function Navigation() {
               initial="hidden"
               className="flex flex-col gap-24 text-lg items-center dark:text-gray-300"
             >
-              <motion.a
-                variants={itemMotion}
-                href="#"
-                onClick={() => setToggled((prevToggle) => !prevToggle)}
-              >
-                Home
-              </motion.a>
               <motion.a
                 variants={itemMotion}
                 href="#about"
