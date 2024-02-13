@@ -7,6 +7,16 @@ import { useDarkMode } from "../theme/dark-mode-context";
 import { BsMoonStarsFill } from "react-icons/bs";
 import { FaSun } from "react-icons/fa";
 
+const navDesktop = {
+  hidden: { x: "-100vw", scale: 0, opacity: 0 },
+  visible: {
+    x: 0,
+    scale: 1,
+    opacity: 1,
+    transition: { type: "spring", stiffness: 50 },
+  },
+};
+
 const navMotion = {
   visible: {
     opacity: 1,
@@ -37,15 +47,33 @@ export default function Navigation() {
         {matches && (
           <div>
             <ul className="flex text-lg gap-16">
-              <li>
+              <motion.li
+                variants={navDesktop}
+                animate="visible"
+                initial="hidden"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
                 <a href="#about">About</a>
-              </li>
-              <li>
+              </motion.li>
+              <motion.li
+                variants={navDesktop}
+                animate="visible"
+                initial="hidden"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
                 <a href="#skills">Skills</a>
-              </li>
-              <li>
+              </motion.li>
+              <motion.li
+                variants={navDesktop}
+                animate="visible"
+                initial="hidden"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
                 <a href="#projects">Projects</a>
-              </li>
+              </motion.li>
             </ul>
           </div>
         )}
@@ -96,6 +124,7 @@ export default function Navigation() {
             >
               <motion.a
                 variants={itemMotion}
+                whileHover={{ scale: 1.3 }}
                 href="#about"
                 onClick={() => setToggled((prevToggle) => !prevToggle)}
               >
@@ -103,6 +132,7 @@ export default function Navigation() {
               </motion.a>
               <motion.a
                 variants={itemMotion}
+                whileHover={{ scale: 1.3 }}
                 href="#skills"
                 onClick={() => setToggled((prevToggle) => !prevToggle)}
               >
@@ -110,6 +140,7 @@ export default function Navigation() {
               </motion.a>
               <motion.a
                 variants={itemMotion}
+                whileHover={{ scale: 1.3 }}
                 href="#projects"
                 onClick={() => setToggled((prevToggle) => !prevToggle)}
               >
