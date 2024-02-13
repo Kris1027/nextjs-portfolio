@@ -90,7 +90,9 @@ export default function Navigation() {
 
         {/* Burger */}
         {!matches && (
-          <div
+          <motion.div
+            initial={{ x: "-100vw", opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
             className="space-y-1.5 cursor-pointer z-50"
             onClick={() => setToggled((prevToggle) => !prevToggle)}
           >
@@ -110,7 +112,7 @@ export default function Navigation() {
               }}
               className="block h-0.5 w-4 bg-black dark:bg-gray-300"
             ></motion.span>
-          </div>
+          </motion.div>
         )}
 
         {/* Mobile menu */}
