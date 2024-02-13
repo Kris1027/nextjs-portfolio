@@ -1,17 +1,18 @@
 "use client";
-import MainSection from "./sections/main-section";
-import ProjectsSection from "./sections/projects-section";
-import SkillsSection from "./sections/skills-section";
 import { useDarkMode } from "./theme/dark-mode-context";
+
+import About from "./sections/about";
+import Projects from "./sections/projects";
+import Skills from "./sections/skills";
 
 export default function Home() {
   const { darkMode } = useDarkMode();
 
   return (
     <main className={darkMode ? "dark" : ""}>
-      <MainSection />
-      <SkillsSection />
-      <ProjectsSection />
+      <About />
+      <Skills />
+      <Projects />
     </main>
   );
 }

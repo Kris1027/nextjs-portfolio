@@ -16,7 +16,7 @@ type ProjectProps = {
   github: string;
 };
 
-export default function ProjectsSection() {
+export default function Projects() {
   const projects: ProjectProps[] = [
     {
       title: "Movie rating app",

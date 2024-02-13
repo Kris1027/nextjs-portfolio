@@ -7,7 +7,7 @@ import { FaGithub } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
 import Paragraph from "../components/paragraph";
 
-export default function MainSection() {
+export default function About() {
   return (
     <section className="p-10 pt-40 bg-white dark:bg-black" id="about">
       <div>

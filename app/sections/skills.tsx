@@ -20,7 +20,7 @@ import { FaAngular } from "react-icons/fa";
 import { FaVuejs } from "react-icons/fa";
 import { FaPython } from "react-icons/fa";
 
-export default function SkillsSection() {
+export default function Skills() {
   return (
     <section className="p-10 pt-40 bg-white dark:bg-black" id="skills">
       <Heading>Know technologies</Heading>
