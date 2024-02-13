@@ -1,11 +1,14 @@
 import Image from "next/image";
+
 import GithubImg from "../../public/github.png";
 import Heading from "../components/heading";
 
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
-import Paragraph from "../components/paragraph";
+
+const descripion =
+  "Since November 2022, I've been diving into frontend development, fueled by a passion for creating captivating digital experiences. From mastering HTML, CSS, and JavaScript to exploring advanced technologies like React and TypeScript, I'm dedicated to continuous learning. Despite challenges, I persistently push forward, always seeking new techniques and best practices. I prioritize design principles and usability, striving to strike the perfect balance between form and function. As I continue my journey, I'm excited to collaborate, contribute, and grow in this dynamic field.";
 
 export default function About() {
   return (
@@ -15,23 +18,9 @@ export default function About() {
           Krzysztof Obarzanek
         </h1>
         <Heading>Frontend developer</Heading>
-        <Paragraph>
-          Since November <span className="text-green-500">2022</span>, I&apos;ve
-          been diving into frontend development, fueled by a passion for
-          creating captivating digital experiences. From mastering{" "}
-          <span className="text-orange-500">HTML</span>,{" "}
-          <span className="text-blue-500">CSS</span>, and{" "}
-          <span className="text-yellow-500">JavaScript</span> to exploring
-          advanced technologies like{" "}
-          <span className="text-blue-600">React</span> and{" "}
-          <span className="text-blue-500">TypeScript</span>, I&apos;m dedicated
-          to continuous learning. Despite challenges, I persistently push
-          forward, always seeking new techniques and best practices. I
-          prioritize design principles and usability, striving to strike the
-          perfect balance between form and function. As I continue my journey,
-          I&apos;m excited to collaborate, contribute, and grow in this dynamic
-          field.
-        </Paragraph>
+        <p className="text-sm md:text-lg pb-5 leading-8 text-gray-800 dark:text-gray-600 lg:w-1/2 mx-auto text-center">
+          {descripion}
+        </p>
       </div>
       <div className="text-5xl flex justify-center gap-16 text-gray-600">
         <a
