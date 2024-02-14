@@ -1,5 +1,3 @@
-import Heading from "../components/heading";
-
 import { FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
@@ -23,7 +21,9 @@ import { FaPython } from "react-icons/fa";
 export default function Skills() {
   return (
     <section className="p-10 pt-40 bg-white dark:bg-black" id="skills">
-      <Heading>Know technologies</Heading>
+      <h2 className="text-2xl pt-2 dark:text-gray-500 pb-10 text-center">
+        Know technologies
+      </h2>
       <div className="text-5xl flex flex-wrap justify-center gap-16 text-gray-600 pb-10">
         <FaHtml5 className="hover:text-orange-500 hover:scale-110" />
         <FaCss3Alt className="hover:text-blue-500 hover:scale-110" />
@@ -37,7 +37,9 @@ export default function Skills() {
         <TbBrandNextjs className="hover:text-slate-400 hover:scale-110" />
         <SiVite className="hover:text-violet-600 hover:scale-110" />
       </div>
-      <Heading>Next to learn</Heading>
+      <h3 className="text-2xl pt-2 dark:text-gray-500 pb-10 text-center">
+        Next to learn
+      </h3>
       <div className="text-5xl flex flex-wrap justify-center gap-16 text-gray-600 pb-10">
         <AiOutlineConsoleSql className="hover:text-blue-500 hover:scale-110" />
         <SiMysql className="hover:text-blue-500 hover:scale-110" />

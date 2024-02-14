@@ -1,6 +1,4 @@
 import Image from "next/image";
-import Heading from "../components/heading";
-import Paragraph from "../components/paragraph";
 import { type StaticImageData } from "next/image";
 
 import HummerMushroomsImg from "../../public/hummer-mushrooms.png";
@@ -50,15 +48,21 @@ export default function Projects() {
 
   return (
     <section className="p-10 pt-40 bg-white dark:bg-black" id="projects">
-      <Heading>Projects</Heading>
-      <Paragraph>Here are some of the projects I&apos;ve worked on.</Paragraph>
+      <h2 className="text-2xl pt-2 dark:text-gray-500 pb-10 text-center">
+        Projects
+      </h2>
+      <p className="text-sm md:text-lg pb-5 leading-8 text-gray-800 dark:text-gray-600 lg:w-1/2 mx-auto text-center">
+        Here are some of the projects I&apos;ve worked on.
+      </p>
       <div className="flex flex-wrap gap-10 justify-center w-1/2 mx-auto">
         {projects.map((project, index) => (
           <div
             key={index}
             className="flex flex-col p-5 items-center text-gray-800 dark:text-gray-300 shadow-md w-96"
           >
-            <Heading>{project.title}</Heading>
+            <h3 className="text-2xl pt-2 dark:text-gray-500 pb-10 text-center">
+              {project.title}
+            </h3>
             <div className="w-full h-60 relative overflow-hidden">
               <Image
                 src={project.image}
@@ -68,7 +72,9 @@ export default function Projects() {
                 className="hover:scale-150"
               />
             </div>
-            <Paragraph>{project.description}</Paragraph>
+            <p className="text-sm md:text-lg pb-5 leading-8 text-gray-800 dark:text-gray-600 lg:w-1/2 mx-auto text-center">
+              {project.description}
+            </p>
             <div className="text-center">
               <a
                 className="hover:text-blue-500 text-sm"

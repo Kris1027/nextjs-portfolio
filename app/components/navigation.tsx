@@ -74,6 +74,15 @@ export default function Navigation() {
               >
                 <a href="#projects">Projects</a>
               </motion.li>
+              <motion.li
+                variants={navDesktop}
+                animate="visible"
+                initial="hidden"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                <a href="#courses">Courses</a>
+              </motion.li>
             </ul>
           </div>
         )}
@@ -147,6 +156,14 @@ export default function Navigation() {
                 onClick={() => setToggled((prevToggle) => !prevToggle)}
               >
                 Projects
+              </motion.a>
+              <motion.a
+                variants={itemMotion}
+                whileHover={{ scale: 1.3 }}
+                href="#courses"
+                onClick={() => setToggled((prevToggle) => !prevToggle)}
+              >
+                Courses
               </motion.a>
             </motion.div>
           </div>
