@@ -132,9 +132,6 @@ export default function Skills() {
             variants={fadeInAnimationVariants}
             initial="initial"
             whileInView="animate"
-            viewport={{
-              once: true,
-            }}
             custom={index}
             whileHover={{ x: -5, y: -5, scale: 1.1 }}
           >
@@ -153,9 +150,6 @@ export default function Skills() {
             variants={fadeInAnimationVariants}
             initial="initial"
             whileInView="animate"
-            viewport={{
-              once: true,
-            }}
             custom={index}
             whileHover={{ x: -5, y: -5, scale: 1.1 }}
           >

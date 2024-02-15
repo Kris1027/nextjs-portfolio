@@ -14,7 +14,7 @@ export const DarkModeProvider = ({
 }: {
   children: React.ReactNode;
 }) => {
-  const [darkMode, setDarkMode] = useState<boolean>(false);
+  const [darkMode, setDarkMode] = useState<boolean>(true);
 
   return (
     <DarkModeContext.Provider value={{ darkMode, setDarkMode }}>
