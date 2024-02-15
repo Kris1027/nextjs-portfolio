@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { type StaticImageData } from "next/image";
+import { motion } from "framer-motion";
 
 import HummerMushroomsImg from "../../public/hummer-mushrooms.png";
 import MovieRatingImg from "../../public/movie-rating.png";
@@ -12,6 +13,21 @@ type ProjectProps = {
   image: StaticImageData;
   live: string;
   github: string;
+};
+
+const projectsAnimationVariants = {
+  initial: (index: number) => ({
+    opacity: 0,
+    x: index % 2 === 0 ? -500 : 500,
+  }),
+  animate: (index: number) => ({
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.3,
+      delay: index * 0.05,
+    },
+  }),
 };
 
 export default function Projects() {
@@ -56,8 +72,12 @@ export default function Projects() {
       </p>
       <div className="flex flex-wrap gap-10 justify-center w-1/2 mx-auto">
         {projects.map((project, index) => (
-          <div
+          <motion.div
             key={index}
+            custom={index}
+            variants={projectsAnimationVariants}
+            initial="initial"
+            whileInView="animate"
             className="flex flex-col p-5 items-center text-gray-800 dark:text-gray-300 shadow-md w-96"
           >
             <h3 className="text-2xl pt-2 dark:text-gray-500 pb-10 text-center">
@@ -95,7 +115,7 @@ export default function Projects() {
                 {project.github}
               </a>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>
