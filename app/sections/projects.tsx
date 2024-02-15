@@ -18,14 +18,14 @@ type ProjectProps = {
 const projectsAnimationVariants = {
   initial: (index: number) => ({
     opacity: 0,
-    x: index % 2 === 0 ? -500 : 500,
+    x: index % 2 === 0 ? -200 : 200,
   }),
   animate: (index: number) => ({
     opacity: 1,
     x: 0,
     transition: {
-      duration: 0.3,
-      delay: index * 0.05,
+      duration: 0.4,
+      delay: index * 0.2,
     },
   }),
 };
@@ -63,7 +63,10 @@ export default function Projects() {
   ];
 
   return (
-    <section className="p-10 pt-40 bg-white dark:bg-black" id="projects">
+    <section
+      className="pt-40 pb-10 px-10 bg-white dark:bg-black min-h-screen"
+      id="projects"
+    >
       <h2 className="text-2xl pt-2 dark:text-gray-500 pb-10 text-center">
         Projects
       </h2>
@@ -83,13 +86,12 @@ export default function Projects() {
             <h3 className="text-2xl pt-2 dark:text-gray-500 pb-10 text-center">
               {project.title}
             </h3>
-            <div className="w-full h-60 relative overflow-hidden">
+            <div className="w-full h-60 relative">
               <Image
                 src={project.image}
                 alt={project.title}
                 fill
                 objectFit="cover"
-                className="hover:scale-150"
               />
             </div>
             <p className="text-sm md:text-lg pb-5 leading-8 text-gray-800 dark:text-gray-600 lg:w-1/2 mx-auto text-center">

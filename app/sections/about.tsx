@@ -28,28 +28,25 @@ export default function About() {
     {
       icon: <FaLinkedin />,
       link: "https://www.linkedin.com/in/krzysztof-obarzanek-6b8803254/",
-      target: "_blank",
-      rel: "noopener noreferrer",
-      color: "blue-500",
+      color: "#3b82f6",
     },
     {
       icon: <FaGithub />,
       link: "https://github.com/Kris1027",
-      target: "_blank",
-      rel: "noopener noreferrer",
-      color: "gray-900",
+      color: "#111827",
     },
     {
       icon: <FaInstagramSquare />,
       link: "https://www.instagram.com/krzy1027/",
-      target: "_blank",
-      rel: "noopener noreferrer",
-      color: "red-500",
+      color: "#ef4444",
     },
   ];
 
   return (
-    <section className="p-10 pt-40 bg-white dark:bg-black" id="about">
+    <section
+      className="pt-40 pb-10 px-10 bg-white dark:bg-black min-h-screen flex flex-col justify-between"
+      id="about"
+    >
       <div>
         <motion.h1
           initial="hidden"
@@ -100,25 +97,24 @@ export default function About() {
           ))}
         </motion.p>
       </div>
-      <ul className="text-5xl flex justify-center gap-16 text-gray-600">
+      <ul className="text-5xl lg:text-7xl flex justify-center gap-16 text-gray-600">
         {socials.map((social, index) => (
           <motion.li
             key={index}
-            className={`hover:text-${social.color}`}
             variants={fadeInAnimationVariants}
             initial="initial"
             whileInView="animate"
             custom={index}
-            whileHover={{ x: -5, y: -5, scale: 1.1 }}
+            whileHover={{ x: -5, y: -5, scale: 1.1, color: social.color }}
           >
-            <a href={social.link} target={social.target} rel={social.rel}>
+            <a href={social.link} target="_blank" rel="noopener noreferrer">
               {social.icon}
             </a>
           </motion.li>
         ))}
       </ul>
       <motion.div
-        className="relative rounded-full w-80 h-80 lg:w-96 lg:h-96 mx-auto mt-20 overflow-hidden shadow-lg shadow-zinc-800 dark:shadow-zinc-600"
+        className="relative rounded-full w-96 h-96 lg:w-[40rem] lg:h-[40rem] mx-auto overflow-hidden shadow-lg shadow-zinc-800 dark:shadow-zinc-600"
         variants={fadeInAnimationVariants}
         initial="initial"
         whileInView="animate"

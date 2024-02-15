@@ -120,29 +120,35 @@ export default function Skills() {
   ];
 
   return (
-    <section className="p-10 pt-40 bg-white dark:bg-black" id="skills">
+    <section
+      className="pt-40 pb-10 px-10 bg-white dark:bg-black min-h-screen flex flex-col justify-between"
+      id="skills"
+    >
       <h2 className="text-2xl pt-2 dark:text-gray-500 pb-10 text-center">
         Know technologies
       </h2>
-      <ul className="text-5xl flex flex-wrap justify-center gap-16 text-gray-600 pb-10 lg:w-1/2 mx-auto">
+      <ul className="lg:text-8xl text-5xl flex flex-wrap justify-center gap-16 text-gray-600 pb-10 lg:w-1/2 mx-auto">
         {skillsIcons.map((icon, index) => (
           <motion.li
             key={index}
-            className={`hover:text-${icon.color}`}
             variants={fadeInAnimationVariants}
             initial="initial"
             whileInView="animate"
             custom={index}
-            whileHover={{ x: -5, y: -5, scale: 1.1 }}
+            whileHover={{
+              x: -5,
+              y: -5,
+              scale: 1.1,
+            }}
           >
             {icon.icon}
           </motion.li>
         ))}
       </ul>
-      <h3 className="text-2xl pt-2 dark:text-gray-500 pb-10 text-center">
+      <h2 className="text-2xl pt-2 dark:text-gray-500 pb-10 text-center">
         Next to learn
-      </h3>
-      <ul className="text-5xl flex flex-wrap justify-center gap-16 text-gray-600 pb-10 lg:w-1/2 mx-auto">
+      </h2>
+      <ul className="lg:text-8xl text-5xl flex flex-wrap justify-center gap-16 text-gray-600 pb-10 lg:w-1/2 mx-auto">
         {nextToLearn.map((icon, index) => (
           <motion.li
             key={index}
