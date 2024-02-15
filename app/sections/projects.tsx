@@ -73,7 +73,7 @@ export default function Projects() {
       <p className="text-sm md:text-lg pb-5 leading-8 text-gray-800 dark:text-gray-600 lg:w-1/2 mx-auto text-center">
         Here are some of the projects I&apos;ve worked on.
       </p>
-      <div className="flex flex-wrap gap-10 justify-center w-1/2 mx-auto">
+      <div className="flex flex-wrap gap-10 justify-center w-3/4 mx-auto">
         {projects.map((project, index) => (
           <motion.div
             key={index}
@@ -81,42 +81,42 @@ export default function Projects() {
             variants={projectsAnimationVariants}
             initial="initial"
             whileInView="animate"
-            className="flex flex-col p-5 items-center text-gray-800 dark:text-gray-300 shadow-md w-96"
+            className="flex flex-col items-center w-96 h-96 relative rounded-md overflow-hidden shadow-md"
           >
-            <h3 className="text-2xl pt-2 dark:text-gray-500 pb-10 text-center">
-              {project.title}
-            </h3>
-            <div className="w-full h-60 relative">
-              <Image
-                src={project.image}
-                alt={project.title}
-                fill
-                objectFit="cover"
-              />
+            <div className="flex flex-col justify-between p-2 w-full h-full z-10 hover:bg-black text-transparent hover:text-gray-300 hover:bg-opacity-80">
+              <h3 className="text-2xl pt-2 pb-10 text-center">
+                {project.title}
+              </h3>
+              <p className="text-sm md:text-lg pb-5 leading-8 lg:w-1/2 mx-auto text-center">
+                {project.description}
+              </p>
+              <div className="text-center">
+                <a
+                  className="hover:text-blue-500 text-sm"
+                  href={project.live}
+                  target="_blank"
+                  rel="norefferer"
+                >
+                  <span className="block">Live: </span>
+                  {project.live}
+                </a>
+                <a
+                  className="hover:text-blue-500 text-sm"
+                  href={project.github}
+                  target="_blank"
+                  rel="norefferer"
+                >
+                  <span className="block">GitHub: </span>
+                  {project.github}
+                </a>
+              </div>
             </div>
-            <p className="text-sm md:text-lg pb-5 leading-8 text-gray-800 dark:text-gray-600 lg:w-1/2 mx-auto text-center">
-              {project.description}
-            </p>
-            <div className="text-center">
-              <a
-                className="hover:text-blue-500 text-sm"
-                href={project.live}
-                target="_blank"
-                rel="norefferer"
-              >
-                <span className="block">Live: </span>
-                {project.live}
-              </a>
-              <a
-                className="hover:text-blue-500 text-sm"
-                href={project.github}
-                target="_blank"
-                rel="norefferer"
-              >
-                <span className="block">GitHub: </span>
-                {project.github}
-              </a>
-            </div>
+            <Image
+              src={project.image}
+              alt={project.title}
+              fill
+              objectFit="cover"
+            />
           </motion.div>
         ))}
       </div>
