@@ -21,7 +21,7 @@ import { FaAngular } from "react-icons/fa";
 import { FaVuejs } from "react-icons/fa";
 import { FaPython } from "react-icons/fa";
 
-const fadeInAnimationVariants = {
+export const fadeInAnimationVariants = {
   initial: {
     opacity: 0,
     y: 100,
@@ -128,7 +128,7 @@ export default function Skills() {
         {skillsIcons.map((icon, index) => (
           <motion.li
             key={index}
-            className={`hover:text-${icon.color} hover:scale-110`}
+            className={`hover:text-${icon.color}`}
             variants={fadeInAnimationVariants}
             initial="initial"
             whileInView="animate"
@@ -136,6 +136,7 @@ export default function Skills() {
               once: true,
             }}
             custom={index}
+            whileHover={{ x: -5, y: -5, scale: 1.1 }}
           >
             {icon.icon}
           </motion.li>
@@ -148,7 +149,7 @@ export default function Skills() {
         {nextToLearn.map((icon, index) => (
           <motion.li
             key={index}
-            className={`flex hover:text-${icon.color} hover:scale-110`}
+            className={`flex hover:text-${icon.color}`}
             variants={fadeInAnimationVariants}
             initial="initial"
             whileInView="animate"
@@ -156,6 +157,7 @@ export default function Skills() {
               once: true,
             }}
             custom={index}
+            whileHover={{ x: -5, y: -5, scale: 1.1 }}
           >
             {icon.icon}
             {icon.secondIcon && icon.secondIcon}

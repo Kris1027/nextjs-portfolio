@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { fadeInAnimationVariants } from "./skills";
 import { splitStringUsingRegex } from "../components/util/splitStringUsingRegex";
 
 import GithubImg from "../../public/github.png";
@@ -22,6 +23,30 @@ export default function About() {
   const titleChars = splitStringUsingRegex(title);
   const professionChars = splitStringUsingRegex(profession);
   const descripionChars = splitStringUsingRegex(descripion);
+
+  const socials = [
+    {
+      icon: <FaLinkedin />,
+      link: "https://www.linkedin.com/in/krzysztof-obarzanek-6b8803254/",
+      target: "_blank",
+      rel: "noopener noreferrer",
+      color: "blue-500",
+    },
+    {
+      icon: <FaGithub />,
+      link: "https://github.com/Kris1027",
+      target: "_blank",
+      rel: "noopener noreferrer",
+      color: "gray-900",
+    },
+    {
+      icon: <FaInstagramSquare />,
+      link: "https://www.instagram.com/krzy1027/",
+      target: "_blank",
+      rel: "noopener noreferrer",
+      color: "red-500",
+    },
+  ];
 
   return (
     <section className="p-10 pt-40 bg-white dark:bg-black" id="about">
@@ -84,32 +109,26 @@ export default function About() {
           ))}
         </motion.p>
       </div>
-      <div className="text-5xl flex justify-center gap-16 text-gray-600">
-        <a
-          href="https://www.linkedin.com/in/krzysztof-obarzanek-6b8803254/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-blue-500 hover:scale-110"
-        >
-          <FaLinkedin />
-        </a>
-        <a
-          href="https://github.com/Kris1027"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-gray-900 hover:scale-110"
-        >
-          <FaGithub />
-        </a>
-        <a
-          href="https://www.instagram.com/krzy1027/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-red-500 hover:scale-110"
-        >
-          <FaInstagramSquare />
-        </a>
-      </div>
+      <ul className="text-5xl flex justify-center gap-16 text-gray-600">
+        {socials.map((social, index) => (
+          <motion.li
+            key={index}
+            className={`hover:text-${social.color}`}
+            variants={fadeInAnimationVariants}
+            initial="initial"
+            whileInView="animate"
+            viewport={{
+              once: true,
+            }}
+            custom={index}
+            whileHover={{ x: -5, y: -5, scale: 1.1 }}
+          >
+            <a href={social.link} target={social.target} rel={social.rel}>
+              {social.icon}
+            </a>
+          </motion.li>
+        ))}
+      </ul>
       <div className="relative rounded-full w-80 h-80 lg:w-96 lg:h-96 mx-auto mt-20 overflow-hidden shadow-lg shadow-zinc-800 dark:shadow-zinc-600">
         <Image src={GithubImg} alt="image from github" fill />
       </div>
