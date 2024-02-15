@@ -31,6 +31,9 @@ export default function About() {
           whileInView="visible"
           transition={{ staggerChildren: 0.02 }}
           className="text-5xl py-2 text-teal-600 font-bold text-center"
+          viewport={{
+            once: true,
+          }}
         >
           {titleChars.map((char) => (
             <motion.span
@@ -47,6 +50,9 @@ export default function About() {
           whileInView="visible"
           transition={{ staggerChildren: 0.2 }}
           className="text-2xl pt-2 dark:text-gray-500 pb-10 text-center"
+          viewport={{
+            once: true,
+          }}
         >
           {professionChars.map((char) => (
             <motion.span
@@ -63,6 +69,9 @@ export default function About() {
           whileInView="visible"
           transition={{ staggerChildren: 0.006 }}
           className="text-sm md:text-lg pb-5 leading-8 text-gray-800 dark:text-gray-600 lg:w-1/2 mx-auto text-center"
+          viewport={{
+            once: true,
+          }}
         >
           {descripionChars.map((char) => (
             <motion.span
