@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 import { FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
@@ -18,6 +20,20 @@ import { FaMobileAlt } from "react-icons/fa";
 import { FaAngular } from "react-icons/fa";
 import { FaVuejs } from "react-icons/fa";
 import { FaPython } from "react-icons/fa";
+
+const fadeInAnimationVariants = {
+  initial: {
+    opacity: 0,
+    y: 100,
+  },
+  animate: (index: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: index * 0.05,
+    },
+  }),
+};
 
 export default function Skills() {
   const skillsIcons = [
@@ -108,30 +124,44 @@ export default function Skills() {
       <h2 className="text-2xl pt-2 dark:text-gray-500 pb-10 text-center">
         Know technologies
       </h2>
-      <div className="text-5xl flex flex-wrap justify-center gap-16 text-gray-600 pb-10">
+      <ul className="text-5xl flex flex-wrap justify-center gap-16 text-gray-600 pb-10 lg:w-1/2 mx-auto">
         {skillsIcons.map((icon, index) => (
-          <div
+          <motion.li
             key={index}
             className={`hover:text-${icon.color} hover:scale-110`}
+            variants={fadeInAnimationVariants}
+            initial="initial"
+            whileInView="animate"
+            viewport={{
+              once: true,
+            }}
+            custom={index}
           >
             {icon.icon}
-          </div>
+          </motion.li>
         ))}
-      </div>
+      </ul>
       <h3 className="text-2xl pt-2 dark:text-gray-500 pb-10 text-center">
         Next to learn
       </h3>
-      <div className="text-5xl flex flex-wrap justify-center gap-16 text-gray-600 pb-10">
+      <ul className="text-5xl flex flex-wrap justify-center gap-16 text-gray-600 pb-10 lg:w-1/2 mx-auto">
         {nextToLearn.map((icon, index) => (
-          <div
+          <motion.li
             key={index}
             className={`flex hover:text-${icon.color} hover:scale-110`}
+            variants={fadeInAnimationVariants}
+            initial="initial"
+            whileInView="animate"
+            viewport={{
+              once: true,
+            }}
+            custom={index}
           >
             {icon.icon}
             {icon.secondIcon && icon.secondIcon}
-          </div>
+          </motion.li>
         ))}
-      </div>
+      </ul>
     </section>
   );
 }
