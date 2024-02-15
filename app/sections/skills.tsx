@@ -39,83 +39,83 @@ export default function Skills() {
   const skillsIcons = [
     {
       icon: <FaHtml5 />,
-      color: "orange-500",
+      color: "#3b82f6",
     },
     {
       icon: <FaCss3Alt />,
-      color: "blue-500",
+      color: "#3b82f6",
     },
     {
       icon: <IoLogoJavascript />,
-      color: "yellow-500",
+      color: "#eab308",
     },
     {
       icon: <FaReact />,
-      color: "blue-600",
+      color: "#2563eb",
     },
     {
       icon: <SiTypescript />,
-      color: "blue-500",
+      color: "#3b82f6",
     },
     {
       icon: <FaNodeJs />,
-      color: "green-500",
+      color: "#22c55e",
     },
     {
       icon: <SiExpress />,
-      color: "amber-500",
+      color: "#f59e0b",
     },
     {
       icon: <DiMongodb />,
-      color: "green-950",
+      color: "#052e16",
     },
     {
       icon: <SiTailwindcss />,
-      color: "cyan-500",
+      color: "#06b6d4",
     },
     {
       icon: <TbBrandNextjs />,
-      color: "slate-400",
+      color: "#94a3b8",
     },
     {
       icon: <SiVite />,
-      color: "violet-600",
+      color: "#7c3aed",
     },
     {
       icon: <SiAstro />,
-      color: "red-500",
+      color: "#ef4444",
     },
   ];
 
   const nextToLearn = [
     {
       icon: <AiOutlineConsoleSql />,
-      color: "blue-500",
+      color: "#3b82f6",
     },
     {
       icon: <SiMysql />,
-      color: "blue-500",
+      color: "#3b82f6",
     },
     {
       icon: <SiCypress />,
-      color: "green-500",
+      color: "#22c55e",
     },
     {
       icon: <FaMobileAlt />,
       secondIcon: <FaReact />,
-      color: "blue-600",
+      color: "#2563eb",
     },
     {
       icon: <FaAngular />,
-      color: "red-500",
+      color: "#ef4444",
     },
     {
       icon: <FaVuejs />,
-      color: "green-500",
+      color: "#22c55e",
     },
     {
       icon: <FaPython />,
-      color: "yellow-500",
+      color: "#eab308",
     },
   ];
 
@@ -139,6 +139,7 @@ export default function Skills() {
               x: -5,
               y: -5,
               scale: 1.1,
+              color: icon.color,
             }}
           >
             {icon.icon}
@@ -151,13 +152,13 @@ export default function Skills() {
       <ul className="lg:text-8xl text-5xl flex flex-wrap justify-center gap-16 text-gray-600 pb-10 lg:w-1/2 mx-auto">
         {nextToLearn.map((icon, index) => (
           <motion.li
+            className="flex"
             key={index}
-            className={`flex hover:text-${icon.color}`}
             variants={fadeInAnimationVariants}
             initial="initial"
             whileInView="animate"
             custom={index}
-            whileHover={{ x: -5, y: -5, scale: 1.1 }}
+            whileHover={{ x: -5, y: -5, scale: 1.1, color: icon.color }}
           >
             {icon.icon}
             {icon.secondIcon && icon.secondIcon}
