@@ -129,9 +129,17 @@ export default function About() {
           </motion.li>
         ))}
       </ul>
-      <div className="relative rounded-full w-80 h-80 lg:w-96 lg:h-96 mx-auto mt-20 overflow-hidden shadow-lg shadow-zinc-800 dark:shadow-zinc-600">
+      <motion.div
+        className="relative rounded-full w-80 h-80 lg:w-96 lg:h-96 mx-auto mt-20 overflow-hidden shadow-lg shadow-zinc-800 dark:shadow-zinc-600"
+        variants={fadeInAnimationVariants}
+        initial="initial"
+        whileInView="animate"
+        viewport={{
+          once: true,
+        }}
+      >
         <Image src={GithubImg} alt="image from github" fill />
-      </div>
+      </motion.div>
     </section>
   );
 }
