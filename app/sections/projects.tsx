@@ -2,10 +2,10 @@ import Image from "next/image";
 import { type StaticImageData } from "next/image";
 import { motion } from "framer-motion";
 
-import HummerMushroomsImg from "../../public/hummer-mushrooms.png";
-import MovieRatingImg from "../../public/movie-rating.png";
-import JSGameImg from "../../public/frela-game.png";
-import PortfolioImg from "../../public/portfolio.png";
+import HummerMushroomsImg from "../../public/projects/hummer-mushrooms.png";
+import MovieRatingImg from "../../public/projects/movie-rating.png";
+import JSGameImg from "../../public/projects/frela-game.png";
+import PortfolioImg from "../../public/projects/portfolio.png";
 
 type ProjectProps = {
   title: string;
