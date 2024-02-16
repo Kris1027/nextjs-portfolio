@@ -44,7 +44,7 @@ export default function About() {
 
   return (
     <section
-      className="pt-40 pb-10 px-10 bg-white dark:bg-black min-h-screen flex flex-col justify-between"
+      className="pt-40 pb-10 px-10 bg-white dark:bg-black min-h-screen flex flex-col justify-between overflow-hidden"
       id="about"
     >
       <div>
@@ -114,7 +114,7 @@ export default function About() {
         ))}
       </ul>
       <motion.div
-        className="relative rounded-full w-96 h-96 lg:w-[40rem] lg:h-[40rem] mx-auto overflow-hidden shadow-lg shadow-zinc-800 dark:shadow-zinc-600"
+        className="relative rounded-full w-80 h-80 lg:w-[40rem] lg:h-[40rem] mx-auto overflow-hidden shadow-lg shadow-zinc-800 dark:shadow-zinc-600"
         variants={fadeInAnimationVariants}
         initial="initial"
         whileInView="animate"

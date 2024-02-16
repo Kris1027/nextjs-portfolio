@@ -9,10 +9,10 @@ import PortfolioImg from "../../public/portfolio.png";
 
 type ProjectProps = {
   title: string;
-  description: string;
   image: StaticImageData;
   live: string;
   github: string;
+  technologies: string[];
 };
 
 const projectsAnimationVariants = {
@@ -34,37 +34,37 @@ export default function Projects() {
   const projects: ProjectProps[] = [
     {
       title: "Movie rating app",
-      description: "This is another project I worked on.",
       image: MovieRatingImg,
       live: "https://nextjs-movie-rating-app.vercel.app/",
       github: "https://github.com/Kris1027/nextjs-movie-rating-app",
+      technologies: ["Next.js", "Tailwind CSS", "React", "TypeScript"],
     },
     {
       title: "Portfolio",
-      description: "This is another project I worked on.",
       image: PortfolioImg,
       live: "https://kris1027-nextjs-portfolio.vercel.app/",
       github: "https://github.com/Kris1027/nextjs-portfolio",
+      technologies: ["Next.js", "Tailwind CSS", "React", "TypeScript"],
     },
     {
       title: "E-commerce site",
-      description: "This is a project I worked on.",
       image: HummerMushroomsImg,
       live: "https://hummer-mushrooms.netlify.app/",
       github: "https://github.com/Kris1027/mushrooms-shop",
+      technologies: ["React", "React Router", "Tailwind CSS", "TypeScript"],
     },
     {
       title: "JavaScript game",
-      description: "This is a project I worked on.",
       image: JSGameImg,
       live: "https://kris1027.github.io/Frela---The-Game/",
       github: "https://github.com/Kris1027/Frela---The-Game",
+      technologies: ["HTML", "CSS", "JavaScript"],
     },
   ];
 
   return (
     <section
-      className="pt-40 pb-10 px-10 bg-white dark:bg-black min-h-screen"
+      className="pt-40 pb-10 px-10 bg-white dark:bg-black min-h-screen overflow-hidden flex flex-col justify-between"
       id="projects"
     >
       <h2 className="text-2xl pt-2 dark:text-gray-500 pb-10 text-center">
@@ -87,8 +87,15 @@ export default function Projects() {
               <h3 className="text-2xl pt-2 pb-10 text-center">
                 {project.title}
               </h3>
-              <p className="text-sm md:text-lg pb-5 leading-8 lg:w-1/2 mx-auto text-center">
-                {project.description}
+              <p className="flex flex-wrap gap-1 justify-center">
+                {project.technologies.map((tech, index) => (
+                  <span
+                    key={index}
+                    className="p-1 px-2 bg-gray-600 text-white rounded-lg"
+                  >
+                    {tech}
+                  </span>
+                ))}
               </p>
               <div className="text-center">
                 <a
