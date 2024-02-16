@@ -73,7 +73,7 @@ export default function Projects() {
       <p className="text-sm md:text-lg pb-5 leading-8 text-gray-800 dark:text-gray-600 lg:w-1/2 mx-auto text-center">
         Here are some of the projects I&apos;ve worked on.
       </p>
-      <div className="flex flex-wrap gap-10 justify-center w-3/4 mx-auto">
+      <div className="flex flex-wrap gap-10 justify-center mx-auto">
         {projects.map((project, index) => (
           <motion.div
             key={index}
