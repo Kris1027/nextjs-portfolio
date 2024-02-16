@@ -44,7 +44,7 @@ export default function About() {
 
   return (
     <section
-      className="pt-40 pb-10 px-10 bg-white dark:bg-black min-h-screen flex flex-col justify-between overflow-hidden"
+      className="pt-40 pb-5 px-10 bg-white dark:bg-black min-h-screen flex flex-col justify-between overflow-hidden"
       id="about"
     >
       <div>
@@ -54,9 +54,9 @@ export default function About() {
           transition={{ staggerChildren: 0.02 }}
           className="text-5xl py-2 text-teal-600 font-bold text-center"
         >
-          {titleChars.map((char) => (
+          {titleChars.map((char, index) => (
             <motion.span
-              key={char}
+              key={index}
               variants={charVariants}
               transition={{ duration: 0.1 }}
             >
@@ -70,9 +70,9 @@ export default function About() {
           transition={{ staggerChildren: 0.2 }}
           className="text-2xl pt-2 dark:text-gray-500 pb-10 text-center"
         >
-          {professionChars.map((char) => (
+          {professionChars.map((char, index) => (
             <motion.span
-              key={char}
+              key={index}
               variants={charVariants}
               transition={{ duration: 0.3 }}
             >
@@ -86,9 +86,9 @@ export default function About() {
           transition={{ staggerChildren: 0.006 }}
           className="text-sm md:text-lg pb-5 leading-8 text-gray-800 dark:text-gray-600 lg:w-1/2 mx-auto text-center"
         >
-          {descripionChars.map((char) => (
+          {descripionChars.map((char, index) => (
             <motion.span
-              key={char}
+              key={index}
               variants={charVariants}
               transition={{ duration: 0.1 }}
             >
@@ -114,7 +114,7 @@ export default function About() {
         ))}
       </ul>
       <motion.div
-        className="relative rounded-full w-80 h-80 md:w-96 md:h-96 lg:w-[37rem] lg:h-[37rem] mx-auto overflow-hidden shadow-lg shadow-zinc-800 dark:shadow-zinc-600"
+        className="relative rounded-full w-72 h-72 sm:w-96 sm:h-96 md:w-[29rem] md:h-[29rem] lg:w-[32rem] lg:h-[32rem] mx-auto overflow-hidden shadow-lg shadow-zinc-800 dark:shadow-zinc-600"
         variants={fadeInAnimationVariants}
         initial="initial"
         whileInView="animate"
