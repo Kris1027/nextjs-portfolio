@@ -81,6 +81,7 @@ export default function Projects() {
             variants={cardAnimationVariants}
             initial="initial"
             whileInView="animate"
+            viewport={{ once: true }}
             className="flex flex-col items-center w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 relative rounded-md overflow-hidden shadow-md"
           >
             <div className="flex flex-col justify-between p-2 w-full h-full z-10 hover:bg-black text-transparent hover:text-gray-300 hover:bg-opacity-80">

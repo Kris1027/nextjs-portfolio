@@ -57,6 +57,7 @@ export default function Courses() {
             variants={cardAnimationVariants}
             initial="initial"
             whileInView="animate"
+            viewport={{ once: true }}
           >
             <h1 className="text-xl text-center">{course.title}</h1>
             <a

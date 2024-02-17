@@ -53,6 +53,7 @@ export default function About() {
           whileInView="visible"
           transition={{ staggerChildren: 0.02 }}
           className="text-5xl py-2 text-teal-600 font-bold text-center"
+          viewport={{ once: true }}
         >
           {titleChars.map((char, index) => (
             <motion.span
@@ -69,6 +70,7 @@ export default function About() {
           whileInView="visible"
           transition={{ staggerChildren: 0.2 }}
           className="text-2xl pt-2 dark:text-gray-500 pb-10 text-center"
+          viewport={{ once: true }}
         >
           {professionChars.map((char, index) => (
             <motion.span
@@ -85,6 +87,7 @@ export default function About() {
           whileInView="visible"
           transition={{ staggerChildren: 0.006 }}
           className="text-sm md:text-lg lg:text-xl pb-5 leading-8 text-gray-800 dark:text-gray-600 xl:w-3/4 mx-auto text-center"
+          viewport={{ once: true }}
         >
           {descripionChars.map((char, index) => (
             <motion.span
@@ -106,6 +109,7 @@ export default function About() {
             whileInView="animate"
             custom={index}
             whileHover={{ x: -5, y: -5, scale: 1.1, color: social.color }}
+            viewport={{ once: true }}
           >
             <a href={social.link} target="_blank" rel="noopener noreferrer">
               {social.icon}
@@ -118,6 +122,7 @@ export default function About() {
         variants={fadeInAnimationVariants}
         initial="initial"
         whileInView="animate"
+        viewport={{ once: true }}
       >
         <Image src={GithubImg} alt="image from github" fill />
       </motion.div>

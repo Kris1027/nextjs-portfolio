@@ -141,6 +141,7 @@ export default function Skills() {
               scale: 1.1,
               color: icon.color,
             }}
+            viewport={{ once: true }}
           >
             {icon.icon}
           </motion.li>
@@ -159,6 +160,7 @@ export default function Skills() {
             whileInView="animate"
             custom={index}
             whileHover={{ x: -5, y: -5, scale: 1.1, color: icon.color }}
+            viewport={{ once: true }}
           >
             {icon.icon}
             {icon.secondIcon && icon.secondIcon}
