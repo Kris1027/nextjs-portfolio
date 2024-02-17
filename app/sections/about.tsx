@@ -44,7 +44,7 @@ export default function About() {
 
   return (
     <section
-      className="pt-40 pb-5 px-10 bg-white dark:bg-black min-h-screen flex flex-col justify-between overflow-hidden"
+      className="pt-40 pb-5 sm:px-10 bg-white dark:bg-black min-h-screen flex flex-col gap-10 justify-center overflow-hidden"
       id="about"
     >
       <div>
@@ -84,7 +84,7 @@ export default function About() {
           initial="hidden"
           whileInView="visible"
           transition={{ staggerChildren: 0.006 }}
-          className="text-sm md:text-lg pb-5 leading-8 text-gray-800 dark:text-gray-600 lg:w-1/2 mx-auto text-center"
+          className="text-sm md:text-lg lg:text-xl pb-5 leading-8 text-gray-800 dark:text-gray-600 xl:w-3/4 mx-auto text-center"
         >
           {descripionChars.map((char, index) => (
             <motion.span
