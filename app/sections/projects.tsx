@@ -85,9 +85,7 @@ export default function Projects() {
             className="flex flex-col items-center w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 xl:w-[35rem] xl:h-[35rem] relative rounded-lg overflow-hidden shadow-md"
           >
             <div className="flex flex-col justify-between p-2 w-full h-full z-10 hover:bg-black text-transparent hover:text-gray-300 hover:bg-opacity-80">
-              <h3 className="text-2xl pt-2 pb-10 text-center">
-                {project.title}
-              </h3>
+              <h3 className="text-2xl py-2 text-center">{project.title}</h3>
               <p className="flex flex-wrap gap-1 justify-center">
                 {project.technologies.map((tech, index) => (
                   <span
