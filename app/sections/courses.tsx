@@ -1,4 +1,6 @@
 import Image, { StaticImageData } from "next/image";
+import { motion } from "framer-motion";
+import { cardAnimationVariants } from "./projects";
 
 import JavaScriptImg from "../../public/courses/JavaScript.png";
 import ReactImg from "../../public/courses/React.png";
@@ -48,9 +50,13 @@ export default function Courses() {
       </p>
       <ul className="flex flex-wrap gap-5 justify-center dark:text-gray-500">
         {coursesList.map((course, index) => (
-          <li
+          <motion.li
             className="flex flex-col justify-center items-center w-96 h-96 dark:bg-gray-950 bg-gray-100 rounded-lg p-2"
             key={index}
+            custom={index}
+            variants={cardAnimationVariants}
+            initial="initial"
+            whileInView="animate"
           >
             <h1 className="text-xl text-center">{course.title}</h1>
             <a
@@ -67,7 +73,7 @@ export default function Courses() {
                 objectFit="cover"
               />
             </div>
-          </li>
+          </motion.li>
         ))}
       </ul>
     </section>

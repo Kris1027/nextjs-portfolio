@@ -15,7 +15,7 @@ type ProjectProps = {
   technologies: string[];
 };
 
-const projectsAnimationVariants = {
+export const cardAnimationVariants = {
   initial: (index: number) => ({
     opacity: 0,
     x: index % 2 === 0 ? -200 : 200,
@@ -78,7 +78,7 @@ export default function Projects() {
           <motion.li
             key={index}
             custom={index}
-            variants={projectsAnimationVariants}
+            variants={cardAnimationVariants}
             initial="initial"
             whileInView="animate"
             className="flex flex-col items-center w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 relative rounded-md overflow-hidden shadow-md"
