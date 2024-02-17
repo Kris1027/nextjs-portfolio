@@ -82,7 +82,7 @@ export default function Projects() {
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
-            className="flex flex-col items-center w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 relative rounded-md overflow-hidden shadow-md"
+            className="flex flex-col items-center w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 xl:w-[35rem] xl:h-[35rem] relative rounded-lg overflow-hidden shadow-md"
           >
             <div className="flex flex-col justify-between p-2 w-full h-full z-10 hover:bg-black text-transparent hover:text-gray-300 hover:bg-opacity-80">
               <h3 className="text-2xl pt-2 pb-10 text-center">
@@ -92,7 +92,7 @@ export default function Projects() {
                 {project.technologies.map((tech, index) => (
                   <span
                     key={index}
-                    className="p-1 px-2 bg-gray-600 text-white rounded-lg"
+                    className="p-1 px-2 bg-gray-600 text-white rounded-lg xl:text-lg"
                   >
                     {tech}
                   </span>
