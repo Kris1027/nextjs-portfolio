@@ -1,6 +1,7 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+
 import { useMediaQuery } from "./util/useMediaQuery";
 import { useDarkMode } from "../theme/dark-mode-context";
 
@@ -40,6 +41,25 @@ export default function Navigation() {
   const [toggled, setToggled] = useState(false);
   const matches = useMediaQuery("(min-width: 1024px)");
 
+  const [hash, setHash] = useState(window.location.hash);
+
+  useEffect(() => {
+    window.addEventListener("hashchange", () => setHash(window.location.hash));
+
+    return () => {
+      window.removeEventListener("hashchange", () =>
+        setHash(window.location.hash)
+      );
+    };
+  }, []);
+
+  const links = [
+    { href: "#about", text: "About" },
+    { href: "#skills", text: "Skills" },
+    { href: "#projects", text: "Projects" },
+    { href: "#courses", text: "Courses" },
+  ];
+
   return (
     <nav className={darkMode ? "dark" : ""}>
       <div className="flex justify-between p-10 bg-white dark:bg-black text-gray-800 dark:text-gray-300 fixed w-full z-40">
@@ -47,42 +67,25 @@ export default function Navigation() {
         {matches && (
           <div>
             <ul className="flex text-lg gap-16">
-              <motion.li
-                variants={navDesktop}
-                animate="visible"
-                initial="hidden"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                <a href="#about">About</a>
-              </motion.li>
-              <motion.li
-                variants={navDesktop}
-                animate="visible"
-                initial="hidden"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                <a href="#skills">Skills</a>
-              </motion.li>
-              <motion.li
-                variants={navDesktop}
-                animate="visible"
-                initial="hidden"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                <a href="#projects">Projects</a>
-              </motion.li>
-              <motion.li
-                variants={navDesktop}
-                animate="visible"
-                initial="hidden"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                <a href="#courses">Courses</a>
-              </motion.li>
+              {links.map((link) => (
+                <motion.li
+                  key={link.href}
+                  variants={navDesktop}
+                  animate="visible"
+                  initial="hidden"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <a
+                    className={
+                      link.href === hash ? "text-teal-600 text-2xl" : ""
+                    }
+                    href={link.href}
+                  >
+                    {link.text}
+                  </a>
+                </motion.li>
+              ))}
             </ul>
           </div>
         )}
@@ -126,47 +129,28 @@ export default function Navigation() {
 
         {/* Mobile menu */}
         {toggled && !matches && (
-          <div className="fixed flex justify-center items-center bg-white dark:bg-black bottom-0 left-0 w-full h-screen z-40">
-            <motion.div
-              variants={navMotion}
-              animate="visible"
-              initial="hidden"
-              className="flex flex-col gap-24 text-lg items-center dark:text-gray-300"
-            >
-              <motion.a
+          <motion.ul
+            className="fixed flex flex-col justify-center gap-24 items-center bg-white dark:bg-black dark:text-gray-300 bottom-0 left-0 w-full h-screen text-4xl z-40"
+            variants={navMotion}
+            animate="visible"
+            initial="hidden"
+          >
+            {links.map((link) => (
+              <motion.li
+                key={link.href}
                 variants={itemMotion}
                 whileHover={{ scale: 1.3 }}
-                href="#about"
                 onClick={() => setToggled((prevToggle) => !prevToggle)}
               >
-                About
-              </motion.a>
-              <motion.a
-                variants={itemMotion}
-                whileHover={{ scale: 1.3 }}
-                href="#skills"
-                onClick={() => setToggled((prevToggle) => !prevToggle)}
-              >
-                Skills
-              </motion.a>
-              <motion.a
-                variants={itemMotion}
-                whileHover={{ scale: 1.3 }}
-                href="#projects"
-                onClick={() => setToggled((prevToggle) => !prevToggle)}
-              >
-                Projects
-              </motion.a>
-              <motion.a
-                variants={itemMotion}
-                whileHover={{ scale: 1.3 }}
-                href="#courses"
-                onClick={() => setToggled((prevToggle) => !prevToggle)}
-              >
-                Courses
-              </motion.a>
-            </motion.div>
-          </div>
+                <a
+                  href={link.href}
+                  className={link.href === hash ? "text-teal-600 text-5xl" : ""}
+                >
+                  {link.text}
+                </a>
+              </motion.li>
+            ))}
+          </motion.ul>
         )}
       </div>
     </nav>
