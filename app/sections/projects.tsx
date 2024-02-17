@@ -64,7 +64,7 @@ export default function Projects() {
 
   return (
     <section
-      className="pt-40 pb-10 px-10 bg-white dark:bg-black min-h-screen overflow-hidden flex flex-col justify-between"
+      className="pt-40 sm:px-10 bg-white dark:bg-black min-h-screen overflow-hidden flex flex-col justify-center"
       id="projects"
     >
       <h2 className="text-2xl pt-2 dark:text-gray-500 pb-10 text-center">
@@ -73,15 +73,15 @@ export default function Projects() {
       <p className="text-sm md:text-lg pb-5 leading-8 text-gray-800 dark:text-gray-600 lg:w-1/2 mx-auto text-center">
         Here are some of the projects I&apos;ve worked on.
       </p>
-      <div className="flex flex-wrap gap-10 justify-center mx-auto">
+      <ul className="flex flex-wrap gap-10 justify-center">
         {projects.map((project, index) => (
-          <motion.div
+          <motion.li
             key={index}
             custom={index}
             variants={projectsAnimationVariants}
             initial="initial"
             whileInView="animate"
-            className="flex flex-col items-center w-96 h-96 relative rounded-md overflow-hidden shadow-md"
+            className="flex flex-col items-center w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 relative rounded-md overflow-hidden shadow-md"
           >
             <div className="flex flex-col justify-between p-2 w-full h-full z-10 hover:bg-black text-transparent hover:text-gray-300 hover:bg-opacity-80">
               <h3 className="text-2xl pt-2 pb-10 text-center">
@@ -124,9 +124,9 @@ export default function Projects() {
               fill
               objectFit="cover"
             />
-          </motion.div>
+          </motion.li>
         ))}
-      </div>
+      </ul>
     </section>
   );
 }
