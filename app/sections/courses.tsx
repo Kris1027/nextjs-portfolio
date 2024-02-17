@@ -48,11 +48,24 @@ export default function Courses() {
       </p>
       <ul className="flex flex-wrap gap-5 justify-center dark:text-gray-500">
         {coursesList.map((course, index) => (
-          <li className="flex flex-col items-center" key={index}>
-            <h1 className="font-extrabold">{course.title}</h1>
-            <a href={course.link}>{course.link}</a>
-            <div className=" w-64 h-64 relative">
-              <Image src={course.image} alt={course.title} />
+          <li
+            className="flex flex-col justify-center items-center w-96 h-96 dark:bg-gray-950 bg-gray-100 rounded-lg p-2"
+            key={index}
+          >
+            <h1 className="text-xl text-center">{course.title}</h1>
+            <a
+              className="hover:text-blue-500 text-center text-xs"
+              href={course.link}
+            >
+              {course.link}
+            </a>
+            <div className=" w-64 h-48 relative">
+              <Image
+                src={course.image}
+                alt={course.title}
+                fill
+                objectFit="cover"
+              />
             </div>
           </li>
         ))}
