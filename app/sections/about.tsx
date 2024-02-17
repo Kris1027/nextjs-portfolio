@@ -114,7 +114,7 @@ export default function About() {
         ))}
       </ul>
       <motion.div
-        className="relative rounded-full w-72 h-72 sm:w-96 sm:h-96 md:w-[29rem] md:h-[29rem] lg:w-[32rem] lg:h-[32rem] mx-auto overflow-hidden shadow-lg shadow-zinc-800 dark:shadow-zinc-600"
+        className="relative rounded-full w-56 h-56 sm:w-96 sm:h-96 md:w-[29rem] md:h-[29rem] lg:w-[32rem] lg:h-[32rem] mx-auto overflow-hidden shadow-lg shadow-zinc-800 dark:shadow-zinc-600"
         variants={fadeInAnimationVariants}
         initial="initial"
         whileInView="animate"
