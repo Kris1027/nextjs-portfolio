@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 
 import { useMediaQuery } from "./util/useMediaQuery";
@@ -41,18 +41,6 @@ export default function Navigation() {
   const [toggled, setToggled] = useState(false);
   const matches = useMediaQuery("(min-width: 1024px)");
 
-  const [hash, setHash] = useState(window.location.hash);
-
-  useEffect(() => {
-    window.addEventListener("hashchange", () => setHash(window.location.hash));
-
-    return () => {
-      window.removeEventListener("hashchange", () =>
-        setHash(window.location.hash)
-      );
-    };
-  }, []);
-
   const links = [
     { href: "#about", text: "About" },
     { href: "#skills", text: "Skills" },
@@ -76,14 +64,7 @@ export default function Navigation() {
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                 >
-                  <a
-                    className={
-                      link.href === hash ? "text-teal-600 text-2xl" : ""
-                    }
-                    href={link.href}
-                  >
-                    {link.text}
-                  </a>
+                  <a href={link.href}>{link.text}</a>
                 </motion.li>
               ))}
             </ul>
@@ -142,12 +123,7 @@ export default function Navigation() {
                 whileHover={{ scale: 1.3 }}
                 onClick={() => setToggled((prevToggle) => !prevToggle)}
               >
-                <a
-                  href={link.href}
-                  className={link.href === hash ? "text-teal-600 text-5xl" : ""}
-                >
-                  {link.text}
-                </a>
+                <a href={link.href}>{link.text}</a>
               </motion.li>
             ))}
           </motion.ul>

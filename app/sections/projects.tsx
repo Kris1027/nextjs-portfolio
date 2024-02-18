@@ -64,7 +64,7 @@ export default function Projects() {
 
   return (
     <section
-      className="pt-40 sm:px-10 bg-white dark:bg-black min-h-screen overflow-hidden flex flex-col justify-center"
+      className="pt-40 px-2 sm:px-10 bg-white dark:bg-black min-h-screen overflow-hidden flex flex-col gap-5 justify-center"
       id="projects"
     >
       <h2 className="text-2xl pt-2 dark:text-gray-500 pb-10 text-center">
@@ -126,6 +126,9 @@ export default function Projects() {
           </motion.li>
         ))}
       </ul>
+      <p className="text-sm md:text-lg leading-8 text-gray-800 dark:text-gray-600 lg:w-1/2 mx-auto text-center">
+        More you can find on my Github profile!
+      </p>
     </section>
   );
 }
