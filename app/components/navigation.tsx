@@ -50,7 +50,7 @@ export default function Navigation() {
 
   return (
     <nav className={darkMode ? "dark" : ""}>
-      <div className="flex justify-between p-10 bg-white dark:bg-black text-gray-800 dark:text-gray-300 fixed w-full z-40">
+      <div className="flex justify-between p-10 bg-white dark:bg-black text-gray-800 dark:text-gray-300 fixed w-full z-40 ease-in-out duration-500">
         {/* Desktop menu */}
         {matches && (
           <div>

@@ -121,7 +121,7 @@ export default function Skills() {
 
   return (
     <section
-      className="pt-40 px-10 bg-white dark:bg-black min-h-screen flex flex-col gap-10 justify-center overflow-hidden"
+      className="pt-40 px-10 bg-white dark:bg-black min-h-screen flex flex-col gap-10 justify-center overflow-hidden ease-in-out duration-500"
       id="skills"
     >
       <h2 className="text-2xl pt-2 dark:text-gray-500 pb-10 text-center">

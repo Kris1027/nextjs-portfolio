@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import ThemeProvider from "./theme/theme-provider";
 import Navigation from "./components/navigation";
+import Footer from "./components/footer";
 
 export const metadata: Metadata = {
   title: "Kris Portfolio",
@@ -19,6 +20,7 @@ export default function RootLayout({
         <body className="font-CNR">
           <Navigation />
           {children}
+          <Footer />
         </body>
       </ThemeProvider>
     </html>
