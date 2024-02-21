@@ -6,6 +6,7 @@ import HummerMushroomsImg from "../../public/projects/hummer-mushrooms.png";
 import MovieRatingImg from "../../public/projects/movie-rating.png";
 import JSGameImg from "../../public/projects/frela-game.png";
 import PortfolioImg from "../../public/projects/portfolio.png";
+import CountriesImg from "../../public/projects/countries.png";
 
 type ProjectProps = {
   title: string;
@@ -52,6 +53,14 @@ export default function Projects() {
       live: "https://hummer-mushrooms.netlify.app/",
       github: "https://github.com/Kris1027/mushrooms-shop",
       technologies: ["React", "React Router", "Tailwind CSS", "TypeScript"],
+    },
+    {
+      title: "Countries rest API",
+      image: CountriesImg,
+      live: "https://effortless-churros-ad658b.netlify.app/",
+      github:
+        "https://github.com/Kris1027/rest-countries-api?tab=readme-ov-file",
+      technologies: ["React", "Tailwind CSS"],
     },
     {
       title: "JavaScript game",

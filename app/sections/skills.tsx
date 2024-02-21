@@ -89,10 +89,6 @@ export default function Skills() {
 
   const nextToLearn = [
     {
-      icon: <AiOutlineConsoleSql />,
-      color: "#3b82f6",
-    },
-    {
       icon: <SiMysql />,
       color: "#3b82f6",
     },
