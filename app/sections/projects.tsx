@@ -136,7 +136,16 @@ export default function Projects() {
         ))}
       </ul>
       <p className="text-sm md:text-lg leading-8 text-gray-800 dark:text-gray-600 lg:w-1/2 mx-auto text-center">
-        More you can find on my Github profile!
+        More you can find on my{" "}
+        <a
+          className="text-pink-600"
+          href="https://github.com/Kris1027"
+          target="_blank"
+          rel="norefferer"
+        >
+          GitHub
+        </a>{" "}
+        profile!
       </p>
     </section>
   );
