@@ -13,13 +13,109 @@ import { TbBrandNextjs } from "react-icons/tb";
 import { SiVite } from "react-icons/si";
 import { SiAstro } from "react-icons/si";
 
-import { AiOutlineConsoleSql } from "react-icons/ai";
 import { SiMysql } from "react-icons/si";
 import { SiCypress } from "react-icons/si";
 import { FaMobileAlt } from "react-icons/fa";
 import { FaAngular } from "react-icons/fa";
 import { FaVuejs } from "react-icons/fa";
 import { FaPython } from "react-icons/fa";
+
+const skillsIcons = [
+  {
+    icon: <FaHtml5 />,
+    color: "#3b82f6",
+    name: "HTML5",
+  },
+  {
+    icon: <FaCss3Alt />,
+    color: "#3b82f6",
+    name: "CSS3",
+  },
+  {
+    icon: <IoLogoJavascript />,
+    color: "#eab308",
+    name: "JavaScript",
+  },
+  {
+    icon: <FaReact />,
+    color: "#2563eb",
+    name: "React",
+  },
+  {
+    icon: <SiTypescript />,
+    color: "#3b82f6",
+    name: "TypeScript",
+  },
+  {
+    icon: <FaNodeJs />,
+    color: "#22c55e",
+    name: "Node.js",
+  },
+  {
+    icon: <SiExpress />,
+    color: "#f59e0b",
+    name: "Express",
+  },
+  {
+    icon: <DiMongodb />,
+    color: "#052e16",
+    name: "MongoDB",
+  },
+  {
+    icon: <SiTailwindcss />,
+    color: "#06b6d4",
+    name: "Tailwind CSS",
+  },
+  {
+    icon: <TbBrandNextjs />,
+    color: "#94a3b8",
+    name: "Next.js",
+  },
+  {
+    icon: <SiVite />,
+    color: "#7c3aed",
+    name: "Vite",
+  },
+  {
+    icon: <SiAstro />,
+    color: "#ef4444",
+    name: "Astro",
+  },
+];
+
+const nextToLearn = [
+  {
+    icon: <SiMysql />,
+    color: "#3b82f6",
+    name: "MySQL",
+  },
+  {
+    icon: <SiCypress />,
+    color: "#22c55e",
+    name: "Cypress",
+  },
+  {
+    icon: <FaMobileAlt />,
+    secondIcon: <FaReact />,
+    color: "#2563eb",
+    name: "React Native",
+  },
+  {
+    icon: <FaAngular />,
+    color: "#ef4444",
+    name: "Angular",
+  },
+  {
+    icon: <FaVuejs />,
+    color: "#22c55e",
+    name: "Vue.js",
+  },
+  {
+    icon: <FaPython />,
+    color: "#eab308",
+    name: "Python",
+  },
+];
 
 export const fadeInAnimationVariants = {
   initial: {
@@ -36,85 +132,6 @@ export const fadeInAnimationVariants = {
 };
 
 export default function Skills() {
-  const skillsIcons = [
-    {
-      icon: <FaHtml5 />,
-      color: "#3b82f6",
-    },
-    {
-      icon: <FaCss3Alt />,
-      color: "#3b82f6",
-    },
-    {
-      icon: <IoLogoJavascript />,
-      color: "#eab308",
-    },
-    {
-      icon: <FaReact />,
-      color: "#2563eb",
-    },
-    {
-      icon: <SiTypescript />,
-      color: "#3b82f6",
-    },
-    {
-      icon: <FaNodeJs />,
-      color: "#22c55e",
-    },
-    {
-      icon: <SiExpress />,
-      color: "#f59e0b",
-    },
-    {
-      icon: <DiMongodb />,
-      color: "#052e16",
-    },
-    {
-      icon: <SiTailwindcss />,
-      color: "#06b6d4",
-    },
-    {
-      icon: <TbBrandNextjs />,
-      color: "#94a3b8",
-    },
-    {
-      icon: <SiVite />,
-      color: "#7c3aed",
-    },
-    {
-      icon: <SiAstro />,
-      color: "#ef4444",
-    },
-  ];
-
-  const nextToLearn = [
-    {
-      icon: <SiMysql />,
-      color: "#3b82f6",
-    },
-    {
-      icon: <SiCypress />,
-      color: "#22c55e",
-    },
-    {
-      icon: <FaMobileAlt />,
-      secondIcon: <FaReact />,
-      color: "#2563eb",
-    },
-    {
-      icon: <FaAngular />,
-      color: "#ef4444",
-    },
-    {
-      icon: <FaVuejs />,
-      color: "#22c55e",
-    },
-    {
-      icon: <FaPython />,
-      color: "#eab308",
-    },
-  ];
-
   return (
     <section
       className="pt-40 px-10 bg-white dark:bg-black min-h-screen flex flex-col gap-10 justify-center overflow-hidden ease-in-out duration-500"
@@ -123,7 +140,7 @@ export default function Skills() {
       <h2 className="text-2xl pt-2 dark:text-gray-500 pb-10 text-center">
         Know technologies
       </h2>
-      <ul className="lg:text-8xl text-5xl flex flex-wrap justify-center gap-16 text-gray-600 pb-10 lg:w-1/2 mx-auto">
+      <ul className="relative lg:text-8xl text-5xl flex flex-wrap justify-center gap-16 text-gray-600 pb-10 lg:w-1/2 mx-auto">
         {skillsIcons.map((icon, index) => (
           <motion.li
             key={index}
@@ -138,8 +155,10 @@ export default function Skills() {
               color: icon.color,
             }}
             viewport={{ once: true }}
+            className="flex flex-col items-center"
           >
-            {icon.icon}
+            <div className="text-sm">{icon.name}</div>
+            <div>{icon.icon}</div>
           </motion.li>
         ))}
       </ul>
@@ -149,7 +168,7 @@ export default function Skills() {
       <ul className="lg:text-8xl text-5xl flex flex-wrap justify-center gap-16 text-gray-600 pb-10 lg:w-1/2 mx-auto">
         {nextToLearn.map((icon, index) => (
           <motion.li
-            className="flex"
+            className="flex flex-col items-center"
             key={index}
             variants={fadeInAnimationVariants}
             initial="initial"
@@ -158,8 +177,11 @@ export default function Skills() {
             whileHover={{ x: -5, y: -5, scale: 1.1, color: icon.color }}
             viewport={{ once: true }}
           >
-            {icon.icon}
-            {icon.secondIcon && icon.secondIcon}
+            <span className="text-sm">{icon.name}</span>
+            <div className="flex">
+              <span>{icon.icon}</span>
+              {icon.secondIcon && <span>{icon.secondIcon}</span>}
+            </div>
           </motion.li>
         ))}
       </ul>
