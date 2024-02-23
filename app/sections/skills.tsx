@@ -23,7 +23,7 @@ import { FaPython } from "react-icons/fa";
 const skillsIcons = [
   {
     icon: <FaHtml5 />,
-    color: "#3b82f6",
+    color: "#f59e0b",
     name: "HTML5",
   },
   {
@@ -49,7 +49,7 @@ const skillsIcons = [
   {
     icon: <FaNodeJs />,
     color: "#22c55e",
-    name: "Node.js",
+    name: "Node",
   },
   {
     icon: <SiExpress />,
@@ -64,12 +64,12 @@ const skillsIcons = [
   {
     icon: <SiTailwindcss />,
     color: "#06b6d4",
-    name: "Tailwind CSS",
+    name: "Tailwind",
   },
   {
     icon: <TbBrandNextjs />,
     color: "#94a3b8",
-    name: "Next.js",
+    name: "Next",
   },
   {
     icon: <SiVite />,
@@ -140,7 +140,7 @@ export default function Skills() {
       <h2 className="text-2xl pt-2 dark:text-gray-500 pb-10 text-center">
         Know technologies
       </h2>
-      <ul className="relative lg:text-8xl text-5xl flex flex-wrap justify-center gap-16 text-gray-600 pb-10 lg:w-1/2 mx-auto">
+      <ul className="relative md:text-6xl lg:text-8xl text-5xl flex flex-wrap justify-center items-center gap-2 md:gap-4 text-gray-600 pb-10 md:w-2/3 lg:w-1/2 mx-auto">
         {skillsIcons.map((icon, index) => (
           <motion.li
             key={index}
@@ -157,15 +157,15 @@ export default function Skills() {
             viewport={{ once: true }}
             className="flex flex-col items-center"
           >
-            <div className="text-sm">{icon.name}</div>
             <div>{icon.icon}</div>
+            <div className="text-sm">{icon.name}</div>
           </motion.li>
         ))}
       </ul>
       <h2 className="text-2xl pt-2 dark:text-gray-500 pb-10 text-center">
         Next to learn
       </h2>
-      <ul className="lg:text-8xl text-5xl flex flex-wrap justify-center gap-16 text-gray-600 pb-10 lg:w-1/2 mx-auto">
+      <ul className="relative md:text-6xl lg:text-8xl text-5xl flex flex-wrap justify-center items-center gap-2 md:gap-4 text-gray-600 pb-10 md:w-2/3 lg:w-1/2 mx-auto">
         {nextToLearn.map((icon, index) => (
           <motion.li
             className="flex flex-col items-center"
@@ -177,11 +177,11 @@ export default function Skills() {
             whileHover={{ x: -5, y: -5, scale: 1.1, color: icon.color }}
             viewport={{ once: true }}
           >
-            <span className="text-sm">{icon.name}</span>
             <div className="flex">
               <span>{icon.icon}</span>
               {icon.secondIcon && <span>{icon.secondIcon}</span>}
             </div>
+            <span className="text-xs md:text-sm">{icon.name}</span>
           </motion.li>
         ))}
       </ul>
