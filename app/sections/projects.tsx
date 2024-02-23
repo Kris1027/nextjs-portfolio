@@ -2,6 +2,8 @@ import Image from "next/image";
 import { type StaticImageData } from "next/image";
 import { motion } from "framer-motion";
 
+// className="flex flex-col items-center w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 xl:w-[35rem] xl:h-[35rem] relative rounded-lg overflow-hidden shadow-md"
+
 import HummerMushroomsImg from "../../public/projects/hummer-mushrooms.png";
 import MovieRatingImg from "../../public/projects/movie-rating.png";
 import JSGameImg from "../../public/projects/frela-game.png";
@@ -91,7 +93,7 @@ export default function Projects() {
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
-            className="flex flex-col items-center w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 xl:w-[35rem] xl:h-[35rem] relative rounded-lg overflow-hidden shadow-md"
+            className="flex flex-col items-center w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 relative rounded-lg overflow-hidden shadow-md"
           >
             <div className="flex flex-col justify-between p-2 w-full h-full z-10 hover:bg-black text-transparent hover:text-gray-300 hover:bg-opacity-80">
               <h3 className="text-2xl py-2 text-center">{project.title}</h3>
