@@ -10,13 +10,7 @@ import { SiTailwindcss } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
 import { SiVite } from "react-icons/si";
 import { SiAstro } from "react-icons/si";
-
-import { SiMysql } from "react-icons/si";
-import { SiCypress } from "react-icons/si";
-import { FaMobileAlt } from "react-icons/fa";
-import { FaAngular } from "react-icons/fa";
-import { FaVuejs } from "react-icons/fa";
-import { FaPython } from "react-icons/fa";
+import { BiLogoPostgresql } from "react-icons/bi";
 
 export type SkillsIconsProps = {
   id: number;
@@ -76,6 +70,12 @@ export const skillsIcons: SkillsIconsProps[] = [
     name: "MongoDB",
   },
   {
+    id: 81,
+    icon: <BiLogoPostgresql />,
+    color: "#3b82f6",
+    name: "PostgreSQL",
+  },
+  {
     id: 9,
     icon: <SiTailwindcss />,
     color: "#06b6d4",
@@ -98,45 +98,5 @@ export const skillsIcons: SkillsIconsProps[] = [
     icon: <SiAstro />,
     color: "#ef4444",
     name: "Astro",
-  },
-];
-
-export const nextToLearn: SkillsIconsProps[] = [
-  {
-    id: 1,
-    icon: <SiMysql />,
-    color: "#3b82f6",
-    name: "MySQL",
-  },
-  {
-    id: 2,
-    icon: <SiCypress />,
-    color: "#22c55e",
-    name: "Cypress",
-  },
-  {
-    id: 3,
-    icon: <FaMobileAlt />,
-    secondIcon: <FaReact />,
-    color: "#2563eb",
-    name: "React Native",
-  },
-  {
-    id: 4,
-    icon: <FaAngular />,
-    color: "#ef4444",
-    name: "Angular",
-  },
-  {
-    id: 5,
-    icon: <FaVuejs />,
-    color: "#22c55e",
-    name: "Vue.js",
-  },
-  {
-    id: 6,
-    icon: <FaPython />,
-    color: "#eab308",
-    name: "Python",
   },
 ];
