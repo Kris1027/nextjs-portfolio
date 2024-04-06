@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { motion } from "framer-motion";
 import { type ProjectProps } from "../data/projects-data";
+import { GoLinkExternal } from "react-icons/go";
 
 export const cardAnimationVariants = {
   initial: (index: number) => ({
@@ -23,51 +23,57 @@ export default function ProjectItem({
   live,
   github,
   technologies,
-  id,
+  description,
 }: ProjectProps) {
   return (
-    <motion.li
-      variants={cardAnimationVariants}
-      initial="initial"
-      whileInView="animate"
-      custom={id}
-      viewport={{ once: true }}
-      className="flex flex-col items-center w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 relative rounded-lg overflow-hidden shadow-md"
-    >
-      <div className="flex flex-col justify-between p-2 w-full h-full z-10 hover:bg-black text-transparent hover:text-gray-300 hover:bg-opacity-80">
-        <h3 className="text-2xl py-2 text-center">{title}</h3>
-        <p className="flex flex-wrap gap-1 justify-center">
-          {technologies.map((tech, index) => (
-            <span
+    <li className="flex flex-col gap-4 bg-slate-500 bg-opacity-25 rounded-2xl p-6 dark:text-slate-300">
+      <div className="relative w-full h-80 bg-black rounded-t-2xl">
+        <Image
+          className="rounded-t-2xl"
+          src={image}
+          alt={title}
+          fill
+          objectFit="cover"
+        />
+      </div>
+      <ul className="flex flex-wrap gap-1">
+        {technologies.map((tech, index) => {
+          return (
+            <li
+              className="border-[1px] dark:border-slate-700 rounded-2xl py-1 px-3 hover:dark:text-slate-200 hover:dark:border-slate-200"
               key={index}
-              className="p-1 px-2 bg-gray-600 text-white rounded-lg xl:text-lg"
             >
               {tech}
-            </span>
-          ))}
-        </p>
-        <div className="text-center">
-          <a
-            className="hover:text-blue-500 text-sm"
-            href={live}
-            target="_blank"
-            rel="norefferer"
-          >
-            <span className="block">Live: </span>
-            {live}
-          </a>
-          <a
-            className="hover:text-blue-500 text-sm"
-            href={github}
-            target="_blank"
-            rel="norefferer"
-          >
-            <span className="block">GitHub: </span>
-            {github}
-          </a>
-        </div>
+            </li>
+          );
+        })}
+      </ul>
+      <h3 className="text-2xl">{title}</h3>
+      <ul className="list-disc pl-4 space-y-2">
+        {description.map((desc, index) => {
+          return <li key={index}>{desc}</li>;
+        })}
+      </ul>
+      <div className="flex justify-between">
+        <a
+          className="flex items-center gap-2 border-[1px] dark:border-slate-700 py-1 px-3 cursor-pointer hover:dark:text-slate-200 hover:dark:border-slate-200"
+          href={live}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Check Live
+          <GoLinkExternal />
+        </a>
+        <a
+          className="flex items-center gap-2 border-[1px] dark:border-slate-700 py-1 px-3 cursor-pointer hover:dark:text-slate-200 hover:dark:border-slate-200"
+          href={github}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          See Code
+          <GoLinkExternal />
+        </a>
       </div>
-      <Image src={image} alt={title} fill objectFit="cover" />
-    </motion.li>
+    </li>
   );
 }

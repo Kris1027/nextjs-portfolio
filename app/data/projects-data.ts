@@ -12,6 +12,7 @@ export type ProjectProps = {
   live: string;
   github: string;
   technologies: string[];
+  description: string[];
 };
 
 export const projects: ProjectProps[] = [
@@ -22,6 +23,11 @@ export const projects: ProjectProps[] = [
     live: "https://nextjs-movie-rating-app.vercel.app/",
     github: "https://github.com/Kris1027/nextjs-movie-rating-app",
     technologies: ["Next.js", "Tailwind CSS", "React", "TypeScript"],
+    description: [
+      "The app allows users to search for movies and add them to their favorites list.",
+      "The app uses the TMDB API to fetch movie data.",
+      "Implemented a responsive design that adapts to different screen sizes.",
+    ],
   },
   {
     id: 2,
@@ -30,6 +36,11 @@ export const projects: ProjectProps[] = [
     live: "https://kris1027-nextjs-portfolio.vercel.app/",
     github: "https://github.com/Kris1027/nextjs-portfolio",
     technologies: ["Next.js", "Tailwind CSS", "React", "TypeScript"],
+    description: [
+      "The app allows users to search for movies and add them to their favorites list.",
+      "The app uses the TMDB API to fetch movie data.",
+      "Implemented a responsive design that adapts to different screen sizes.",
+    ],
   },
   {
     id: 3,
@@ -38,6 +49,11 @@ export const projects: ProjectProps[] = [
     live: "https://hummer-mushrooms.netlify.app/",
     github: "https://github.com/Kris1027/mushrooms-shop",
     technologies: ["React", "React Router", "Tailwind CSS", "TypeScript"],
+    description: [
+      "The app allows users to search for movies and add them to their favorites list.",
+      "The app uses the TMDB API to fetch movie data.",
+      "Implemented a responsive design that adapts to different screen sizes.",
+    ],
   },
   {
     id: 4,
@@ -46,6 +62,11 @@ export const projects: ProjectProps[] = [
     live: "https://effortless-churros-ad658b.netlify.app/",
     github: "https://github.com/Kris1027/rest-countries-api?tab=readme-ov-file",
     technologies: ["React", "Tailwind CSS"],
+    description: [
+      "The app allows users to search for movies and add them to their favorites list.",
+      "The app uses the TMDB API to fetch movie data.",
+      "Implemented a responsive design that adapts to different screen sizes.",
+    ],
   },
   {
     id: 5,
@@ -54,5 +75,10 @@ export const projects: ProjectProps[] = [
     live: "https://kris1027.github.io/Frela---The-Game/",
     github: "https://github.com/Kris1027/Frela---The-Game",
     technologies: ["HTML", "CSS", "JavaScript"],
+    description: [
+      "The app allows users to search for movies and add them to their favorites list.",
+      "The app uses the TMDB API to fetch movie data.",
+      "Implemented a responsive design that adapts to different screen sizes.",
+    ],
   },
 ];

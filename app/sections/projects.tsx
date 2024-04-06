@@ -13,7 +13,7 @@ export default function Projects() {
       <p className="text-sm md:text-lg pb-5 leading-8 text-gray-800 dark:text-gray-600 lg:w-1/2 mx-auto text-center">
         Here are some of the projects I&apos;ve worked on.
       </p>
-      <ul className="flex flex-wrap gap-10 justify-center">
+      <ul className="grid grid-cols-1 lg:grid-cols-2 gap-10 place-items-center mx-auto xl:w-5/6">
         {projects.map((project) => (
           <ProjectItem
             key={project.id}
@@ -23,6 +23,7 @@ export default function Projects() {
             live={project.live}
             github={project.github}
             technologies={project.technologies}
+            description={project.description}
           />
         ))}
       </ul>
