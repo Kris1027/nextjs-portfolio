@@ -27,9 +27,9 @@ export default function ProjectItem({
 }: ProjectProps) {
   return (
     <li className="flex flex-col gap-4 bg-slate-400 bg-opacity-25 rounded-2xl p-6 text-slate-700 dark:text-slate-300">
-      <div className="relative w-full h-80 bg-black rounded-t-2xl">
+      <div className="relative w-full h-80 bg-black rounded-t-2xl overflow-hidden">
         <Image
-          className="rounded-t-2xl"
+          className="rounded-t-2xl scale-[1.7] rotate-12"
           src={image}
           alt={title}
           fill
