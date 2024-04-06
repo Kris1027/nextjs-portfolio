@@ -26,7 +26,7 @@ export default function ProjectItem({
   description,
 }: ProjectProps) {
   return (
-    <li className="flex flex-col gap-4 bg-slate-500 bg-opacity-25 rounded-2xl p-6 dark:text-slate-300">
+    <li className="flex flex-col gap-4 bg-slate-400 bg-opacity-25 rounded-2xl p-6 text-slate-700 dark:text-slate-300">
       <div className="relative w-full h-80 bg-black rounded-t-2xl">
         <Image
           className="rounded-t-2xl"
@@ -40,7 +40,7 @@ export default function ProjectItem({
         {technologies.map((tech, index) => {
           return (
             <li
-              className="border-[1px] dark:border-slate-700 rounded-2xl py-1 px-3 hover:dark:text-slate-200 hover:dark:border-slate-200"
+              className="border-[1px] border-slate-300 dark:border-slate-700 rounded-2xl py-1 px-5 hover:text-slate-500 hover:border-slate-500 dark:hover:text-slate-200 dark:hover:border-slate-200"
               key={index}
             >
               {tech}
@@ -56,7 +56,7 @@ export default function ProjectItem({
       </ul>
       <div className="flex justify-between">
         <a
-          className="flex items-center gap-2 border-[1px] dark:border-slate-700 py-1 px-3 cursor-pointer hover:dark:text-slate-200 hover:dark:border-slate-200"
+          className="flex items-center gap-2 border-[1px] border-slate-300 dark:border-slate-700 py-1 px-3 cursor-pointer hover:text-blue-400 hover:border-blue-400 dark:hover:border-blue-400"
           href={live}
           target="_blank"
           rel="noopener noreferrer"
@@ -65,7 +65,7 @@ export default function ProjectItem({
           <GoLinkExternal />
         </a>
         <a
-          className="flex items-center gap-2 border-[1px] dark:border-slate-700 py-1 px-3 cursor-pointer hover:dark:text-slate-200 hover:dark:border-slate-200"
+          className="flex items-center gap-2 border-[1px] border-slate-300 dark:border-slate-700 py-1 px-3 cursor-pointer hover:text-blue-400 hover:border-blue-400 dark:hover:border-blue-400"
           href={github}
           target="_blank"
           rel="noopener noreferrer"
