@@ -26,7 +26,7 @@ export default function ProjectItem({
   description,
 }: ProjectProps) {
   return (
-    <li className="flex flex-col gap-4 bg-slate-400 bg-opacity-25 rounded-2xl p-6 text-slate-700 dark:text-slate-300">
+    <li className="flex flex-col gap-4 bg-slate-400 bg-opacity-20 rounded-2xl p-6 text-slate-700 dark:text-slate-300 shadow-lg dark:shadow-sm dark:shadow-white">
       <div className="relative w-full h-80 bg-black rounded-t-2xl overflow-hidden">
         <Image
           className="rounded-t-2xl scale-[1.7] rotate-12"
@@ -36,7 +36,7 @@ export default function ProjectItem({
           objectFit="cover"
         />
       </div>
-      <ul className="flex flex-wrap gap-1">
+      <ul className="flex items-center flex-wrap gap-1">
         {technologies.map((tech, index) => {
           return (
             <li
@@ -48,8 +48,8 @@ export default function ProjectItem({
           );
         })}
       </ul>
-      <h3 className="text-2xl">{title}</h3>
-      <ul className="list-disc pl-4 space-y-2">
+      <h3 className="text-3xl">{title}</h3>
+      <ul className="list-disc pl-4 space-y-2 text-sm">
         {description.map((desc, index) => {
           return <li key={index}>{desc}</li>;
         })}
