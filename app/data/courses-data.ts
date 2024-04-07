@@ -4,6 +4,7 @@ import JavaScriptImg from "../../public/courses/JavaScript.png";
 import ReactImg from "../../public/courses/React.png";
 import ReactTSImg from "../../public/courses/React-TypeScript.png";
 import TypeScriptImg from "../../public/courses/TypeScript.png";
+import ZrozumiecImg from "../../public/courses/ZrozumiecReact.png";
 
 export type CoursesListProps = {
   id: number;
@@ -36,5 +37,11 @@ export const coursesList: CoursesListProps[] = [
     title: "Understanding TypeScript",
     image: TypeScriptImg,
     link: "https://www.udemy.com/course/understanding-typescript/",
+  },
+  {
+    id: 5,
+    title: "Zrozumieć React",
+    image: ZrozumiecImg,
+    link: "https://zrozumreact.pl/",
   },
 ];

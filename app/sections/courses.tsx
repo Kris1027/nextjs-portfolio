@@ -4,7 +4,7 @@ import CourseItem from "../components/course-item";
 export default function Courses() {
   return (
     <section
-      className="pt-40 pb-10 px-10 bg-white dark:bg-black min-h-screen flex flex-col justify-center overflow-hidden ease-in-out duration-500"
+      className="pt-40 px-2 sm:px-10 bg-white dark:bg-black min-h-screen overflow-hidden flex flex-col gap-5 justify-center ease-in-out duration-500"
       id="courses"
     >
       <h2 className="text-2xl pt-2 dark:text-gray-500 pb-10 text-center">

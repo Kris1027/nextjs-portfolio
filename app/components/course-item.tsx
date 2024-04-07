@@ -26,10 +26,10 @@ export default function CourseItem({
   return (
     <>
       <li className="flex flex-col w-full gap-4 bg-slate-400 bg-opacity-20 rounded-2xl p-6 text-slate-700 dark:text-slate-300 shadow-lg dark:shadow-sm dark:shadow-white">
-        <h4 className="text-3xl">{title}</h4>
-        <div className="flex justify-between">
+        <h4 className="text-lg md:text-3xl">{title}</h4>
+        <div className="flex justify-between text-sm md:text-base">
           <a
-            className="flex items-center gap-2 border-[1px] border-slate-300 dark:border-slate-700 py-1 px-3 cursor-pointer hover:text-blue-400 hover:border-blue-400 dark:hover:border-blue-400"
+            className="flex items-center gap-2 border-[1px] border-slate-300 dark:border-slate-700 px-1 md:py-1 md:px-3 cursor-pointer hover:text-blue-400 hover:border-blue-400 dark:hover:border-blue-400"
             href={link}
             target="_blank"
             rel="noopener noreferrer"
@@ -38,7 +38,7 @@ export default function CourseItem({
             <GoLinkExternal />
           </a>
           <button
-            className="flex items-center gap-2 border-[1px] border-slate-300 dark:border-slate-700 py-1 px-3 cursor-pointer hover:text-amber-400 hover:border-amber-400 dark:hover:border-amber-400"
+            className="flex items-center gap-2 border-[1px] border-slate-300 dark:border-slate-700 px-1 md:py-1 md:px-3 cursor-pointer hover:text-amber-400 hover:border-amber-400 dark:hover:border-amber-400"
             onClick={() => handleModal(id)}
           >
             Show certificate
