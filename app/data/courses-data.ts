@@ -6,10 +6,10 @@ import ReactTSImg from "../../public/courses/React-TypeScript.png";
 import TypeScriptImg from "../../public/courses/TypeScript.png";
 
 export type CoursesListProps = {
-  id: number;
-  title: string;
-  image: StaticImageData;
-  link: string;
+  id?: number;
+  title?: string;
+  image?: StaticImageData;
+  link?: string;
 };
 
 export const coursesList: CoursesListProps[] = [
