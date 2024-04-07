@@ -3,6 +3,7 @@ import { useState } from "react";
 import Image, { StaticImageData } from "next/image";
 import { GoLinkExternal } from "react-icons/go";
 import { PiCertificateLight } from "react-icons/pi";
+import CourseModal from "./course-modal";
 
 export default function CourseItem({
   id,
@@ -45,17 +46,11 @@ export default function CourseItem({
             <PiCertificateLight size={30} />
           </button>
           {image && showModal && (
-            <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-              <div className="bg-white p-6 rounded-lg shadow-lg">
-                <Image src={image} alt={title} width={500} height={300} />
-                <button
-                  className="block mx-auto mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-                  onClick={() => setShowModal(false)}
-                >
-                  Close
-                </button>
-              </div>
-            </div>
+            <CourseModal
+              image={image}
+              title={title}
+              setShowModal={setShowModal}
+            />
           )}
         </div>
       </li>
