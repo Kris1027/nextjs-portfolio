@@ -5,6 +5,7 @@ import About from "./sections/about";
 import Projects from "./sections/projects";
 import Skills from "./sections/skills";
 import Courses from "./sections/courses";
+import Contact from "./sections/contact";
 
 export default function Home() {
   const { darkMode } = useDarkMode();
@@ -15,6 +16,7 @@ export default function Home() {
       <Skills />
       <Projects />
       <Courses />
+      <Contact />
     </main>
   );
 }

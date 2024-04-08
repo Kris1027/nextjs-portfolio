@@ -46,6 +46,7 @@ export default function Navigation() {
     { href: "#skills", text: "Skills" },
     { href: "#projects", text: "Projects" },
     { href: "#courses", text: "Courses" },
+    { href: "#contact", text: "Contact" },
   ];
 
   return (
