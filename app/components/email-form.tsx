@@ -1,5 +1,4 @@
 import { useState } from "react";
-import emailjs from "@emailjs/browser";
 import axios from "axios";
 
 export default function EmailForm() {
@@ -71,7 +70,7 @@ export default function EmailForm() {
         onChange={(e) => setMessage(e.target.value)}
       />
       <button
-        className="bg-pink-600 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded"
+        className="bg-pink-400 dark:bg-pink-700 text-white font-bold py-2 px-4 rounded active:scale-95"
         type="submit"
       >
         Send!
