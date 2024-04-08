@@ -42,13 +42,14 @@ export default function EmailForm() {
 
   return (
     <form
-      className="flex flex-col gap-3 md:w-3/4 mx-auto"
+      className="flex flex-col gap-3 w-full lg:w-3/4 mx-auto"
       onSubmit={handleSubmit}
     >
       <input
         className="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 px-4 py-2 rounded-lg focus:outline-none"
         type="text"
         placeholder="Your name"
+        required
         value={name}
         onChange={(e) => setName(e.target.value)}
       />
@@ -56,12 +57,14 @@ export default function EmailForm() {
         className="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 px-4 py-2 rounded-lg focus:outline-none"
         type="email"
         placeholder="Your email"
+        required
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
       <textarea
         className="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 px-4 py-2 rounded-lg focus:outline-none"
         placeholder="Your message"
+        required
         cols={30}
         rows={10}
         value={message}
