@@ -27,7 +27,7 @@ export default function ProjectItem({
 }: ProjectProps) {
   return (
     <li className="flex flex-col gap-4 bg-slate-400 bg-opacity-20 rounded-3xl p-4 text-slate-700 dark:text-slate-300 shadow-lg dark:shadow-sm dark:shadow-white">
-      <div className="relative w-full h-80 bg-black rounded-t-2xl overflow-hidden">
+      <div className="relative w-full h-56 md:h-64 bg-black rounded-t-2xl overflow-hidden">
         <Image
           className="scale-[1.7] rotate-12"
           src={image}
@@ -40,7 +40,7 @@ export default function ProjectItem({
         {technologies.map((tech, index) => {
           return (
             <li
-              className="border-[1px] border-slate-300 dark:border-slate-700 rounded-2xl py-1 px-5 hover:text-slate-500 hover:border-slate-500 dark:hover:text-slate-200 dark:hover:border-slate-200"
+              className="border-[1px] border-slate-300 dark:border-slate-700 rounded-2xl py-1 px-5 hover:text-slate-500 hover:border-slate-500 dark:hover:text-slate-200 dark:hover:border-slate-200 text-xs md:text-base"
               key={index}
             >
               {tech}
@@ -48,13 +48,13 @@ export default function ProjectItem({
           );
         })}
       </ul>
-      <h3 className="text-3xl">{title}</h3>
-      <ul className="list-disc pl-4 space-y-2 text-sm">
+      <h3 className="text-xl md:text-3xl">{title}</h3>
+      <ul className="list-disc pl-4 space-y-2 text-xs md:text-sm">
         {description.map((desc, index) => {
           return <li key={index}>{desc}</li>;
         })}
       </ul>
-      <div className="flex justify-between">
+      <div className="flex justify-between text-xs md:text-base">
         <a
           className="flex items-center gap-2 border-[1px] border-slate-300 dark:border-slate-700 py-1 px-3 cursor-pointer hover:text-blue-400 hover:border-blue-400 dark:hover:border-blue-400"
           href={live}
