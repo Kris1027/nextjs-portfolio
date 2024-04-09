@@ -2,6 +2,10 @@ import { useState } from "react";
 import axios from "axios";
 import { motion } from "framer-motion";
 import { fadeInAnimationVariants } from "./skill-item";
+import { FaUserEdit } from "react-icons/fa";
+import { MdAlternateEmail } from "react-icons/md";
+import { MdOutlineMessage } from "react-icons/md";
+import { IoSend } from "react-icons/io5";
 
 export default function EmailForm() {
   const [name, setName] = useState("");
@@ -43,43 +47,60 @@ export default function EmailForm() {
 
   return (
     <motion.form
-      className="flex flex-col gap-3 w-full lg:w-3/4 mx-auto"
+      className="flex flex-col gap-4 w-full md:w-3/4 mx-auto"
       onSubmit={handleSubmit}
       variants={fadeInAnimationVariants}
       initial="initial"
       whileInView="animate"
       viewport={{ once: true }}
     >
-      <input
-        className="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 px-4 py-2 rounded-lg focus:outline-none"
-        type="text"
-        placeholder="Your name"
-        required
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-      />
-      <input
-        className="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 px-4 py-2 rounded-lg focus:outline-none"
-        type="email"
-        placeholder="Your email"
-        required
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      <textarea
-        className="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 px-4 py-2 rounded-lg focus:outline-none"
-        placeholder="Your message"
-        required
-        cols={30}
-        rows={10}
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
-      />
+      <div className="relative">
+        <input
+          className="w-full bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 px-4 py-2 rounded-lg focus:outline-none pl-14"
+          type="text"
+          placeholder="Your name"
+          required
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+        <FaUserEdit
+          size={30}
+          className="text-pink-400 dark:text-pink-700 absolute top-1 left-3"
+        />
+      </div>
+      <div className="relative">
+        <input
+          className="w-full bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 px-4 py-2 rounded-lg focus:outline-none pl-14"
+          type="email"
+          placeholder="Your email"
+          required
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <MdAlternateEmail
+          size={30}
+          className="text-pink-400 dark:text-pink-700 absolute top-1 left-3"
+        />
+      </div>
+      <div className="relative">
+        <textarea
+          className="w-full bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 px-4 py-2 rounded-lg focus:outline-none pl-14"
+          placeholder="Your message"
+          rows={10}
+          required
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+        />
+        <MdOutlineMessage
+          size={30}
+          className="text-pink-400 dark:text-pink-700 absolute top-1 left-3"
+        />
+      </div>
       <button
-        className="bg-pink-400 dark:bg-pink-700 text-white font-bold py-2 px-4 rounded active:scale-95"
+        className="bg-pink-400 dark:bg-pink-700 text-white font-bold py-4 rounded hover:bg-pink-500 dark:hover:bg-pink-800 active:scale-95 flex justify-center items-center"
         type="submit"
       >
-        Send!
+        <IoSend size={30} />
       </button>
     </motion.form>
   );
