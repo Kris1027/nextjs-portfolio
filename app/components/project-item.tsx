@@ -1,13 +1,12 @@
 import Image from "next/image";
 import { type ProjectProps } from "../data/projects-data";
 import { GoLinkExternal } from "react-icons/go";
-import { fadeInAnimationVariants } from "./skill-item";
 import { motion } from "framer-motion";
 
 export const cardAnimationVariants = {
   initial: (index: number) => ({
     opacity: 0,
-    x: index % 2 === 0 ? -200 : 200,
+    x: index % 2 === 0 ? 200 : -200,
   }),
   animate: (index: number) => ({
     opacity: 1,
@@ -31,7 +30,7 @@ export default function ProjectItem({
   return (
     <motion.li
       className="flex flex-col gap-4 bg-slate-400 bg-opacity-20 rounded-3xl p-4 text-slate-700 dark:text-slate-300 shadow-lg dark:shadow-sm dark:shadow-white"
-      variants={fadeInAnimationVariants}
+      variants={cardAnimationVariants}
       initial="initial"
       whileInView="animate"
       custom={id}

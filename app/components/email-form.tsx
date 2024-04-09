@@ -1,5 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
+import { motion } from "framer-motion";
+import { fadeInAnimationVariants } from "./skill-item";
 
 export default function EmailForm() {
   const [name, setName] = useState("");
@@ -40,9 +42,13 @@ export default function EmailForm() {
   };
 
   return (
-    <form
+    <motion.form
       className="flex flex-col gap-3 w-full lg:w-3/4 mx-auto"
       onSubmit={handleSubmit}
+      variants={fadeInAnimationVariants}
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: true }}
     >
       <input
         className="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 px-4 py-2 rounded-lg focus:outline-none"
@@ -75,6 +81,6 @@ export default function EmailForm() {
       >
         Send!
       </button>
-    </form>
+    </motion.form>
   );
 }
