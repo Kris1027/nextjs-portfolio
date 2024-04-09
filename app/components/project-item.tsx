@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { type ProjectProps } from "../data/projects-data";
 import { GoLinkExternal } from "react-icons/go";
+import { fadeInAnimationVariants } from "./skill-item";
+import { motion } from "framer-motion";
 
 export const cardAnimationVariants = {
   initial: (index: number) => ({
@@ -18,6 +20,7 @@ export const cardAnimationVariants = {
 };
 
 export default function ProjectItem({
+  id,
   title,
   image,
   live,
@@ -26,7 +29,14 @@ export default function ProjectItem({
   description,
 }: ProjectProps) {
   return (
-    <li className="flex flex-col gap-4 bg-slate-400 bg-opacity-20 rounded-3xl p-4 text-slate-700 dark:text-slate-300 shadow-lg dark:shadow-sm dark:shadow-white">
+    <motion.li
+      className="flex flex-col gap-4 bg-slate-400 bg-opacity-20 rounded-3xl p-4 text-slate-700 dark:text-slate-300 shadow-lg dark:shadow-sm dark:shadow-white"
+      variants={fadeInAnimationVariants}
+      initial="initial"
+      whileInView="animate"
+      custom={id}
+      viewport={{ once: true }}
+    >
       <div className="relative w-full h-56 md:h-64 bg-black rounded-t-2xl overflow-hidden">
         <Image
           className="scale-[1.7] rotate-12"
@@ -74,6 +84,6 @@ export default function ProjectItem({
           <GoLinkExternal />
         </a>
       </div>
-    </li>
+    </motion.li>
   );
 }
