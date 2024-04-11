@@ -11,6 +11,11 @@ import { TbBrandNextjs } from "react-icons/tb";
 import { SiVite } from "react-icons/si";
 import { SiAstro } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
+import { FaSass } from "react-icons/fa";
+import { SiStyledcomponents } from "react-icons/si";
+import { SiMysql } from "react-icons/si";
+import { SiJquery } from "react-icons/si";
+import { FaGitAlt } from "react-icons/fa";
 
 export type SkillsIconsProps = {
   id: number;
@@ -24,7 +29,7 @@ export const skillsIcons: SkillsIconsProps[] = [
   {
     id: 1,
     icon: <FaHtml5 />,
-    color: "#f59e0b",
+    color: "#ef4444",
     name: "HTML5",
   },
   {
@@ -53,48 +58,78 @@ export const skillsIcons: SkillsIconsProps[] = [
   },
   {
     id: 6,
+    icon: <SiJquery />,
+    color: "#2563eb",
+    name: "JQuery",
+  },
+  {
+    id: 7,
     icon: <FaNodeJs />,
     color: "#22c55e",
     name: "Node",
   },
   {
-    id: 7,
+    id: 8,
     icon: <SiExpress />,
     color: "#f59e0b",
     name: "Express",
   },
   {
-    id: 8,
+    id: 9,
     icon: <DiMongodb />,
     color: "#052e16",
     name: "MongoDB",
   },
   {
-    id: 9,
+    id: 10,
     icon: <BiLogoPostgresql />,
     color: "#3b82f6",
     name: "PostgreSQL",
   },
   {
-    id: 10,
+    id: 11,
+    icon: <SiMysql />,
+    color: "#007c77",
+    name: "MySQL",
+  },
+  {
+    id: 12,
     icon: <SiTailwindcss />,
     color: "#06b6d4",
     name: "Tailwind",
   },
   {
-    id: 11,
+    id: 13,
+    icon: <FaSass />,
+    color: "#bf1363",
+    name: "SCSS/SASS",
+  },
+  {
+    id: 14,
+    icon: <SiStyledcomponents />,
+    color: "#f59e0b",
+    name: "Styled-Components",
+  },
+  {
+    id: 15,
     icon: <TbBrandNextjs />,
     color: "#94a3b8",
     name: "Next",
   },
   {
-    id: 12,
+    id: 16,
     icon: <SiVite />,
     color: "#7c3aed",
     name: "Vite",
   },
   {
-    id: 13,
+    id: 17,
+    icon: <FaGitAlt />,
+    color: "#ed474a",
+    name: "Git",
+  },
+  {
+    id: 18,
     icon: <SiAstro />,
     color: "#ef4444",
     name: "Astro",
