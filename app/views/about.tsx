@@ -1,12 +1,13 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { splitStringUsingRegex } from "../components/util/splitStringUsingRegex";
+import { splitStringUsingRegex } from "../util/splitStringUsingRegex";
 
 import GithubImg from "../../public/github.png";
 
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
+import Section from "../ui/section";
 
 const descripion =
   "Hi there! I am a web developer who is passionate about creating user-friendly and visually appealing websites. I have been learning to code since November 2022, and I have experience with HTML, CSS, JavaScript, React, and TypeScript. I am always eager to learn new technologies and improve my skills. I believe that web development is a powerfull tool that can be used to create positive change in the world. I am excited to use my skills to build websites that make a difference. I am currently looking for a job as a frontend developer, so if you think I would be a good fit for your team, please don't hesitate to reach out. Thank you for your time!";
@@ -56,10 +57,7 @@ export default function About() {
   ];
 
   return (
-    <section
-      className="pt-40 pb-5 sm:px-10 bg-white dark:bg-black ease-in-out duration-500 min-h-screen flex flex-col gap-10 justify-center overflow-hidden"
-      id="about"
-    >
+    <Section id="about">
       <div>
         <motion.h1
           initial="hidden"
@@ -139,6 +137,6 @@ export default function About() {
       >
         <Image src={GithubImg} alt="image from github" fill />
       </motion.div>
-    </section>
+    </Section>
   );
 }

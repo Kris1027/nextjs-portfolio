@@ -1,12 +1,10 @@
 import ProjectItem from "../components/project-item";
+import Section from "../ui/section";
 import { projects } from "../data/projects-data";
 
 export default function Projects() {
   return (
-    <section
-      className="pt-40 px-2 sm:px-10 bg-white dark:bg-black min-h-screen overflow-hidden flex flex-col gap-5 justify-center ease-in-out duration-500"
-      id="projects"
-    >
+    <Section id="projects">
       <h2 className="text-2xl pt-2 dark:text-gray-500 pb-10 text-center">
         Projects
       </h2>
@@ -39,6 +37,6 @@ export default function Projects() {
         </a>{" "}
         profile!
       </p>
-    </section>
+    </Section>
   );
 }

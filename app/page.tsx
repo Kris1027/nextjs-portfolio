@@ -1,11 +1,11 @@
 "use client";
 import { useDarkMode } from "./theme/dark-mode-context";
 
-import About from "./sections/about";
-import Projects from "./sections/projects";
-import Skills from "./sections/skills";
-import Courses from "./sections/courses";
-import Contact from "./sections/contact";
+import About from "./views/about";
+import Projects from "./views/projects";
+import Skills from "./views/skills";
+import Courses from "./views/courses";
+import Contact from "./views/contact";
 
 export default function Home() {
   const { darkMode } = useDarkMode();
