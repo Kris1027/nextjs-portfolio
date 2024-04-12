@@ -1,13 +1,12 @@
 import ProjectItem from "../components/project-item";
 import Section from "../ui/section";
 import { projects } from "../data/projects-data";
+import Heading from "../ui/heading";
 
 export default function Projects() {
   return (
     <Section id="projects">
-      <h2 className="text-2xl pt-2 dark:text-gray-500 pb-10 text-center">
-        Projects
-      </h2>
+      <Heading>Projects</Heading>
       <p className="text-sm md:text-lg pb-5 leading-8 text-gray-800 dark:text-gray-600 lg:w-1/2 mx-auto text-center">
         Here are some of the projects I&apos;ve worked on.
       </p>
