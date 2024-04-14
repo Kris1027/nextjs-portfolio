@@ -97,7 +97,7 @@ export default function EmailForm() {
         />
       </div>
       <button
-        className="bg-pink-400 dark:bg-pink-700 text-white font-bold py-4 rounded hover:bg-pink-500 dark:hover:bg-pink-800 active:scale-95 flex justify-center items-center"
+        className="bg-pink-400 dark:bg-pink-700 text-white font-bold py-2 md:py-4 rounded hover:bg-pink-500 dark:hover:bg-pink-800 active:scale-95 flex justify-center items-center"
         type="submit"
       >
         <IoSend size={30} />

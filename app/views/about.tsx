@@ -80,7 +80,7 @@ export default function About() {
           initial="hidden"
           whileInView="visible"
           transition={{ staggerChildren: 0.2 }}
-          className="text-2xl pt-2 dark:text-gray-500 pb-10 text-center"
+          className="text-2xl pt-2 text-gray-800 dark:text-gray-600 pb-10 text-center"
           viewport={{ once: true }}
         >
           {professionChars.map((char, index) => (

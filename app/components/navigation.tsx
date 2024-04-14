@@ -51,7 +51,7 @@ export default function Navigation() {
 
   return (
     <nav className={darkMode ? "dark" : ""}>
-      <div className="flex justify-between p-10 bg-white dark:bg-black text-gray-800 dark:text-gray-300 fixed w-full z-40 ease-in-out duration-500">
+      <div className="flex justify-between py-5 px-10 bg-white dark:bg-black text-pink-400 dark:text-pink-700 fixed w-full z-40 ease-in-out duration-500">
         {/* Desktop menu */}
         {matches && (
           <div>
@@ -92,11 +92,11 @@ export default function Navigation() {
           >
             <motion.span
               animate={{ rotateZ: toggled ? 45 : 0, y: toggled ? 8 : 0 }}
-              className="block h-0.5 w-8 bg-black dark:bg-gray-300"
+              className="block h-0.5 w-8 bg-pink-400 dark:bg-pink-700"
             ></motion.span>
             <motion.span
               animate={{ width: toggled ? 0 : 24 }}
-              className="block h-0.5 w-6 bg-black dark:bg-gray-300"
+              className="block h-0.5 w-6 bg-pink-400 dark:bg-pink-700"
             ></motion.span>
             <motion.span
               animate={{
@@ -104,7 +104,7 @@ export default function Navigation() {
                 y: toggled ? -8 : 0,
                 width: toggled ? 32 : 16,
               }}
-              className="block h-0.5 w-4 bg-black dark:bg-gray-300"
+              className="block h-0.5 w-4 bg-pink-400 dark:bg-pink-700"
             ></motion.span>
           </motion.div>
         )}
@@ -112,7 +112,7 @@ export default function Navigation() {
         {/* Mobile menu */}
         {toggled && !matches && (
           <motion.ul
-            className="fixed flex flex-col justify-center gap-24 items-center bg-white dark:bg-black dark:text-gray-300 bottom-0 left-0 w-full h-screen text-4xl z-40"
+            className="fixed flex flex-col justify-center gap-24 items-center bg-white dark:bg-black text-pink-400 dark:text-pink-700 bottom-0 left-0 w-full h-screen text-4xl z-40"
             variants={navMotion}
             animate="visible"
             initial="hidden"
