@@ -2,14 +2,13 @@ import ProjectItem from "../components/project-item";
 import Section from "../ui/section";
 import { projects } from "../data/projects-data";
 import Heading from "../ui/heading";
+import Paragraph from "../ui/paragraph";
 
 export default function Projects() {
   return (
     <Section id="projects">
       <Heading>Projects</Heading>
-      <p className="text-sm md:text-lg pb-5 leading-8 text-gray-800 dark:text-gray-600 lg:w-1/2 mx-auto text-center">
-        Here are some of the projects I&apos;ve worked on.
-      </p>
+      <Paragraph>Here are some of the projects I&apos;ve worked on.</Paragraph>
       <ul className="grid grid-cols-1 lg:grid-cols-2 gap-10 place-items-center mx-auto xl:w-5/6">
         {projects.map((project) => (
           <ProjectItem
