@@ -111,7 +111,7 @@ export default function About() {
           ))}
         </motion.p>
       </div>
-      <ul className="text-5xl lg:text-7xl flex justify-center gap-16 text-gray-600">
+      <ul className="text-5xl lg:text-7xl flex justify-center gap-16 text-gray-600 mb-10 md:mb-20">
         {socials.map((social, index) => (
           <motion.li
             key={index}
@@ -129,7 +129,7 @@ export default function About() {
         ))}
       </ul>
       <motion.div
-        className="relative rounded-full w-56 h-56 sm:w-96 sm:h-96 md:w-[29rem] md:h-[29rem] lg:w-[32rem] lg:h-[32rem] mx-auto overflow-hidden shadow-lg shadow-zinc-800 dark:shadow-zinc-600"
+        className="relative rounded-full w-56 h-56 sm:w-96 sm:h-96 md:w-[29rem] md:h-[29rem] lg:w-[32rem] lg:h-[32rem] xl:h-[40rem] xl:w-[40rem] mx-auto overflow-hidden shadow-lg shadow-zinc-800 dark:shadow-zinc-600"
         variants={fadeInAnimationVariants}
         initial="initial"
         whileInView="animate"
