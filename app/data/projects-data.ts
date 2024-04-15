@@ -31,9 +31,8 @@ export const projects: ProjectProps[] = [
       "Vite",
     ],
     description: [
-      "The app allows users to search for movies and add them to their favorites list.",
-      "The app uses the TMDB API to fetch movie data.",
-      "Implemented a responsive design that adapts to different screen sizes.",
+      "A collection of 25 React projects.",
+      "Learing how to build useful React projects and components with TypeScript.",
     ],
   },
   {
@@ -42,11 +41,17 @@ export const projects: ProjectProps[] = [
     image: MovieRatingImg,
     live: "https://nextjs-movie-rating-app.vercel.app/",
     github: "https://github.com/Kris1027/nextjs-movie-rating-app",
-    technologies: ["Next.js", "Tailwind CSS", "React", "TypeScript"],
+    technologies: [
+      "Next.js",
+      "Tailwind CSS",
+      "React",
+      "TypeScript",
+      "Framer Motion",
+    ],
     description: [
       "The app allows users to search for movies and add them to their favorites list.",
       "The app uses the TMDB API to fetch movie data.",
-      "Implemented a responsive design that adapts to different screen sizes.",
+      "Working with API.",
     ],
   },
   {
@@ -55,11 +60,18 @@ export const projects: ProjectProps[] = [
     image: PortfolioImg,
     live: "https://kris1027-nextjs-portfolio.vercel.app/",
     github: "https://github.com/Kris1027/nextjs-portfolio",
-    technologies: ["Next.js", "Tailwind CSS", "React", "TypeScript"],
+    technologies: [
+      "Next.js",
+      "Tailwind CSS",
+      "React",
+      "TypeScript",
+      "Framer Motion",
+      "Toastify",
+    ],
     description: [
-      "The app allows users to search for movies and add them to their favorites list.",
-      "The app uses the TMDB API to fetch movie data.",
+      "Working with animations using Framer Motion and Toastify.",
       "Implemented a responsive design that adapts to different screen sizes.",
+      "Implemented emailjs for sending emails.",
     ],
   },
   {
@@ -68,11 +80,17 @@ export const projects: ProjectProps[] = [
     image: HummerMushroomsImg,
     live: "https://hummer-mushrooms.netlify.app/",
     github: "https://github.com/Kris1027/mushrooms-shop",
-    technologies: ["React", "React Router", "Tailwind CSS", "TypeScript"],
+    technologies: [
+      "React",
+      "React Router",
+      "Tailwind CSS",
+      "TypeScript",
+      "React Redux",
+    ],
     description: [
-      "The app allows users to search for movies and add them to their favorites list.",
-      "The app uses the TMDB API to fetch movie data.",
-      "Implemented a responsive design that adapts to different screen sizes.",
+      "Routing with React Router.",
+      "State management with React Redux.",
+      "Styled components as a CSS-in-JS library.",
     ],
   },
   {
@@ -83,9 +101,9 @@ export const projects: ProjectProps[] = [
     github: "https://github.com/Kris1027/rest-countries-api?tab=readme-ov-file",
     technologies: ["React", "Tailwind CSS"],
     description: [
-      "The app allows users to search for movies and add them to their favorites list.",
-      "The app uses the TMDB API to fetch movie data.",
+      "Working with API.",
       "Implemented a responsive design that adapts to different screen sizes.",
+      "Dark mode with React Context.",
     ],
   },
   {
@@ -96,9 +114,8 @@ export const projects: ProjectProps[] = [
     github: "https://github.com/Kris1027/Frela---The-Game",
     technologies: ["HTML", "CSS", "JavaScript"],
     description: [
-      "The app allows users to search for movies and add them to their favorites list.",
-      "The app uses the TMDB API to fetch movie data.",
-      "Implemented a responsive design that adapts to different screen sizes.",
+      "Implementing keyboard controls.",
+      "Implementing game mechanics.",
     ],
   },
 ];
