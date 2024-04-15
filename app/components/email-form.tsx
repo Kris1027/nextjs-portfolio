@@ -35,7 +35,7 @@ export default function EmailForm() {
     try {
       await axios.post("https://api.emailjs.com/api/v1.0/email/send", data);
       toast.success("Email sent successfully!", {
-        position: "top-center",
+        position: "bottom-center",
         style: {
           background: "#000",
           color: "#04E824",
@@ -47,7 +47,7 @@ export default function EmailForm() {
     } catch (error) {
       console.error(error);
       toast.error("Something went wrong!", {
-        position: "top-center",
+        position: "bottom-center",
         style: {
           background: "#000",
           color: "#BD1E1E",
