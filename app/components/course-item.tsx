@@ -1,24 +1,26 @@
 "use client";
 import { useState } from "react";
-import Image, { StaticImageData } from "next/image";
-import { GoLinkExternal } from "react-icons/go";
-import { PiCertificateLight } from "react-icons/pi";
-import CourseModal from "./course-modal";
 import { motion } from "framer-motion";
 import { fadeInAnimationVariants } from "./skill-item";
+import { type CoursesListProps } from "../data/courses-data";
+import CourseModal from "./course-modal";
+import { GoLinkExternal } from "react-icons/go";
+import { PiCertificateLight } from "react-icons/pi";
+import { createPortal } from "react-dom";
 
 export default function CourseItem({
   id,
   title,
   image,
   link,
-}: {
-  id: number;
-  title: string;
-  image: StaticImageData;
-  link: string;
-}) {
+}: CoursesListProps) {
   const [showModal, setShowModal] = useState(false);
+  const modal =
+    typeof window !== "undefined" &&
+    createPortal(
+      <CourseModal image={image} title={title} setShowModal={setShowModal} />,
+      document.body
+    );
 
   function handleModal(getCurrentId: number) {
     if (getCurrentId === id) {
@@ -54,13 +56,7 @@ export default function CourseItem({
             Show certificate
             <PiCertificateLight size={30} />
           </button>
-          {image && showModal && (
-            <CourseModal
-              image={image}
-              title={title}
-              setShowModal={setShowModal}
-            />
-          )}
+          {image && showModal && modal}
         </div>
       </motion.li>
     </>
