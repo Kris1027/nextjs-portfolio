@@ -97,7 +97,7 @@ export default function About() {
           initial="hidden"
           whileInView="visible"
           transition={{ staggerChildren: 0.006 }}
-          className="text-sm px-2 md:text-lg lg:text-xl pb-5 leading-8 text-gray-800 dark:text-gray-600 xl:w-3/4 mx-auto text-center"
+          className="text-sm md:text-lg lg:text-xl pb-5 leading-8 text-gray-800 dark:text-gray-600 xl:w-3/4 mx-auto text-center"
           viewport={{ once: true }}
         >
           {descripionChars.map((char, index) => (

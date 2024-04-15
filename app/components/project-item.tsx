@@ -29,7 +29,7 @@ export default function ProjectItem({
 }: ProjectProps) {
   return (
     <motion.li
-      className="flex flex-col gap-4 bg-slate-400 bg-opacity-20 rounded-3xl p-4 text-slate-700 dark:text-slate-300 shadow-lg dark:shadow-sm dark:shadow-white"
+      className="flex flex-col gap-4 w-full bg-slate-400 bg-opacity-20 rounded-3xl p-3 text-slate-700 dark:text-slate-300 shadow-lg dark:shadow-sm dark:shadow-white"
       variants={cardAnimationVariants}
       initial="initial"
       whileInView="animate"
