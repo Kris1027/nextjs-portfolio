@@ -5,6 +5,7 @@ import ReactImg from "../../public/courses/React.png";
 import ReactTSImg from "../../public/courses/React-TypeScript.png";
 import TypeScriptImg from "../../public/courses/TypeScript.png";
 import ZrozumiecImg from "../../public/courses/ZrozumiecReact.png";
+import SqlImg from "../../public/courses/Sql.png";
 
 export type CoursesListProps = {
   id: number;
@@ -43,5 +44,11 @@ export const coursesList: CoursesListProps[] = [
     title: "Zrozumieć React",
     image: ZrozumiecImg,
     link: "https://zrozumreact.pl/",
+  },
+  {
+    id: 6,
+    title: "The complete SQL bootcamp: Go from Zero to Hero",
+    image: SqlImg,
+    link: "https://www.udemy.com/course/the-complete-sql-bootcamp/?couponCode=24T3FS41524",
   },
 ];
