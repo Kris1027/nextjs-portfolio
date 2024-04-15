@@ -6,6 +6,7 @@ import { FaUserEdit } from "react-icons/fa";
 import { MdAlternateEmail } from "react-icons/md";
 import { MdOutlineMessage } from "react-icons/md";
 import { IoSend } from "react-icons/io5";
+import { toast } from "react-toastify";
 
 export default function EmailForm() {
   const [name, setName] = useState("");
@@ -32,16 +33,26 @@ export default function EmailForm() {
     };
 
     try {
-      const res = await axios.post(
-        "https://api.emailjs.com/api/v1.0/email/send",
-        data
-      );
-      console.log(res.data);
+      await axios.post("https://api.emailjs.com/api/v1.0/email/send", data);
+      toast.success("Email sent successfully!", {
+        position: "top-center",
+        style: {
+          background: "#000",
+          color: "#04E824",
+        },
+      });
       setName("");
       setEmail("");
       setMessage("");
     } catch (error) {
       console.error(error);
+      toast.error("Something went wrong!", {
+        position: "top-center",
+        style: {
+          background: "#000",
+          color: "#BD1E1E",
+        },
+      });
     }
   };
 

@@ -1,4 +1,7 @@
 "use client";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import { useDarkMode } from "./theme/dark-mode-context";
 
 import About from "./views/about";
@@ -17,6 +20,7 @@ export default function Home() {
       <Projects />
       <Courses />
       <Contact />
+      <ToastContainer />
     </main>
   );
 }
