@@ -1,9 +1,9 @@
-import HummerMushroomsImg from "../../public/projects/hummer-mushrooms.png";
 import MovieRatingImg from "../../public/projects/movie-rating.png";
 import JSGameImg from "../../public/projects/frela-game.png";
 import PortfolioImg from "../../public/projects/portfolio.png";
 import CountriesImg from "../../public/projects/countries.png";
 import ReactProjectsImg from "../../public/projects/25React.png";
+import QuizImg from "../../public/projects/quiz.png";
 import { StaticImageData } from "next/image";
 
 export type ProjectProps = {
@@ -76,21 +76,14 @@ export const projects: ProjectProps[] = [
   },
   {
     id: 4,
-    title: "E-commerce site",
-    image: HummerMushroomsImg,
-    live: "https://hummer-mushrooms.netlify.app/",
-    github: "https://github.com/Kris1027/mushrooms-shop",
-    technologies: [
-      "React",
-      "React Router",
-      "Tailwind CSS",
-      "TypeScript",
-      "React Redux",
-    ],
+    title: "React Quiz",
+    image: QuizImg,
+    live: "https://react-quiz-app-rosy-nine.vercel.app/",
+    github: "https://github.com/Kris1027/react-quiz-app",
+    technologies: ["React", "Tailwind CSS", "SQLite"],
     description: [
-      "Routing with React Router.",
-      "State management with React Redux.",
-      "Styled components as a CSS-in-JS library.",
+      "Working with database.",
+      "using useReducer hook for state management.",
     ],
   },
   {
