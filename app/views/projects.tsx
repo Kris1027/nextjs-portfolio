@@ -26,7 +26,7 @@ export default function Projects() {
       <p className="text-sm md:text-lg leading-8 text-secondary dark:text-secondaryDark lg:w-1/2 mx-auto text-center pt-10">
         More you can find on my{" "}
         <a
-          className="text-primary dark:text-primaryDark hover:underline"
+          className="text-primary dark:text-primaryDark hover:underline font-bold"
           href="https://github.com/Kris1027"
           target="_blank"
           rel="norefferer"

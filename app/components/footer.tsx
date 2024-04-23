@@ -13,7 +13,7 @@ export default function Footer() {
             href="https://www.linkedin.com/in/krzysztof-obarzanek-6b8803254/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary dark:text-primaryDark hover:underline"
+            className="text-primary dark:text-primaryDark hover:underline font-bold"
           >
             Kris1027
           </a>

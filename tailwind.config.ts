@@ -9,9 +9,6 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        CNR: "code-new-roman",
-      },
       colors: {
         primary: "#0d9488",
         primaryDark: "#059669",
