@@ -80,7 +80,7 @@ export default function About() {
           initial="hidden"
           whileInView="visible"
           transition={{ staggerChildren: 0.2 }}
-          className="text-2xl pt-2 text-gray-800 dark:text-gray-600 pb-10 text-center"
+          className="text-2xl pt-2 text-secondary dark:text-secondaryDark pb-10 text-center"
           viewport={{ once: true }}
         >
           {professionChars.map((char, index) => (
@@ -97,7 +97,7 @@ export default function About() {
           initial="hidden"
           whileInView="visible"
           transition={{ staggerChildren: 0.006 }}
-          className="text-sm md:text-lg lg:text-xl pb-5 leading-8 text-gray-800 dark:text-gray-600 xl:w-3/4 mx-auto text-center"
+          className="text-sm md:text-lg lg:text-xl pb-5 leading-8 text-secondary dark:text-secondaryDark xl:w-3/4 mx-auto text-center"
           viewport={{ once: true }}
         >
           {descripionChars.map((char, index) => (
@@ -111,7 +111,7 @@ export default function About() {
           ))}
         </motion.p>
       </div>
-      <ul className="text-5xl lg:text-7xl flex justify-center gap-16 text-gray-600 mb-10 md:mb-20">
+      <ul className="text-5xl lg:text-7xl flex justify-center gap-16 text-secondary dark:text-secondaryDark mb-10 md:mb-20">
         {socials.map((social, index) => (
           <motion.li
             key={index}
