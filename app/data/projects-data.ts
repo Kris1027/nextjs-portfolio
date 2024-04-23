@@ -1,15 +1,7 @@
-import MovieRatingImg from "../../public/projects/movie-rating.png";
-import JSGameImg from "../../public/projects/frela-game.png";
-import PortfolioImg from "../../public/projects/portfolio.png";
-import CountriesImg from "../../public/projects/countries.png";
-import ReactProjectsImg from "../../public/projects/25React.png";
-import QuizImg from "../../public/projects/quiz.png";
-import { StaticImageData } from "next/image";
-
 export type ProjectProps = {
   id: number;
   title: string;
-  image: StaticImageData;
+  image: string;
   live: string;
   github: string;
   technologies: string[];
@@ -20,7 +12,8 @@ export const projects: ProjectProps[] = [
   {
     id: 1,
     title: "25 React projects",
-    image: ReactProjectsImg,
+    image:
+      "https://ik.imagekit.io/1027/portfolio-projects/25React.png?updatedAt=1713867200682",
     live: "https://25-react-projects.netlify.app/",
     github: "https://github.com/Kris1027/25-react-projects",
     technologies: [
@@ -38,7 +31,8 @@ export const projects: ProjectProps[] = [
   {
     id: 2,
     title: "Movie rating app",
-    image: MovieRatingImg,
+    image:
+      "https://ik.imagekit.io/1027/portfolio-projects/movie-rating.png?updatedAt=1713867178600",
     live: "https://nextjs-movie-rating-app.vercel.app/",
     github: "https://github.com/Kris1027/nextjs-movie-rating-app",
     technologies: [
@@ -57,7 +51,8 @@ export const projects: ProjectProps[] = [
   {
     id: 3,
     title: "Portfolio",
-    image: PortfolioImg,
+    image:
+      "https://ik.imagekit.io/1027/portfolio-projects/portfolio.png?updatedAt=1713867195662",
     live: "https://kris1027-nextjs-portfolio.vercel.app/",
     github: "https://github.com/Kris1027/nextjs-portfolio",
     technologies: [
@@ -77,7 +72,8 @@ export const projects: ProjectProps[] = [
   {
     id: 4,
     title: "React Quiz",
-    image: QuizImg,
+    image:
+      "https://ik.imagekit.io/1027/portfolio-projects/quiz.png?updatedAt=1713867198417",
     live: "https://react-quiz-app-rosy-nine.vercel.app/",
     github: "https://github.com/Kris1027/react-quiz-app",
     technologies: ["React", "Tailwind CSS", "SQLite"],
@@ -89,7 +85,8 @@ export const projects: ProjectProps[] = [
   {
     id: 5,
     title: "Countries rest API",
-    image: CountriesImg,
+    image:
+      "https://ik.imagekit.io/1027/portfolio-projects/countries.png?updatedAt=1713867202810",
     live: "https://effortless-churros-ad658b.netlify.app/",
     github: "https://github.com/Kris1027/rest-countries-api?tab=readme-ov-file",
     technologies: ["React", "Tailwind CSS"],
@@ -102,7 +99,8 @@ export const projects: ProjectProps[] = [
   {
     id: 6,
     title: "JavaScript game",
-    image: JSGameImg,
+    image:
+      "https://ik.imagekit.io/1027/portfolio-projects/frela-game.png?updatedAt=1713867192786",
     live: "https://kris1027.github.io/Frela---The-Game/",
     github: "https://github.com/Kris1027/Frela---The-Game",
     technologies: ["HTML", "CSS", "JavaScript"],

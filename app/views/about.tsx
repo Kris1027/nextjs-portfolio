@@ -2,8 +2,6 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { splitStringUsingRegex } from "../util/splitStringUsingRegex";
 
-import GithubImg from "../../public/github.png";
-
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
@@ -135,7 +133,12 @@ export default function About() {
         whileInView="animate"
         viewport={{ once: true }}
       >
-        <Image src={GithubImg} alt="image from github" fill />
+        <Image
+          src="https://ik.imagekit.io/1027/nextjs-portfolio/IMG_4354.jpeg?updatedAt=1713868861634"
+          alt="image from github"
+          fill
+          objectFit="cover"
+        />
       </motion.div>
     </Section>
   );

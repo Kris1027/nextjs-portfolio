@@ -1,16 +1,7 @@
-import { StaticImageData } from "next/image";
-
-import JavaScriptImg from "../../public/courses/JavaScript.png";
-import ReactImg from "../../public/courses/React.png";
-import ReactTSImg from "../../public/courses/React-TypeScript.png";
-import TypeScriptImg from "../../public/courses/TypeScript.png";
-import ZrozumiecImg from "../../public/courses/ZrozumiecReact.png";
-import SqlImg from "../../public/courses/Sql.png";
-
 export type CoursesListProps = {
   id: number;
   title: string;
-  image: StaticImageData;
+  image: string;
   link: string;
 };
 
@@ -18,37 +9,43 @@ export const coursesList: CoursesListProps[] = [
   {
     id: 1,
     title: "The Complete JavaScript Course 2023: From Zero to Expert!",
-    image: JavaScriptImg,
+    image:
+      "https://ik.imagekit.io/1027/nextjs-portfolio/portfolio-courses/JavaScript.png?updatedAt=1713868108239",
     link: "https://www.udemy.com/course/the-complete-javascript-course/",
   },
   {
     id: 2,
     title: "The Ultimate React Course 2023: React, Redux & More",
-    image: ReactImg,
+    image:
+      "https://ik.imagekit.io/1027/nextjs-portfolio/portfolio-courses/React.png?updatedAt=1713868108240",
     link: "https://www.udemy.com/course/the-ultimate-react-course/",
   },
   {
     id: 3,
     title: "React & TypeScript - The Practical Guide",
-    image: ReactTSImg,
+    image:
+      "https://ik.imagekit.io/1027/nextjs-portfolio/portfolio-courses/React-TypeScript.png?updatedAt=1713868108225",
     link: "https://www.udemy.com/course/react-typescript-the-practical-guide/",
   },
   {
     id: 4,
     title: "Understanding TypeScript",
-    image: TypeScriptImg,
+    image:
+      "https://ik.imagekit.io/1027/nextjs-portfolio/portfolio-courses/TypeScript.png?updatedAt=1713868113254",
     link: "https://www.udemy.com/course/understanding-typescript/",
   },
   {
     id: 5,
     title: "Zrozumieć React",
-    image: ZrozumiecImg,
+    image:
+      "https://ik.imagekit.io/1027/nextjs-portfolio/portfolio-courses/ZrozumiecReact.png?updatedAt=1713868108371",
     link: "https://zrozumreact.pl/",
   },
   {
     id: 6,
     title: "The complete SQL bootcamp: Go from Zero to Hero",
-    image: SqlImg,
+    image:
+      "https://ik.imagekit.io/1027/nextjs-portfolio/portfolio-courses/Sql.png?updatedAt=1713868108613",
     link: "https://www.udemy.com/course/the-complete-sql-bootcamp/?couponCode=24T3FS41524",
   },
 ];

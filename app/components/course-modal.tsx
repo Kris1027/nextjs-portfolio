@@ -1,11 +1,11 @@
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 
 export default function CourseModal({
   image,
   title,
   setShowModal,
 }: {
-  image: StaticImageData;
+  image: string;
   title: string;
   setShowModal: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
