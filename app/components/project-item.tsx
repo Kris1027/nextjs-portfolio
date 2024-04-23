@@ -2,6 +2,7 @@ import Image from "next/image";
 import { type ProjectProps } from "../data/projects-data";
 import { GoLinkExternal } from "react-icons/go";
 import { motion } from "framer-motion";
+import { imageKitLoader } from "../util/image-kit-loader";
 
 export const cardAnimationVariants = {
   initial: (index: number) => ({
@@ -38,11 +39,13 @@ export default function ProjectItem({
     >
       <div className="relative w-full h-56 md:h-64 bg-black rounded-t-2xl overflow-hidden">
         <Image
-          className="scale-[1.7] rotate-12"
+          className="rotate-12"
+          loader={imageKitLoader}
           src={image}
+          sizes="(min-width: 768px) 564px, (min-width: 384px) 224px"
           alt={title}
-          fill
-          objectFit="cover"
+          width={564}
+          height={233}
         />
       </div>
       <ul className="flex items-center flex-wrap gap-1">

@@ -12,8 +12,7 @@ export const projects: ProjectProps[] = [
   {
     id: 1,
     title: "25 React projects",
-    image:
-      "https://ik.imagekit.io/1027/portfolio-projects/25React.png?updatedAt=1713867200682",
+    image: "web-25react.png",
     live: "https://25-react-projects.netlify.app/",
     github: "https://github.com/Kris1027/25-react-projects",
     technologies: [
@@ -31,8 +30,7 @@ export const projects: ProjectProps[] = [
   {
     id: 2,
     title: "Movie rating app",
-    image:
-      "https://ik.imagekit.io/1027/portfolio-projects/movie-rating.png?updatedAt=1713867178600",
+    image: "web-movie-rating.png",
     live: "https://nextjs-movie-rating-app.vercel.app/",
     github: "https://github.com/Kris1027/nextjs-movie-rating-app",
     technologies: [
@@ -51,8 +49,7 @@ export const projects: ProjectProps[] = [
   {
     id: 3,
     title: "Portfolio",
-    image:
-      "https://ik.imagekit.io/1027/portfolio-projects/portfolio.png?updatedAt=1713867195662",
+    image: "web-portfolio.png",
     live: "https://kris1027-nextjs-portfolio.vercel.app/",
     github: "https://github.com/Kris1027/nextjs-portfolio",
     technologies: [
@@ -72,8 +69,7 @@ export const projects: ProjectProps[] = [
   {
     id: 4,
     title: "React Quiz",
-    image:
-      "https://ik.imagekit.io/1027/portfolio-projects/quiz.png?updatedAt=1713867198417",
+    image: "web-quiz.png",
     live: "https://react-quiz-app-rosy-nine.vercel.app/",
     github: "https://github.com/Kris1027/react-quiz-app",
     technologies: ["React", "Tailwind CSS", "SQLite"],
@@ -85,8 +81,7 @@ export const projects: ProjectProps[] = [
   {
     id: 5,
     title: "Countries rest API",
-    image:
-      "https://ik.imagekit.io/1027/portfolio-projects/countries.png?updatedAt=1713867202810",
+    image: "web-countries.png",
     live: "https://effortless-churros-ad658b.netlify.app/",
     github: "https://github.com/Kris1027/rest-countries-api?tab=readme-ov-file",
     technologies: ["React", "Tailwind CSS"],
@@ -99,8 +94,7 @@ export const projects: ProjectProps[] = [
   {
     id: 6,
     title: "JavaScript game",
-    image:
-      "https://ik.imagekit.io/1027/portfolio-projects/frela-game.png?updatedAt=1713867192786",
+    image: "web-frela-game.png",
     live: "https://kris1027.github.io/Frela---The-Game/",
     github: "https://github.com/Kris1027/Frela---The-Game",
     technologies: ["HTML", "CSS", "JavaScript"],
