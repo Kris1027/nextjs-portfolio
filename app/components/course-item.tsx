@@ -31,7 +31,7 @@ export default function CourseItem({
   return (
     <>
       <motion.li
-        className="flex flex-col w-full gap-4 bg-slate-400 bg-opacity-20 rounded-2xl p-6 text-slate-700 dark:text-slate-300 shadow-lg dark:shadow-sm dark:shadow-white"
+        className="flex flex-col w-full gap-4 bg-slate-400 bg-opacity-20 rounded-lg p-6 text-slate-700 dark:text-slate-300 shadow-lg dark:shadow-sm dark:shadow-white"
         variants={fadeInAnimationVariants}
         initial="initial"
         whileInView="animate"

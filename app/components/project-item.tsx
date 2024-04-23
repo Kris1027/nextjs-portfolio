@@ -30,14 +30,14 @@ export default function ProjectItem({
 }: ProjectProps) {
   return (
     <motion.li
-      className="flex flex-col gap-4 w-full bg-slate-400 bg-opacity-20 rounded-3xl p-3 text-slate-700 dark:text-slate-300 shadow-lg dark:shadow-sm dark:shadow-white"
+      className="flex flex-col gap-4 w-full bg-slate-400 bg-opacity-20 rounded-lg p-3 text-slate-700 dark:text-slate-300 shadow-lg dark:shadow-sm dark:shadow-white"
       variants={cardAnimationVariants}
       initial="initial"
       whileInView="animate"
       custom={id}
       viewport={{ once: true }}
     >
-      <div className="relative h-56 md:h-64 bg-black rounded-t-2xl overflow-hidden">
+      <div className="relative h-56 md:h-64 bg-black rounded-t-lg overflow-hidden">
         <Image
           className="scale-[1.7] hover:scale-[2.2] hover:translate-y-[200px] rotate-45 hover:rotate-12 transform ease-in-out duration-200"
           loader={imageKitLoader}
