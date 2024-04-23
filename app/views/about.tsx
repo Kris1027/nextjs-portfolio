@@ -6,6 +6,7 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
 import Section from "../ui/section";
+import ProfileImage from "../components/profile-image";
 
 const descripion =
   "Hi there! I am a web developer who is passionate about creating user-friendly and visually appealing websites. I have been learning to code since November 2022, and I have experience with HTML, CSS, JavaScript, React, and TypeScript. I am always eager to learn new technologies and improve my skills. I believe that web development is a powerfull tool that can be used to create positive change in the world. I am excited to use my skills to build websites that make a difference. I am currently looking for a job as a frontend developer, so if you think I would be a good fit for your team, please don't hesitate to reach out. Thank you for your time!";
@@ -126,20 +127,7 @@ export default function About() {
           </motion.li>
         ))}
       </ul>
-      <motion.div
-        className="relative rounded-full w-56 h-56 sm:w-96 sm:h-96 md:w-[29rem] md:h-[29rem] lg:w-[32rem] lg:h-[32rem] xl:h-[40rem] xl:w-[40rem] mx-auto overflow-hidden shadow-lg shadow-zinc-800 dark:shadow-zinc-600"
-        variants={fadeInAnimationVariants}
-        initial="initial"
-        whileInView="animate"
-        viewport={{ once: true }}
-      >
-        <Image
-          src="https://ik.imagekit.io/1027/nextjs-portfolio/IMG_4354.jpeg?updatedAt=1713868861634"
-          alt="image from github"
-          fill
-          objectFit="cover"
-        />
-      </motion.div>
+      <ProfileImage />
     </Section>
   );
 }
