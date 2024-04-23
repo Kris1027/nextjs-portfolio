@@ -63,7 +63,7 @@ export default function About() {
           initial="hidden"
           whileInView="visible"
           transition={{ staggerChildren: 0.02 }}
-          className="text-5xl py-2 text-teal-600 font-bold text-center"
+          className="text-5xl py-2 text-primary dark:text-primaryDark font-bold text-center"
           viewport={{ once: true }}
         >
           {titleChars.map((char, index) => (

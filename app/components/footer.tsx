@@ -6,14 +6,14 @@ export default function Footer() {
 
   return (
     <footer className={darkMode ? "dark" : ""}>
-      <div className="p-2 sm:p-10 bg-white dark:bg-black text-gray-800 dark:text-gray-600 ease-in-out duration-500">
+      <div className="p-2 sm:p-10 bg-white dark:bg-black text-secondary dark:text-secondaryDark ease-in-out duration-500">
         <p className="text-center">
           ©2024 All rights reserved. Designed & crafted with love by{" "}
           <a
             href="https://www.linkedin.com/in/krzysztof-obarzanek-6b8803254/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-pink-400 dark:text-pink-700 hover:underline"
+            className="text-primary dark:text-primaryDark hover:underline"
           >
             Kris1027
           </a>

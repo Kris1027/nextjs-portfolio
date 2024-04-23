@@ -24,3 +24,4 @@
 - [ ] scroll to Top and Bottom
 - [x] scroll to Particular Section
 - [ ] refactor data to use SQL database
+- [x] extraction of constant colors

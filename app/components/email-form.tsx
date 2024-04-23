@@ -76,7 +76,7 @@ export default function EmailForm() {
         />
         <FaUserEdit
           size={30}
-          className="text-pink-400 dark:text-pink-700 absolute top-1 left-3"
+          className="text-primary dark:text-primaryDark absolute top-1 left-3"
         />
       </div>
       <div className="relative">
@@ -90,7 +90,7 @@ export default function EmailForm() {
         />
         <MdAlternateEmail
           size={30}
-          className="text-pink-400 dark:text-pink-700 absolute top-1 left-3"
+          className="text-primary absolute top-1 left-3"
         />
       </div>
       <div className="relative">
@@ -104,11 +104,11 @@ export default function EmailForm() {
         />
         <MdOutlineMessage
           size={30}
-          className="text-pink-400 dark:text-pink-700 absolute top-1 left-3"
+          className="text-primary absolute top-1 left-3"
         />
       </div>
       <button
-        className="bg-pink-400 dark:bg-pink-700 text-white font-bold py-2 md:py-4 rounded hover:bg-pink-500 dark:hover:bg-pink-800 active:scale-95 flex justify-center items-center"
+        className="bg-primary dark:bg-primaryDark text-white font-bold py-2 md:py-4 rounded active:scale-95 flex justify-center items-center"
         type="submit"
       >
         <IoSend size={30} />
