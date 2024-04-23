@@ -55,9 +55,10 @@ export default function Navigation() {
         {/* Desktop menu */}
         {matches && (
           <div>
-            <ul className="flex text-lg gap-16">
+            <ul className="flex text-2xl gap-16">
               {links.map((link) => (
                 <motion.li
+                  className="font-bold"
                   key={link.href}
                   variants={navDesktop}
                   animate="visible"
@@ -75,7 +76,7 @@ export default function Navigation() {
         {/* Theme switcher */}
         <div>
           <button
-            className="cursor-pointer text-xl"
+            className="cursor-pointer text-3xl"
             onClick={() => setDarkMode(!darkMode)}
           >
             {darkMode ? <BsMoonStarsFill /> : <FaSun />}
@@ -119,6 +120,7 @@ export default function Navigation() {
           >
             {links.map((link) => (
               <motion.li
+                className="font-bold"
                 key={link.href}
                 variants={itemMotion}
                 whileHover={{ scale: 1.3 }}

@@ -39,7 +39,7 @@ export default function ProjectItem({
     >
       <div className="relative h-56 md:h-64 bg-black rounded-t-2xl overflow-hidden">
         <Image
-          className="scale-[1.7] rotate-45 hover:rotate-12 transform ease-in-out duration-200"
+          className="scale-[1.7] hover:scale-[2.2] hover:translate-y-[200px] rotate-45 hover:rotate-12 transform ease-in-out duration-200"
           loader={imageKitLoader}
           src={image}
           sizes="(min-width: 768px) 564px, (min-width: 384px) 224px"

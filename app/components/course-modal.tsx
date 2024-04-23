@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { imageKitLoader } from "../util/image-kit-loader";
+import { motion } from "framer-motion";
 
 export default function CourseModal({
   image,
@@ -11,7 +12,10 @@ export default function CourseModal({
   setShowModal: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, y: "-100vh" }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.3 }}
       onClick={() => setShowModal(false)}
       className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
     >
@@ -25,6 +29,6 @@ export default function CourseModal({
           height={350}
         />
       </div>
-    </div>
+    </motion.div>
   );
 }
