@@ -16,14 +16,10 @@ export default function EmailForm() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const serviceId = "service_8z3ockk";
-    const templateId = "template_tmkxvqi";
-    const publicKey = "Qymcju6eXS26VvGY_";
-
     const data = {
-      service_id: serviceId,
-      template_id: templateId,
-      user_id: publicKey,
+      service_id: process.env.NEXT_PUBLIC_SERVICE_ID,
+      template_id: process.env.NEXT_PUBLIC_TEMPLATE_ID,
+      user_id: process.env.NEXT_PUBLIC_PUBLIC_KEY,
       template_params: {
         from_name: name,
         from_email: email,
