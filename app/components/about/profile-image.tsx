@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { fadeInAnimationVariants } from "../views/about";
-import { imageKitLoader } from "../util/image-kit-loader";
+import { imageKitLoader } from "../../util/image-kit-loader";
+import { fadeInAnimationVariants } from "../skill-item";
 
 export default function ProfileImage() {
   return (
