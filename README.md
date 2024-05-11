@@ -25,5 +25,6 @@
 - [x] scroll to Particular Section
 - [ ] refactor data to use SQL database
 - [x] extraction of constant colors
-- [ ] fix issue with server pages and client pages
+- [x] fix issue with server pages and client pages
 - [ ] better darkMode
+- [x] refactor email form with react-hook-form and zod
