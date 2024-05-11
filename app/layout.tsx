@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Dosis } from "next/font/google";
-import ThemeProvider from "./theme/theme-provider";
 import Navigation from "./components/navigation";
 import Footer from "./components/footer";
 
@@ -21,13 +20,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <ThemeProvider>
-        <body className={open_sans.className}>
-          <Navigation />
-          {children}
-          <Footer />
-        </body>
-      </ThemeProvider>
+      <body className={open_sans.className}>
+        <Navigation />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

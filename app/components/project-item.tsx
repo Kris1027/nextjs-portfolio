@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import { type ProjectProps } from "../data/projects-data";
 import { GoLinkExternal } from "react-icons/go";

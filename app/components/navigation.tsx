@@ -1,12 +1,7 @@
 "use client";
 import { useState } from "react";
 import { motion } from "framer-motion";
-
 import { useMediaQuery } from "../util/useMediaQuery";
-import { useDarkMode } from "../theme/dark-mode-context";
-
-import { BsMoonStarsFill } from "react-icons/bs";
-import { FaSun } from "react-icons/fa";
 
 const navDesktop = {
   hidden: { x: "-100vw", scale: 0, opacity: 0 },
@@ -37,7 +32,6 @@ const itemMotion = {
 };
 
 export default function Navigation() {
-  const { darkMode, setDarkMode } = useDarkMode();
   const [toggled, setToggled] = useState(false);
   const matches = useMediaQuery("(min-width: 1024px)");
 
@@ -50,7 +44,7 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className={darkMode ? "dark" : ""}>
+    <nav>
       <div className="flex justify-between py-5 px-10 bg-white dark:bg-black text-primary dark:text-primaryDark fixed w-full z-40 ease-in-out duration-500">
         {/* Desktop menu */}
         {matches && (
@@ -72,17 +66,6 @@ export default function Navigation() {
             </ul>
           </div>
         )}
-
-        {/* Theme switcher */}
-        <div>
-          <button
-            className="cursor-pointer text-3xl"
-            onClick={() => setDarkMode(!darkMode)}
-          >
-            {darkMode ? <BsMoonStarsFill /> : <FaSun />}
-          </button>
-        </div>
-
         {/* Burger */}
         {!matches && (
           <motion.div

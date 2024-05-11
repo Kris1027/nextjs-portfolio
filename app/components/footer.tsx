@@ -1,11 +1,6 @@
-"use client";
-import { useDarkMode } from "../theme/dark-mode-context";
-
 export default function Footer() {
-  const { darkMode } = useDarkMode();
-
   return (
-    <footer className={darkMode ? "dark" : ""}>
+    <footer>
       <div className="p-2 sm:p-10 bg-white dark:bg-black text-secondary dark:text-secondaryDark ease-in-out duration-500">
         <p className="text-center">
           ©2024 All rights reserved. Designed & crafted with love by{" "}

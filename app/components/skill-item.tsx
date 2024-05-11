@@ -1,3 +1,4 @@
+"use client";
 import { motion } from "framer-motion";
 import { type SkillsIconsProps } from "../data/skills-data";
 
