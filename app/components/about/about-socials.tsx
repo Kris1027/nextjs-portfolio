@@ -1,25 +1,27 @@
-"use client";
-import { socials } from "@/app/data/socials";
-import { fadeInAnimationVariants } from "../skill-item";
-import { motion } from "framer-motion";
+import db from "@/db/db";
+import { getIcons } from "@/app/util/getIcons";
 
-export default function AboutSocials() {
+export default async function AboutSocials() {
+  const socials = await db.socials.findMany();
+
   return (
     <ul className="text-5xl lg:text-7xl flex justify-center gap-16 text-secondary dark:text-secondaryDark mb-10 md:mb-20">
-      {socials.map((social, index) => (
-        <motion.li
-          key={index}
-          variants={fadeInAnimationVariants}
-          initial="initial"
-          whileInView="animate"
-          custom={index}
-          whileHover={{ x: -5, y: -5, scale: 1.1, color: social.color }}
-          viewport={{ once: true }}
+      {socials.map((social) => (
+        <li
+          className="animate-fade-in hover:scale-110 hover:-translate-x-1 hover:-translate-y-1 duration-200"
+          key={social.id}
         >
-          <a href={social.link} target="_blank" rel="noopener noreferrer">
-            {social.icon}
+          <a
+            href={social.link}
+            target="_blank"
+            rel="noreferrer"
+            style={{
+              color: social.color,
+            }}
+          >
+            {getIcons(social.icon)}
           </a>
-        </motion.li>
+        </li>
       ))}
     </ul>
   );
