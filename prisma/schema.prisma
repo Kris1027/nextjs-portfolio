@@ -1,0 +1,55 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Courses {
+  id    Int    @id @default(autoincrement())
+  title String
+  image String
+  link  String
+}
+
+model Projects {
+  id           Int          @id @default(autoincrement())
+  title        String
+  image        String
+  live         String
+  github       String
+  technologies Technology[]
+  description  Desc[]
+}
+
+model Technology {
+  id      Int        @id @default(autoincrement())
+  name    String
+  project Projects[]
+}
+
+model Desc {
+  id      Int        @id @default(autoincrement())
+  name    String
+  project Projects[]
+}
+
+model SkillIcons {
+  id         Int    @id @default(autoincrement())
+  icon       String
+  secondIcon String
+  color      String
+  name       String
+}
+
+model Socials {
+  id    Int    @id @default(autoincrement())
+  icon  String
+  link  String
+  color String
+}
