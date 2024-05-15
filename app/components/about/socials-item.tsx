@@ -31,7 +31,9 @@ export default function SocialsItem({
       viewport={{ once: true }}
       className="flex flex-col items-center"
     >
-      <div>{getSocialIcons(icon)}</div>
+      <a href={link} target="_blank" rel="noopener noreferrer">
+        {getSocialIcons(icon)}
+      </a>
     </motion.li>
   );
 }
