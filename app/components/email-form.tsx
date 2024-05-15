@@ -9,6 +9,8 @@ import {
   MdOutlineMessage,
   MdOutlineScheduleSend,
 } from "react-icons/md";
+import { motion } from "framer-motion";
+import { fadeInAnimation } from "../theme/fadeInAnimation";
 import { FaUserEdit } from "react-icons/fa";
 import { IoSend } from "react-icons/io5";
 
@@ -72,10 +74,14 @@ export default function EmailForm() {
   };
 
   return (
-    <form
+    <motion.form
       onSubmit={handleSubmit(onSubmit)}
       className="flex flex-col gap-4 w-full md:w-3/4 mx-auto"
       noValidate
+      variants={fadeInAnimation}
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: true }}
     >
       <div className="relative">
         <input
@@ -133,6 +139,6 @@ export default function EmailForm() {
           <IoSend size={30} />
         )}
       </button>
-    </form>
+    </motion.form>
   );
 }
