@@ -1,25 +1,19 @@
 "use client";
 import { motion } from "framer-motion";
-import { type SkillsIconsProps } from "../data/skills-data";
+import { getSkillIcons } from "../util/getSkillIcons";
+import { fadeInAnimation } from "../theme/fadeInAnimation";
 
-export const fadeInAnimationVariants = {
-  initial: {
-    opacity: 0,
-    y: 100,
-  },
-  animate: (index: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: index * 0.05,
-    },
-  }),
+type SkillItemProps = {
+  id: number;
+  color: string;
+  icon: string;
+  name: string;
 };
 
-export default function SkillItem({ id, color, icon, name }: SkillsIconsProps) {
+export default function SkillItem({ id, color, icon, name }: SkillItemProps) {
   return (
     <motion.li
-      variants={fadeInAnimationVariants}
+      variants={fadeInAnimation}
       initial="initial"
       whileInView="animate"
       custom={id}
@@ -32,7 +26,7 @@ export default function SkillItem({ id, color, icon, name }: SkillsIconsProps) {
       viewport={{ once: true }}
       className="flex flex-col items-center"
     >
-      <div>{icon}</div>
+      <div>{getSkillIcons(icon)}</div>
       <div className="text-sm">{name}</div>
     </motion.li>
   );

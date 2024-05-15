@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { fadeInAnimationVariants } from "./skill-item";
+import { fadeInAnimation } from "./skill-item";
 import { type CoursesListProps } from "../data/courses-data";
 import CourseModal from "./course-modal";
 import { GoLinkExternal } from "react-icons/go";

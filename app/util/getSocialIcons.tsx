@@ -1,6 +1,6 @@
 import { FaGithub, FaInstagramSquare, FaLinkedin } from "react-icons/fa";
 
-export const getIcons = (iconName: string) => {
+export const getSocialIcons = (iconName: string) => {
   switch (iconName) {
     case "FaGithub":
       return <FaGithub />;

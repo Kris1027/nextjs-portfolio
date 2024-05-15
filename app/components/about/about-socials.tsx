@@ -1,5 +1,5 @@
 import db from "@/db/db";
-import { getIcons } from "@/app/util/getIcons";
+import { getSocialIcons } from "@/app/util/getSocialIcons";
 
 export default async function AboutSocials() {
   const socials = await db.socials.findMany();
@@ -19,7 +19,7 @@ export default async function AboutSocials() {
               color: social.color,
             }}
           >
-            {getIcons(social.icon)}
+            {getSocialIcons(social.icon)}
           </a>
         </li>
       ))}

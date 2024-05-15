@@ -1,10 +1,12 @@
+import db from "@/db/db";
 import SkillItem from "../components/skill-item";
 import Section from "../ui/section";
-import { skillsIcons } from "../data/skills-data";
 import Heading from "../ui/heading";
 import Paragraph from "../ui/paragraph";
 
-export default function Skills() {
+export default async function Skills() {
+  const skillsIcons = await db.skillIcons.findMany();
+
   return (
     <Section id="skills">
       <Heading>Known technologies</Heading>
@@ -15,7 +17,6 @@ export default function Skills() {
             key={icon.id}
             id={icon.id}
             icon={icon.icon}
-            secondIcon={icon.secondIcon}
             color={icon.color}
             name={icon.name}
           />
