@@ -2,13 +2,13 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { imageKitLoader } from "../../util/image-kit-loader";
-import { fadeInAnimationVariants } from "../skill-item";
+import { fadeInAnimation } from "@/app/theme/fadeInAnimation";
 
 export default function ProfileImage() {
   return (
     <motion.div
       className="relative rounded-full w-56 h-56 sm:w-96 sm:h-96 md:w-[29rem] md:h-[29rem] lg:w-[32rem] lg:h-[32rem] xl:h-[40rem] xl:w-[40rem] mx-auto shadow-lg shadow-zinc-800 dark:shadow-zinc-600"
-      variants={fadeInAnimationVariants}
+      variants={fadeInAnimation}
       initial="initial"
       whileInView="animate"
       viewport={{ once: true }}

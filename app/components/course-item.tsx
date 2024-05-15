@@ -1,12 +1,12 @@
 "use client";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { fadeInAnimation } from "./skill-item";
 import { type CoursesListProps } from "../data/courses-data";
 import CourseModal from "./course-modal";
 import { GoLinkExternal } from "react-icons/go";
 import { PiCertificateLight } from "react-icons/pi";
 import { createPortal } from "react-dom";
+import { fadeInAnimation } from "../theme/fadeInAnimation";
 
 export default function CourseItem({
   id,
@@ -32,7 +32,7 @@ export default function CourseItem({
     <>
       <motion.li
         className="flex flex-col w-full gap-4 bg-slate-400 bg-opacity-20 rounded-lg p-6 text-slate-700 dark:text-slate-300 shadow-lg dark:shadow-sm dark:shadow-white"
-        variants={fadeInAnimationVariants}
+        variants={fadeInAnimation}
         initial="initial"
         whileInView="animate"
         custom={id}
