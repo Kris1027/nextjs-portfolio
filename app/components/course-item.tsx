@@ -1,19 +1,25 @@
 "use client";
 import { useState } from "react";
+import { createPortal } from "react-dom";
 import { motion } from "framer-motion";
-import { type CoursesListProps } from "../data/courses-data";
 import CourseModal from "./course-modal";
+import { fadeInAnimation } from "../theme/fadeInAnimation";
 import { GoLinkExternal } from "react-icons/go";
 import { PiCertificateLight } from "react-icons/pi";
-import { createPortal } from "react-dom";
-import { fadeInAnimation } from "../theme/fadeInAnimation";
+
+type CourseItemProps = {
+  id: number;
+  title: string;
+  image: string;
+  link: string;
+};
 
 export default function CourseItem({
   id,
   title,
   image,
   link,
-}: CoursesListProps) {
+}: CourseItemProps) {
   const [showModal, setShowModal] = useState(false);
   const modal =
     typeof window !== "undefined" &&

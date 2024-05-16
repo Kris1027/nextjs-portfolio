@@ -58,9 +58,9 @@
 - [x] project cart desgin
 - [x] sending emails by emailjs
 - [ ] better dark/light mode
-- [ ] refactor project and course item
+- [x] refactor project and course item
 - [x] scroll to Particular Section
-- [ ] refactor data to use SQL database
+- [x] refactor data to use SQL database
 - [x] extraction of constant colors
 - [x] fix issue with server pages and client pages
 - [x] refactor email form with react-hook-form and zod
