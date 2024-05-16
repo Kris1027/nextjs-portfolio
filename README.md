@@ -2,40 +2,40 @@
 
 ## Challenges Faced During the Portfolio Project
 
-1. Learning and Implementing Next.js with TypeScript
+### 1. Learning and Implementing Next.js with TypeScript
 
 - Adapting to the structure and conventions of Next.js.
 - Leveraging TypeScript for type safety and improved code quality.
 
-2. Integrating Framer Motion for Animations
+### 2. Integrating Framer Motion for Animations
 
 - Creating smooth, interactive animations to enhance user experience.
 - Ensuring performance optimization for complex animations.
 
-3. Using EmailJS for Email Functionality
+### 3. Using EmailJS for Email Functionality
 
 - Setting up EmailJS to handle form submissions and send emails.
 - Ensuring reliable email delivery and handling potential errors.
 
-4. Building Forms with React Hook Form and Zod for Validation
+### 4. Building Forms with React Hook Form and Zod for Validation
 
 - Implementing user-friendly forms with React Hook Form.
 - Using Zod to enforce robust validation rules and improve form reliability.
 
-5. Database Management with Prisma and SQLite
+### 5. Database Management with Prisma and SQLite
 
 - Setting up Prisma as an ORM to interact with an SQLite database.
 - Defining database schemas and managing migrations.
 - Overcoming challenges related to querying and retrieving data efficiently.
 
-6. Biggest Challenge: Utilizing Prisma for Data Management
+### 6. Biggest Challenge: Utilizing Prisma for Data Management
 
 - Understanding Prisma’s query capabilities and relational data handling.
 - Debugging and optimizing queries to ensure data integrity and performance.
 
 `live` : <https://kris1027-nextjs-portfolio.vercel.app/>
 
-## Tech:
+## Technologies:
 
 - Next
 - Tailwind
@@ -50,7 +50,7 @@
 - Toastify
 - SQLite
 
-## ToDo:
+## List to do:
 
 - [x] animations by framer-motion
 - [x] notifications by toastify
