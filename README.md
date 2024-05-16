@@ -1,5 +1,7 @@
 # Portfolio
 
+`live` : <https://kris1027-nextjs-portfolio.vercel.app/>
+
 ## Challenges Faced During the Portfolio Project
 
 ### 1. Learning and Implementing Next.js with TypeScript
@@ -33,8 +35,6 @@
 - Understanding Prisma’s query capabilities and relational data handling.
 - Debugging and optimizing queries to ensure data integrity and performance.
 
-`live` : <https://kris1027-nextjs-portfolio.vercel.app/>
-
 ## Technologies:
 
 - Next
@@ -64,3 +64,6 @@
 - [x] extraction of constant colors
 - [x] fix issue with server pages and client pages
 - [x] refactor email form with react-hook-form and zod
+- [ ] fix modal opening animation
+- [ ] improve project performance
+- [ ] change animation in profil description to have better performance
