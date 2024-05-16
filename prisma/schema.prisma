@@ -23,28 +23,27 @@ model Projects {
   image        String
   live         String
   github       String
-  technologies Technology[]
-  description  Desc[]
+  technologies Technology[] @relation("ProjectTechnologies")
+  description  Desc[]       @relation("ProjectDescriptions")
 }
 
 model Technology {
   id      Int        @id @default(autoincrement())
   name    String
-  project Projects[]
+  project Projects[] @relation("ProjectTechnologies")
 }
 
 model Desc {
   id      Int        @id @default(autoincrement())
   name    String
-  project Projects[]
+  project Projects[] @relation("ProjectDescriptions")
 }
 
 model SkillIcons {
-  id         Int    @id @default(autoincrement())
-  icon       String
-  secondIcon String
-  color      String
-  name       String
+  id    Int    @id @default(autoincrement())
+  icon  String
+  color String
+  name  String
 }
 
 model Socials {

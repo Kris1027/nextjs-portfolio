@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import { type ProjectProps } from "../data/projects-data";
 import { GoLinkExternal } from "react-icons/go";
 import { motion } from "framer-motion";
 import { imageKitLoader } from "../util/image-kit-loader";
@@ -18,6 +17,16 @@ export const cardAnimationVariants = {
       delay: index * 0.2,
     },
   }),
+};
+
+type ProjectProps = {
+  id: number;
+  title: string;
+  image: string;
+  live: string;
+  github: string;
+  technologies: string[];
+  description: string[];
 };
 
 export default function ProjectItem({

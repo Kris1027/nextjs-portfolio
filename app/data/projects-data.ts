@@ -64,6 +64,7 @@ export const projects: ProjectProps[] = [
       "Working with animations using Framer Motion and Toastify.",
       "Implemented a responsive design that adapts to different screen sizes.",
       "Implemented emailjs for sending emails.",
+      "Create Prisma database with SQLite and use it with Next.js.",
     ],
   },
   {

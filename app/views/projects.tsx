@@ -1,10 +1,17 @@
+import db from "@/db/db";
 import ProjectItem from "../components/project-item";
 import Section from "../ui/section";
-import { projects } from "../data/projects-data";
 import Heading from "../ui/heading";
 import Paragraph from "../ui/paragraph";
 
-export default function Projects() {
+export default async function Projects() {
+  const projects = await db.projects.findMany({
+    include: {
+      technologies: true,
+      description: true,
+    },
+  });
+
   return (
     <Section id="projects">
       <Heading>Projects</Heading>
@@ -18,8 +25,8 @@ export default function Projects() {
             image={project.image}
             live={project.live}
             github={project.github}
-            technologies={project.technologies}
-            description={project.description}
+            technologies={project.technologies.map((tech) => tech.name)}
+            description={project.description.map((desc) => desc.name)}
           />
         ))}
       </ul>
