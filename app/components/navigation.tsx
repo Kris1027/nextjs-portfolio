@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useMediaQuery } from "../util/useMediaQuery";
+import { ThemeSwitcher } from "../theme/themeSwitcher";
 
 const navDesktop = {
   hidden: { x: "-100vw", scale: 0, opacity: 0 },
@@ -48,7 +49,7 @@ export default function Navigation() {
       <div className="flex justify-between py-5 px-10 bg-white dark:bg-black text-primary dark:text-primaryDark fixed w-full z-40 ease-in-out duration-500">
         {/* Desktop menu */}
         {matches && (
-          <div>
+          <div className="flex justify-between w-full">
             <ul className="flex text-2xl gap-16">
               {links.map((link) => (
                 <motion.li
@@ -66,6 +67,7 @@ export default function Navigation() {
             </ul>
           </div>
         )}
+        <ThemeSwitcher />
         {/* Burger */}
         {!matches && (
           <motion.div

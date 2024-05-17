@@ -3,6 +3,7 @@ import "./globals.css";
 import { Dosis } from "next/font/google";
 import Navigation from "./components/navigation";
 import Footer from "./components/footer";
+import { DarkModeProvider } from "./theme/darkMode-Provider";
 
 const open_sans = Dosis({
   subsets: ["latin"],
@@ -19,11 +20,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={open_sans.className}>
-        <Navigation />
-        {children}
-        <Footer />
+        <DarkModeProvider>
+          <Navigation />
+          {children}
+          <Footer />
+        </DarkModeProvider>
       </body>
     </html>
   );

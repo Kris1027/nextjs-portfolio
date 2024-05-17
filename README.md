@@ -42,6 +42,7 @@
 - React
 - TypeScript
 - Framer Motion
+- Next Themes
 - Axios
 - React Hook Form
 - Zod
@@ -57,7 +58,7 @@
 - [x] modal for certificate image
 - [x] project cart desgin
 - [x] sending emails by emailjs
-- [ ] better dark/light mode
+- [x] better dark/light mode
 - [x] refactor project and course item
 - [x] scroll to Particular Section
 - [x] refactor data to use SQL database
