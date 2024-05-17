@@ -46,10 +46,10 @@ export default function Navigation() {
 
   return (
     <nav>
-      <div className="flex justify-between py-5 px-10 bg-white dark:bg-black text-primary dark:text-primaryDark fixed w-full z-40">
+      <div className="flex justify-between items-center py-5 px-10 bg-white dark:bg-black text-primary dark:text-primaryDark fixed w-full z-40">
         {/* Desktop menu */}
         {matches && (
-          <div className="flex justify-between w-full">
+          <div>
             <ul className="flex text-2xl gap-16">
               {links.map((link) => (
                 <motion.li
