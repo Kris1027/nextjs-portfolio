@@ -46,7 +46,7 @@ export default function Navigation() {
 
   return (
     <nav>
-      <div className="flex justify-between py-5 px-10 bg-white dark:bg-black text-primary dark:text-primaryDark fixed w-full z-40 ease-in-out duration-500">
+      <div className="flex justify-between py-5 px-10 bg-white dark:bg-black text-primary dark:text-primaryDark fixed w-full z-40">
         {/* Desktop menu */}
         {matches && (
           <div className="flex justify-between w-full">
