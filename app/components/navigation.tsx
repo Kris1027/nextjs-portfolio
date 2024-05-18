@@ -3,34 +3,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { useMediaQuery } from "../util/useMediaQuery";
 import { ThemeSwitcher } from "../theme/themeSwitcher";
-
-const navDesktop = {
-  hidden: { x: "-100vw", scale: 0, opacity: 0 },
-  visible: {
-    x: 0,
-    scale: 1,
-    opacity: 1,
-    transition: { type: "spring", stiffness: 50 },
-  },
-};
-
-const navMotion = {
-  visible: {
-    opacity: 1,
-    transition: {
-      when: "beforeChildren",
-      staggerChildren: 0.15,
-    },
-  },
-  hidden: {
-    opacity: 0,
-  },
-};
-
-const itemMotion = {
-  visible: { opacity: 1, x: 0 },
-  hidden: { opacity: 0, x: -100 },
-};
+import { navDesktop, navMobile, navMobileItem } from "../theme/navAnimation";
 
 export default function Navigation() {
   const [toggled, setToggled] = useState(false);
@@ -99,7 +72,7 @@ export default function Navigation() {
         {toggled && !matches && (
           <motion.ul
             className="fixed flex flex-col justify-center gap-24 items-center bg-white dark:bg-black text-primary dark:text-primaryDark bottom-0 left-0 w-full h-screen text-4xl z-40"
-            variants={navMotion}
+            variants={navMobile}
             animate="visible"
             initial="hidden"
           >
@@ -107,7 +80,7 @@ export default function Navigation() {
               <motion.li
                 className="font-bold"
                 key={link.href}
-                variants={itemMotion}
+                variants={navMobileItem}
                 whileHover={{ scale: 1.3 }}
                 onClick={() => setToggled((prevToggle) => !prevToggle)}
               >

@@ -1,8 +1,10 @@
 "use client";
 import { useTheme } from "next-themes";
-import Image from "next/image";
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import { FiSun, FiMoon } from "react-icons/fi";
+import { MdComputer } from "react-icons/md";
+import { navDesktop } from "./navAnimation";
 
 export function ThemeSwitcher() {
   const [mounted, setMounted] = useState(false);
@@ -10,36 +12,55 @@ export function ThemeSwitcher() {
 
   useEffect(() => setMounted(true), []);
 
-  if (!mounted)
-    return (
-      <Image
-        src="data:image/svg+xml;base64,PHN2ZyBzdHJva2U9IiNGRkZGRkYiIGZpbGw9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iMCIgdmlld0JveD0iMCAwIDI0IDI0IiBoZWlnaHQ9IjIwMHB4IiB3aWR0aD0iMjAwcHgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiB4PSIyIiB5PSIyIiBmaWxsPSJub25lIiBzdHJva2Utd2lkdGg9IjIiIHJ4PSIyIj48L3JlY3Q+PC9zdmc+Cg=="
-        width={30}
-        height={30}
-        sizes="24x24"
-        alt="Loading Light/Dark Toggle"
-        priority={false}
-        title="Loading Light/Dark Toggle"
-      />
-    );
-
-  if (resolvedTheme === "dark") {
-    return (
-      <FiSun
-        className="cursor-pointer z-50"
-        size={30}
-        onClick={() => setTheme("light")}
-      />
-    );
-  }
-
-  if (resolvedTheme === "light") {
-    return (
-      <FiMoon
-        className="cursor-pointer z-50"
-        size={30}
-        onClick={() => setTheme("dark")}
-      />
-    );
-  }
+  return (
+    <motion.ul
+      className="flex gap-4"
+      variants={navDesktop}
+      animate="visible"
+      initial="hidden"
+    >
+      <motion.li
+        whileHover={{
+          x: -2,
+          y: -2,
+          scale: 1.1,
+        }}
+      >
+        <FiSun
+          className="cursor-pointer z-50"
+          size={30}
+          onClick={() => setTheme("light")}
+          color={resolvedTheme === "light" ? "" : "#4b5563"}
+        />
+      </motion.li>
+      <motion.li
+        whileHover={{
+          x: -2,
+          y: -2,
+          scale: 1.1,
+        }}
+      >
+        <FiMoon
+          className="cursor-pointer z-50"
+          size={30}
+          onClick={() => setTheme("dark")}
+          color={resolvedTheme === "dark" ? "" : "#4b5563"}
+        />
+      </motion.li>
+      <motion.li
+        whileHover={{
+          x: -2,
+          y: -2,
+          scale: 1.1,
+        }}
+      >
+        <MdComputer
+          className="cursor-pointer z-50"
+          size={30}
+          onClick={() => setTheme("system")}
+          color="#4b5563"
+        />
+      </motion.li>
+    </motion.ul>
+  );
 }
