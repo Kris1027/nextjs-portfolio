@@ -52,3 +52,18 @@ model Socials {
   link  String
   color String
 }
+
+model AboutTitle {
+  id    Int    @id @default(autoincrement())
+  title String
+}
+
+model AboutSubtitle {
+  id    Int    @id @default(autoincrement())
+  title String
+}
+
+model AboutDescription {
+  id    Int    @id @default(autoincrement())
+  title String
+}
