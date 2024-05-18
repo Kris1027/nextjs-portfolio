@@ -12,14 +12,16 @@ export default function CourseModal({
   setShowModal: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: "-100vh" }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3 }}
+    <div
       onClick={() => setShowModal(false)}
       className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
     >
-      <div className="bg-white dark:bg-slate-950 p-6 rounded-lg shadow-2xl shadow-white">
+      <motion.div
+        className="bg-white dark:bg-slate-950 p-6 rounded-lg shadow-2xl shadow-white"
+        initial={{ opacity: 0, y: "-100vh" }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.3 }}
+      >
         <Image
           loader={imageKitLoader}
           src={image}
@@ -28,7 +30,7 @@ export default function CourseModal({
           width={700}
           height={350}
         />
-      </div>
-    </motion.div>
+      </motion.div>
+    </div>
   );
 }

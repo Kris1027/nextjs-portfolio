@@ -65,6 +65,6 @@
 - [x] extraction of constant colors
 - [x] fix issue with server pages and client pages
 - [x] refactor email form with react-hook-form and zod
-- [ ] fix modal opening animation
+- [x] fix modal opening animation
 - [ ] improve project performance
 - [ ] change animation in profil description to have better performance
