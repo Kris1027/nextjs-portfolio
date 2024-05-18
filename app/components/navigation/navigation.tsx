@@ -1,9 +1,9 @@
 "use client";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { useMediaQuery } from "../util/useMediaQuery";
-import { ThemeSwitcher } from "../theme/themeSwitcher";
-import { navDesktop, navMobile, navMobileItem } from "../theme/navAnimation";
+import { useMediaQuery } from "../../util/useMediaQuery";
+import { ThemeSwitcher } from "../../theme/themeSwitcher";
+import { navDesktop, navMobile, navMobileItem } from "../../theme/navAnimation";
 
 export default function Navigation() {
   const [toggled, setToggled] = useState(false);

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Dosis } from "next/font/google";
-import Navigation from "./components/navigation";
+import Navigation from "./components/navigation/navigation";
 import Footer from "./components/footer";
 import { DarkModeProvider } from "./theme/darkMode-Provider";
 
