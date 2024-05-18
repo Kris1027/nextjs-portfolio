@@ -1,23 +1,9 @@
 "use client";
 import Image from "next/image";
 import { GoLinkExternal } from "react-icons/go";
-import { motion } from "framer-motion";
 import { imageKitLoader } from "../util/image-kit-loader";
-
-export const cardAnimationVariants = {
-  initial: (index: number) => ({
-    opacity: 0,
-    x: index % 2 === 0 ? 200 : -200,
-  }),
-  animate: (index: number) => ({
-    opacity: 1,
-    x: 0,
-    transition: {
-      duration: 0.4,
-      delay: index * 0.2,
-    },
-  }),
-};
+import ListItem from "../ui/list-item";
+import { sideAnimation } from "../theme/sideAnimation";
 
 type ProjectProps = {
   id: number;
@@ -39,14 +25,7 @@ export default function ProjectItem({
   description,
 }: ProjectProps) {
   return (
-    <motion.li
-      className="bg-stone-100 dark:bg-stone-950 text-secondary dark:text-stone-100 p-6 tablet:p-2 rounded-lg shadow-xl dark:shadow-none transform transition-transform hover:scale-105 flex flex-col gap-5"
-      variants={cardAnimationVariants}
-      initial="initial"
-      whileInView="animate"
-      custom={id}
-      viewport={{ once: true }}
-    >
+    <ListItem id={id} variants={sideAnimation}>
       <div className="relative h-56 md:h-64 bg-black rounded-t-lg overflow-hidden">
         <Image
           className="scale-[1.7] hover:scale-[2.2] hover:translate-y-[200px] rotate-45 hover:rotate-12 transform ease-in-out duration-200"
@@ -98,6 +77,6 @@ export default function ProjectItem({
           </a>
         </div>
       </div>
-    </motion.li>
+    </ListItem>
   );
 }

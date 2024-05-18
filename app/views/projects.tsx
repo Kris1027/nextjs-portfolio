@@ -3,6 +3,7 @@ import ProjectItem from "../components/project-item";
 import Section from "../ui/section";
 import Heading from "../ui/heading";
 import Paragraph from "../ui/paragraph";
+import List from "../ui/list";
 
 export default async function Projects() {
   const projects = await db.projects.findMany({
@@ -16,7 +17,7 @@ export default async function Projects() {
     <Section id="projects">
       <Heading>Projects</Heading>
       <Paragraph>Here are some of the projects I&apos;ve worked on.</Paragraph>
-      <ul className="grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-3 gap-8">
+      <List>
         {projects.map((project) => (
           <ProjectItem
             key={project.id}
@@ -29,7 +30,7 @@ export default async function Projects() {
             description={project.description.map((desc) => desc.name)}
           />
         ))}
-      </ul>
+      </List>
       <p className="text-sm md:text-lg leading-8 text-secondary dark:text-secondaryDark lg:w-1/2 mx-auto text-center pt-10">
         More you can find on my{" "}
         <a

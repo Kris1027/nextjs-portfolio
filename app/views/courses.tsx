@@ -3,6 +3,7 @@ import CourseItem from "../components/course-item";
 import Section from "../ui/section";
 import Heading from "../ui/heading";
 import Paragraph from "../ui/paragraph";
+import List from "../ui/list";
 
 export default async function Courses() {
   const coursesList = await db.courses.findMany();
@@ -11,7 +12,7 @@ export default async function Courses() {
     <Section id="courses">
       <Heading>Courses</Heading>
       <Paragraph>The most important courses I have completed</Paragraph>
-      <ul className="grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-3 gap-8">
+      <List>
         {coursesList.map((course) => (
           <CourseItem
             key={course.id}
@@ -21,7 +22,7 @@ export default async function Courses() {
             link={course.link}
           />
         ))}
-      </ul>
+      </List>
     </Section>
   );
 }

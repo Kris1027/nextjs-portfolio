@@ -1,11 +1,11 @@
 "use client";
 import { useState } from "react";
 import { createPortal } from "react-dom";
-import { motion } from "framer-motion";
 import CourseModal from "./course-modal";
-import { fadeInAnimation } from "../theme/fadeInAnimation";
 import { GoLinkExternal } from "react-icons/go";
 import { PiCertificateLight } from "react-icons/pi";
+import ListItem from "../ui/list-item";
+import { fadeInAnimation } from "../theme/fadeInAnimation";
 
 type CourseItemProps = {
   id: number;
@@ -36,14 +36,7 @@ export default function CourseItem({
 
   return (
     <>
-      <motion.li
-        className="bg-stone-100 dark:bg-stone-950 text-secondary dark:text-stone-100 p-6 tablet:p-2 rounded-lg shadow-xl dark:shadow-none transform transition-transform hover:scale-105 flex flex-col gap-5 justify-between"
-        variants={fadeInAnimation}
-        initial="initial"
-        whileInView="animate"
-        custom={id}
-        viewport={{ once: true }}
-      >
+      <ListItem id={id} variants={fadeInAnimation}>
         <h4 className="text-lg tablet:text-3xl">{title}</h4>
         <div className="flex justify-between text-sm tablet:text-base">
           <a
@@ -64,7 +57,7 @@ export default function CourseItem({
           </button>
           {image && showModal && modal}
         </div>
-      </motion.li>
+      </ListItem>
     </>
   );
 }
