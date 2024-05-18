@@ -7,7 +7,7 @@ import { fadeInAnimation } from "@/app/theme/fadeInAnimation";
 export default function ProfileImage() {
   return (
     <motion.div
-      className="relative rounded-full w-[28rem] h-[28rem] tablet:h-[40rem] tablet:w-[40rem] mx-auto shadow-lg shadow-zinc-800 dark:shadow-zinc-600"
+      className="relative rounded-full w-56 h-56 mobile:w-[28rem] mobile:h-[28rem] tablet:h-[40rem] tablet:w-[40rem] mx-auto shadow-lg shadow-zinc-800 dark:shadow-zinc-600"
       variants={fadeInAnimation}
       initial="initial"
       whileInView="animate"
