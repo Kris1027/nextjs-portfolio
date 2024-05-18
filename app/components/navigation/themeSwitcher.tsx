@@ -1,9 +1,8 @@
-"use client";
 import { useTheme } from "next-themes";
 import { motion } from "framer-motion";
 import { FiSun, FiMoon } from "react-icons/fi";
 import { MdComputer } from "react-icons/md";
-import { navDesktop } from "./navAnimation";
+import { navDesktop } from "../../theme/navAnimation";
 import { useEffect, useState } from "react";
 
 export function ThemeSwitcher() {
