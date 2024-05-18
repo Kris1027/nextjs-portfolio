@@ -23,7 +23,7 @@ export default function AboutTitle() {
         initial="hidden"
         whileInView="visible"
         transition={{ staggerChildren: 0.02 }}
-        className="text-5xl py-2 text-primary dark:text-primaryDark font-bold text-center"
+        className="text-5xl tablet:text-7xl desktop:text-9xl py-2 text-primary dark:text-primaryDark font-bold text-center"
         viewport={{ once: true }}
       >
         {titleChars.map((char, index) => (
@@ -40,7 +40,7 @@ export default function AboutTitle() {
         initial="hidden"
         whileInView="visible"
         transition={{ staggerChildren: 0.2 }}
-        className="text-2xl pt-2 text-secondary dark:text-secondaryDark pb-10 text-center"
+        className="text-2xl tablet:text-4xl desktop:text-6xl pt-2 text-secondary dark:text-secondaryDark pb-10 text-center"
         viewport={{ once: true }}
       >
         {professionChars.map((char, index) => (
@@ -57,7 +57,7 @@ export default function AboutTitle() {
         initial="hidden"
         whileInView="visible"
         transition={{ staggerChildren: 0.006 }}
-        className="text-sm md:text-lg lg:text-xl pb-5 leading-8 text-secondary dark:text-secondaryDark xl:w-3/4 mx-auto text-center"
+        className="text-sm tablet:text-lg desktop:text-xl pb-5 leading-8 text-secondary dark:text-secondaryDark text-center tablet:w-4/5 desktop:w-3/5 mx-auto"
         viewport={{ once: true }}
       >
         {descriptionChars.map((char, index) => (

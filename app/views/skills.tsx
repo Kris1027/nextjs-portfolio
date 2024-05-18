@@ -11,7 +11,7 @@ export default async function Skills() {
     <Section id="skills">
       <Heading>Known technologies</Heading>
       <Paragraph>Here are some of the technologies I have used.</Paragraph>
-      <ul className="relative text-8xl md:text-9xl flex flex-wrap justify-center items-center gap-2 md:gap-4 text-secondary dark:text-secondaryDark pb-10 md:w-2/3 lg:w-1/2 mx-auto">
+      <ul className="relative text-8xl tablet:text-9xl flex flex-wrap justify-center items-center gap-2 tablet:gap-4 text-secondary dark:text-secondaryDark pb-10 tablet:w-2/3 mx-auto">
         {skillsIcons.map((icon) => (
           <SkillItem
             key={icon.id}

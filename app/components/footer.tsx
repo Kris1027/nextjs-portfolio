@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer>
-      <div className="p-2 sm:p-10 bg-white dark:bg-black text-secondary dark:text-secondaryDark">
+      <div className="p-2 tablet:p-10 bg-white dark:bg-black text-secondary dark:text-secondaryDark">
         <p className="text-center">
           ©2024 All rights reserved. Designed & crafted with love by{" "}
           <a

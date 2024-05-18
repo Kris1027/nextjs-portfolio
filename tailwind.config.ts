@@ -8,6 +8,10 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens: {
+      tablet: "1000px",
+      desktop: "1400px",
+    },
     extend: {
       colors: {
         primary: "#0d9488",

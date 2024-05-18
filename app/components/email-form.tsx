@@ -76,7 +76,7 @@ export default function EmailForm() {
   return (
     <motion.form
       onSubmit={handleSubmit(onSubmit)}
-      className="flex flex-col gap-4 w-full md:w-3/4 mx-auto"
+      className="flex flex-col gap-4 w-full tablet:w-3/4 mx-auto"
       noValidate
       variants={fadeInAnimation}
       initial="initial"

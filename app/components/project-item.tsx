@@ -40,7 +40,7 @@ export default function ProjectItem({
 }: ProjectProps) {
   return (
     <motion.li
-      className=" bg-stone-100 dark:bg-stone-950 text-secondary dark:text-stone-100 p-6 md:p-2 rounded-lg shadow-xl dark:shadow-none transform transition-transform hover:scale-105 flex flex-col gap-5"
+      className="bg-stone-100 dark:bg-stone-950 text-secondary dark:text-stone-100 p-6 tablet:p-2 rounded-lg shadow-xl dark:shadow-none transform transition-transform hover:scale-105 flex flex-col gap-5"
       variants={cardAnimationVariants}
       initial="initial"
       whileInView="animate"

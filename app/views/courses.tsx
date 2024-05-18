@@ -11,7 +11,7 @@ export default async function Courses() {
     <Section id="courses">
       <Heading>Courses</Heading>
       <Paragraph>The most important courses I have completed</Paragraph>
-      <ul className="grid grid-cols-1 lg:grid-cols-2 gap-10 place-items-center mx-auto xl:w-5/6">
+      <ul className="grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-3 gap-8">
         {coursesList.map((course) => (
           <CourseItem
             key={course.id}
