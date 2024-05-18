@@ -16,7 +16,7 @@ export default async function Projects() {
     <Section id="projects">
       <Heading>Projects</Heading>
       <Paragraph>Here are some of the projects I&apos;ve worked on.</Paragraph>
-      <ul className="grid grid-cols-1 lg:grid-cols-2 gap-10 place-items-center mx-auto xl:w-5/6">
+      <ul className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-8">
         {projects.map((project) => (
           <ProjectItem
             key={project.id}

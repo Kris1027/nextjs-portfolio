@@ -40,7 +40,7 @@ export default function ProjectItem({
 }: ProjectProps) {
   return (
     <motion.li
-      className="flex flex-col gap-4 w-full bg-slate-400 bg-opacity-20 rounded-lg p-3 text-slate-700 dark:text-slate-300 shadow-lg dark:shadow-sm dark:shadow-white"
+      className=" bg-stone-100 dark:bg-stone-950 text-secondary dark:text-stone-100 p-6 md:p-2 rounded-lg shadow-xl dark:shadow-none transform transition-transform hover:scale-105 flex flex-col gap-5"
       variants={cardAnimationVariants}
       initial="initial"
       whileInView="animate"
@@ -58,43 +58,45 @@ export default function ProjectItem({
           height={233}
         />
       </div>
-      <ul className="flex items-center flex-wrap gap-1">
-        {technologies.map((tech, index) => {
-          return (
-            <li
-              className="border-[1px] border-slate-300 dark:border-slate-700 rounded-2xl py-1 px-5 hover:text-slate-500 hover:border-slate-500 dark:hover:text-slate-200 dark:hover:border-slate-200 text-xs md:text-base"
-              key={index}
-            >
-              {tech}
-            </li>
-          );
-        })}
-      </ul>
-      <h3 className="text-xl md:text-3xl">{title}</h3>
-      <ul className="list-disc pl-4 space-y-2 text-xs md:text-sm">
-        {description.map((desc, index) => {
-          return <li key={index}>{desc}</li>;
-        })}
-      </ul>
-      <div className="flex justify-between text-xs md:text-base">
-        <a
-          className="flex items-center gap-2 border-[1px] border-slate-300 dark:border-slate-700 py-1 px-3 cursor-pointer hover:text-blue-400 hover:border-blue-400 dark:hover:border-blue-400"
-          href={live}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Check Live
-          <GoLinkExternal />
-        </a>
-        <a
-          className="flex items-center gap-2 border-[1px] border-slate-300 dark:border-slate-700 py-1 px-3 cursor-pointer hover:text-blue-400 hover:border-blue-400 dark:hover:border-blue-400"
-          href={github}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          See Code
-          <GoLinkExternal />
-        </a>
+      <div className="flex flex-col justify-between h-full">
+        <ul className="flex items-center flex-wrap gap-1">
+          {technologies.map((tech, index) => {
+            return (
+              <li
+                className="border-[1px] border-slate-300 dark:border-slate-700 rounded-2xl py-1 px-5 hover:text-slate-500 hover:border-slate-500 dark:hover:text-slate-200 dark:hover:border-slate-200 text-xs md:text-xs"
+                key={index}
+              >
+                {tech}
+              </li>
+            );
+          })}
+        </ul>
+        <h3 className="text-xl md:text-3xl">{title}</h3>
+        <ul className="list-disc pl-4 space-y-2 text-xs lg:text-sm">
+          {description.map((desc, index) => {
+            return <li key={index}>{desc}</li>;
+          })}
+        </ul>
+        <div className="flex justify-between text-xs md:text-base">
+          <a
+            className="flex items-center gap-2 border-[1px] border-slate-300 dark:border-slate-700 py-1 px-3 cursor-pointer hover:text-blue-400 hover:border-blue-400 dark:hover:border-blue-400"
+            href={live}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Check Live
+            <GoLinkExternal />
+          </a>
+          <a
+            className="flex items-center gap-2 border-[1px] border-slate-300 dark:border-slate-700 py-1 px-3 cursor-pointer hover:text-blue-400 hover:border-blue-400 dark:hover:border-blue-400"
+            href={github}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            See Code
+            <GoLinkExternal />
+          </a>
+        </div>
       </div>
     </motion.li>
   );
