@@ -1,4 +1,5 @@
 import { navDesktop } from "@/app/theme/animations/navAnimation";
+import Reveal from "@/app/theme/animations/reveal";
 import { motion } from "framer-motion";
 
 export default function DesktopMenu({
@@ -22,7 +23,9 @@ export default function DesktopMenu({
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >
-          <a href={link.href}>{link.text}</a>
+          <Reveal>
+            <a href={link.href}>{link.text}</a>
+          </Reveal>
         </motion.li>
       ))}
     </motion.ul>

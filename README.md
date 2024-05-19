@@ -67,4 +67,4 @@
 - [x] refactor email form with react-hook-form and zod
 - [x] fix modal opening animation
 - [x] improve project performance
-- [ ] change animation in profil description to have better performance
+- [x] change animation in profil description to have better performance
