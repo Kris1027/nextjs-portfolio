@@ -16,11 +16,11 @@ export default function Burger({
     >
       <motion.span
         animate={{ rotateZ: toggled ? 45 : 0, y: toggled ? 8 : 0 }}
-        className="block h-0.5 w-8 bg-primary dark:bg-primaryDark"
+        className="block h-0.5 w-8 bg-[var(--primary)]"
       ></motion.span>
       <motion.span
         animate={{ width: toggled ? 0 : 24 }}
-        className="block h-0.5 w-6 bg-primary dark:bg-primaryDark"
+        className="block h-0.5 w-6 bg-[var(--primary)]"
       ></motion.span>
       <motion.span
         animate={{
@@ -28,7 +28,7 @@ export default function Burger({
           y: toggled ? -8 : 0,
           width: toggled ? 32 : 16,
         }}
-        className="block h-0.5 w-4 bg-primary dark:bg-primaryDark"
+        className="block h-0.5 w-4 bg-[var(--primary)]"
       ></motion.span>
     </motion.div>
   );

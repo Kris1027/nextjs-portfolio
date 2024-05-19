@@ -3,7 +3,7 @@ import Image from "next/image";
 import { GoLinkExternal } from "react-icons/go";
 import { imageKitLoader } from "../util/image-kit-loader";
 import ListItem from "../ui/list-item";
-import { sideAnimation } from "../theme/sideAnimation";
+import { sideAnimation } from "../theme/animations/sideAnimation";
 
 type ProjectProps = {
   id: number;
@@ -26,7 +26,7 @@ export default function ProjectItem({
 }: ProjectProps) {
   return (
     <ListItem id={id} variants={sideAnimation}>
-      <div className="relative h-56 md:h-64 bg-black rounded-t-lg overflow-hidden">
+      <div className="relative bg-[var(--background)] rounded-t-lg overflow-hidden">
         <Image
           className="scale-[1.7] hover:scale-[2.2] hover:translate-y-[200px] rotate-45 hover:rotate-12 transform ease-in-out duration-200"
           loader={imageKitLoader}
@@ -42,7 +42,7 @@ export default function ProjectItem({
           {technologies.map((tech, index) => {
             return (
               <li
-                className="border-[1px] border-slate-300 dark:border-slate-700 rounded-2xl py-1 px-5 hover:text-slate-500 hover:border-slate-500 dark:hover:text-slate-200 dark:hover:border-slate-200 text-xs md:text-xs"
+                className="border-[1px] border-[var(--secondary)] rounded-2xl py-1 px-5 hover:text-[var(--primary)] hover:border-[var(--primary)] text-xs tablet:text-xs"
                 key={index}
               >
                 {tech}
@@ -50,15 +50,15 @@ export default function ProjectItem({
             );
           })}
         </ul>
-        <h3 className="text-xl md:text-3xl">{title}</h3>
-        <ul className="list-disc pl-4 space-y-2 text-xs lg:text-sm">
+        <h3 className="text-xl tablet:text-3xl">{title}</h3>
+        <ul className="list-disc pl-4 space-y-2 text-xs tablet:text-sm">
           {description.map((desc, index) => {
             return <li key={index}>{desc}</li>;
           })}
         </ul>
-        <div className="flex justify-between text-xs md:text-base">
+        <div className="flex justify-between text-xs tablet:text-base">
           <a
-            className="flex items-center gap-2 border-[1px] border-slate-300 dark:border-slate-700 py-1 px-3 cursor-pointer hover:text-blue-400 hover:border-blue-400 dark:hover:border-blue-400"
+            className="flex items-center gap-2 border-[1px] border-[var(--secondary)] py-1 px-3 cursor-pointer hover:text-[var(--link)] hover:border-[var(--link)]"
             href={live}
             target="_blank"
             rel="noopener noreferrer"
@@ -67,7 +67,7 @@ export default function ProjectItem({
             <GoLinkExternal />
           </a>
           <a
-            className="flex items-center gap-2 border-[1px] border-slate-300 dark:border-slate-700 py-1 px-3 cursor-pointer hover:text-blue-400 hover:border-blue-400 dark:hover:border-blue-400"
+            className="flex items-center gap-2 border-[1px] border-[var(--secondary)] py-1 px-3 cursor-pointer hover:text-[var(--link)] hover:border-[var(--link)]"
             href={github}
             target="_blank"
             rel="noopener noreferrer"

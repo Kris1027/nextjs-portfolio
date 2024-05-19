@@ -10,7 +10,7 @@ export default function MobileMenu({
 }) {
   return (
     <motion.ul
-      className="fixed flex flex-col justify-center gap-24 items-center bg-white dark:bg-black text-primary dark:text-primaryDark bottom-0 left-0 w-full h-screen text-4xl z-40"
+      className="fixed flex flex-col justify-center gap-24 items-center bg-[var(--background)] text-[var(--primary)] bottom-0 left-0 w-full h-screen text-4xl z-40"
       variants={navMobile}
       animate="visible"
       initial="hidden"

@@ -25,7 +25,7 @@ export function ThemeSwitcher() {
       initial="hidden"
     >
       <motion.li
-        className={resolvedTheme === "light" ? "" : "text-secondaryDark"}
+        className={resolvedTheme === "light" ? "" : "text-[var(--secondary)]"}
         whileHover={{
           x: -2,
           y: -2,
@@ -39,7 +39,7 @@ export function ThemeSwitcher() {
         />
       </motion.li>
       <motion.li
-        className={resolvedTheme === "dark" ? "" : "text-secondaryDark"}
+        className={resolvedTheme === "dark" ? "" : "text-[var(--secondary)]"}
         whileHover={{
           x: -2,
           y: -2,
@@ -53,7 +53,7 @@ export function ThemeSwitcher() {
         />
       </motion.li>
       <motion.li
-        className="text-secondaryDark"
+        className="text-[var(--secondary)]"
         whileHover={{
           x: -2,
           y: -2,

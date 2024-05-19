@@ -23,7 +23,6 @@ export default function Reveal({
     } else {
       mainControls.start("hidden");
     }
-    console.log(isInView);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isInView]);
 
@@ -73,7 +72,7 @@ export default function Reveal({
           bottom: 4,
           left: 0,
           right: 0,
-          background: "#059669",
+          background: "var(--primary)",
           zIndex: 20,
         }}
       />

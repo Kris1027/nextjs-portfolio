@@ -14,10 +14,10 @@ export default function CourseModal({
   return (
     <div
       onClick={() => setShowModal(false)}
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-[var(--blur)]"
     >
       <motion.div
-        className="bg-white dark:bg-slate-950 p-6 rounded-lg shadow-2xl shadow-white"
+        className="bg-[var(--background)] p-6 rounded-lg shadow-2xl shadow-[var(--secondary)]"
         initial={{ opacity: 0, y: "-100vh" }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.3 }}

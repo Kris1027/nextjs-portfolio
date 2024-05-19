@@ -40,7 +40,7 @@ export default function CourseItem({
         <h4 className="text-lg tablet:text-3xl">{title}</h4>
         <div className="flex justify-between text-sm tablet:text-base">
           <a
-            className="flex items-center gap-2 border-[1px] border-slate-300 dark:border-slate-700 px-1 tablet:py-1 tablet:px-3 cursor-pointer hover:text-blue-400 hover:border-blue-400 dark:hover:border-blue-400"
+            className="flex items-center gap-2 border-[1px] border-[var(--secondary)] px-1 tablet:py-1 tablet:px-3 cursor-pointer hover:text-[var(--link)] hover:border-[var(--link)]"
             href={link}
             target="_blank"
             rel="noopener noreferrer"
@@ -49,7 +49,7 @@ export default function CourseItem({
             <GoLinkExternal />
           </a>
           <button
-            className="flex items-center gap-2 border-[1px] border-slate-300 dark:border-slate-700 px-1 tablet:py-1 tablet:px-3 cursor-pointer hover:text-amber-400 hover:border-amber-400 dark:hover:border-amber-400"
+            className="flex items-center gap-2 border-[1px] border-[var(--secondary)] px-1 tablet:py-1 tablet:px-3 cursor-pointer hover:text-[var(--linkSecondary)] hover:border-[var(--linkSecondary)]"
             onClick={() => handleModal(id)}
           >
             Show certificate

@@ -86,50 +86,54 @@ export default function EmailForm() {
       <div className="relative">
         <input
           {...register("name")}
-          className="w-full bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 px-4 py-2 rounded-lg focus:outline-none pl-14"
+          className="w-full bg-[var(--background)] px-4 py-2 rounded-lg focus:outline-none pl-14"
           placeholder="Your name"
         />
         {errors.name && (
-          <span className="text-red-500 px-4 py-1">{errors.name.message}</span>
+          <span className="text-[var(--error)] px-4 py-1">
+            {errors.name.message}
+          </span>
         )}
         <FaUserEdit
           size={30}
-          className="text-primary dark:text-primaryDark absolute top-1 left-3"
+          className="text-[var(--primary)] absolute top-1 left-3"
         />
       </div>
       <div className="relative">
         <input
           {...register("email")}
-          className="w-full bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 px-4 py-2 rounded-lg focus:outline-none pl-14"
+          className="w-full bg-[var(--background)] px-4 py-2 rounded-lg focus:outline-none pl-14"
           placeholder="Your email"
         />
         {errors.email && (
-          <span className="text-red-500 px-4 py-1">{errors.email.message}</span>
+          <span className="text-[var(--error)] px-4 py-1">
+            {errors.email.message}
+          </span>
         )}
         <MdAlternateEmail
           size={30}
-          className="text-primary absolute top-1 left-3"
+          className="text-[var(--primary)] absolute top-1 left-3"
         />
       </div>
       <div className="relative">
         <textarea
           {...register("message")}
-          className="w-full bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 px-4 py-2 rounded-lg focus:outline-none pl-14"
+          className="w-full bg-[var(--background)] px-4 py-2 rounded-lg focus:outline-none pl-14"
           placeholder="Your message"
           rows={10}
         />
         {errors.message && (
-          <span className="text-red-500 px-4 py-1">
+          <span className="text-[var(--error)] px-4 py-1">
             {errors.message.message}
           </span>
         )}
         <MdOutlineMessage
           size={30}
-          className="text-primary absolute top-1 left-3"
+          className="text-[var(--primary)] absolute top-1 left-3"
         />
       </div>
       <button
-        className="bg-primary dark:bg-primaryDark text-white font-bold py-2 md:py-4 rounded active:scale-95 flex justify-center items-center"
+        className="bg-[var(--primary)] text-[var(--background)] font-bold py-2 md:py-4 rounded active:scale-95 flex justify-center items-center"
         type="submit"
         disabled={isSubmitting}
       >

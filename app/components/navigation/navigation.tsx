@@ -19,7 +19,7 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="flex justify-between items-center py-5 px-10 bg-white dark:bg-black text-primary dark:text-primaryDark fixed w-full z-40">
+    <nav className="flex justify-between items-center py-5 px-10 bg-[var(--background)] text-[var(--primary)] fixed w-full z-40">
       {matches && <DesktopMenu links={links} />}
       <ThemeSwitcher />
       {!matches && <Burger setToggled={setToggled} toggled={toggled} />}
