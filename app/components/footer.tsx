@@ -1,9 +1,11 @@
 export default function Footer() {
+  const date = new Date().getFullYear();
+
   return (
     <footer>
-      <div className="p-2 tablet:p-10 bg-[var(--background)] text-[var(--secondary)]">
+      <div className="py-2 tablet:py-4 bg-[var(--background)] text-[var(--secondary)]">
         <p className="text-center">
-          ©2024 All rights reserved. Designed & crafted with love by{" "}
+          ©{date} All rights reserved. Designed & crafted with love by{" "}
           <a
             href="https://www.linkedin.com/in/krzysztof-obarzanek-6b8803254/"
             target="_blank"
