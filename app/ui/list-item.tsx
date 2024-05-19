@@ -9,7 +9,7 @@ type ListItemProps = {
 export default function ListItem({ children, id, variants }: ListItemProps) {
   return (
     <motion.li
-      className="bg-[var(--background)] p-2 tablet:p-4 rounded-lg shadow-md shadow-[var(--secondary)] hover:scale-105 flex flex-col gap-5 justify-between mobile:w-4/5 tablet:w-full mx-auto"
+      className="bg-[var(--background)] p-2 tablet:p-4 rounded-lg shadow-md shadow-[var(--secondary)] hover:scale-105 flex flex-col gap-5 justify-between"
       variants={variants}
       initial="initial"
       whileInView="animate"
