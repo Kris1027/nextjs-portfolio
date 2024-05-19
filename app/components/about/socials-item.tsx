@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { fadeInAnimation } from "@/app/theme/fadeInAnimation";
+import { fadeInAnimation } from "@/app/theme/animations/fadeInAnimation";
 import { getSocialIcons } from "@/app/util/getSocialIcons";
 
 type SocialsItemProps = {

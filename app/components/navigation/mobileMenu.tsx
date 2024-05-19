@@ -1,4 +1,4 @@
-import { navMobile, navMobileItem } from "@/app/theme/navAnimation";
+import { navMobile, navMobileItem } from "@/app/theme/animations/navAnimation";
 import { motion } from "framer-motion";
 
 export default function MobileMenu({

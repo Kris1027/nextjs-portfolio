@@ -5,7 +5,7 @@ import CourseModal from "./course-modal";
 import { GoLinkExternal } from "react-icons/go";
 import { PiCertificateLight } from "react-icons/pi";
 import ListItem from "../ui/list-item";
-import { fadeInAnimation } from "../theme/fadeInAnimation";
+import { fadeInAnimation } from "../theme/animations/fadeInAnimation";
 
 type CourseItemProps = {
   id: number;

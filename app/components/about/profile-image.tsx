@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { imageKitLoader } from "../../util/image-kit-loader";
-import { fadeInAnimation } from "@/app/theme/fadeInAnimation";
+import { fadeInAnimation } from "@/app/theme/animations/fadeInAnimation";
 
 export default function ProfileImage() {
   return (

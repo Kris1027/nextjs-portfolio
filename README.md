@@ -66,5 +66,5 @@
 - [x] fix issue with server pages and client pages
 - [x] refactor email form with react-hook-form and zod
 - [x] fix modal opening animation
-- [ ] improve project performance
+- [x] improve project performance
 - [ ] change animation in profil description to have better performance

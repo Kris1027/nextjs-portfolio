@@ -1,4 +1,4 @@
-import { navDesktop } from "@/app/theme/navAnimation";
+import { navDesktop } from "@/app/theme/animations/navAnimation";
 import { motion } from "framer-motion";
 
 export default function DesktopMenu({

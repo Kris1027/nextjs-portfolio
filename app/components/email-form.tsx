@@ -10,7 +10,7 @@ import {
   MdOutlineScheduleSend,
 } from "react-icons/md";
 import { motion } from "framer-motion";
-import { fadeInAnimation } from "../theme/fadeInAnimation";
+import { fadeInAnimation } from "../theme/animations/fadeInAnimation";
 import { FaUserEdit } from "react-icons/fa";
 import { IoSend } from "react-icons/io5";
 
