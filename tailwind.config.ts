@@ -13,14 +13,7 @@ const config: Config = {
       tablet: "1000px",
       desktop: "1400px",
     },
-    extend: {
-      colors: {
-        primary: "#0d9488",
-        primaryDark: "#059669",
-        secondary: "#1f2937",
-        secondaryDark: "#4b5563",
-      },
-    },
+    extend: {},
   },
   plugins: [],
 };
