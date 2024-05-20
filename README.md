@@ -1,6 +1,6 @@
 # Portfolio
 
-`live` : <https://kris1027-nextjs-portfolio.vercel.app/>
+`live` : <https://www.kris1027.pl/>
 
 ## Challenges Faced During the Portfolio Project
 
