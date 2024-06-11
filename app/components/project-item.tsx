@@ -28,7 +28,7 @@ export default function ProjectItem({
     <ListItem id={id} variants={sideAnimation}>
       <div className="relative bg-[var(--background)] rounded-t-lg overflow-hidden">
         <Image
-          className="scale-[1.7] hover:scale-[2.2] hover:translate-y-[200px] rotate-45 hover:rotate-12 transform ease-in-out duration-200"
+          className="scale-[1.4] rotate-12"
           loader={imageKitLoader}
           src={image}
           sizes="(min-width: 768px) 564px, (min-width: 384px) 224px"
