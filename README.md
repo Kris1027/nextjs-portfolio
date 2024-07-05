@@ -35,6 +35,12 @@
 - Understanding Prisma’s query capabilities and relational data handling.
 - Debugging and optimizing queries to ensure data integrity and performance.
 
+### 7. Testing the Application with Playwright
+
+- Setting up Playwright for end-to-end testing to ensure application reliability.
+- Writing comprehensive tests to cover various user interactions and edge cases.
+- Debugging and maintaining tests to adapt to application changes and ensure continuous quality assurance.
+
 ## Technologies:
 
 - Next
@@ -50,6 +56,7 @@
 - Prisma
 - Toastify
 - SQLite
+- Playwright
 
 ## List to do:
 
@@ -68,3 +75,4 @@
 - [x] fix modal opening animation
 - [x] improve project performance
 - [x] change animation in profil description to have better performance
+- [x] test application
