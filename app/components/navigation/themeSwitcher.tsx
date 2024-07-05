@@ -36,6 +36,7 @@ export function ThemeSwitcher() {
           className="cursor-pointer"
           size={30}
           onClick={() => setTheme("light")}
+          aria-label="Light mode"
         />
       </motion.li>
       <motion.li
@@ -50,6 +51,7 @@ export function ThemeSwitcher() {
           className="cursor-pointer"
           size={30}
           onClick={() => setTheme("dark")}
+          aria-label="Dark mode"
         />
       </motion.li>
       <motion.li
@@ -64,6 +66,7 @@ export function ThemeSwitcher() {
           className="cursor-pointer"
           size={30}
           onClick={() => setTheme("system")}
+          aria-label="System mode"
         />
       </motion.li>
     </motion.ul>
