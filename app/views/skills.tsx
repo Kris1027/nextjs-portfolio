@@ -3,7 +3,6 @@ import SkillItem from "../components/skill-item";
 import Section from "../ui/section";
 import Heading from "../ui/heading";
 import Paragraph from "../ui/paragraph";
-import List from "../ui/list";
 
 export default async function Skills() {
   const skillsIcons = await db.skillIcons.findMany();

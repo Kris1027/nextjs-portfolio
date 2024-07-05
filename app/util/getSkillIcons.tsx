@@ -13,6 +13,7 @@ import {
   SiAstro,
   SiExpress,
   SiMysql,
+  SiPlaywright,
   SiPrisma,
   SiStyledcomponents,
   SiTailwindcss,
@@ -56,6 +57,8 @@ export const getSkillIcons = (iconName: string) => {
       return <SiAstro />;
     case "SiPrisma":
       return <SiPrisma />;
+    case "SiPlaywright":
+      return <SiPlaywright />;
     default:
       return null;
   }
