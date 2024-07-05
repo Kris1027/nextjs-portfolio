@@ -1,11 +1,12 @@
 import { navDesktop } from "@/app/theme/animations/navAnimation";
 import Reveal from "@/app/theme/animations/reveal";
 import { motion } from "framer-motion";
+import { NaviLinksProps } from "./navigation";
 
 export default function DesktopMenu({
   links,
 }: {
-  links: { href: string; text: string }[];
+  links: NaviLinksProps["links"];
 }) {
   return (
     <motion.ul
@@ -24,7 +25,9 @@ export default function DesktopMenu({
           whileTap={{ scale: 0.9 }}
         >
           <Reveal>
-            <a href={link.href}>{link.text}</a>
+            <a href={link.href} aria-label={link.ariaLabel}>
+              {link.text}
+            </a>
           </Reveal>
         </motion.li>
       ))}

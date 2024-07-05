@@ -1,11 +1,12 @@
 import { navMobile, navMobileItem } from "@/app/theme/animations/navAnimation";
 import { motion } from "framer-motion";
+import { NaviLinksProps } from "./navigation";
 
 export default function MobileMenu({
   links,
   setToggled,
 }: {
-  links: { href: string; text: string }[];
+  links: NaviLinksProps["links"];
   setToggled: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
   return (
@@ -23,7 +24,9 @@ export default function MobileMenu({
           whileHover={{ scale: 1.3 }}
           onClick={() => setToggled((prevToggle) => !prevToggle)}
         >
-          <a href={link.href}>{link.text}</a>
+          <a href={link.href} aria-label={link.ariaLabel}>
+            {link.text}
+          </a>
         </motion.li>
       ))}
     </motion.ul>
