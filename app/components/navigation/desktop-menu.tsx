@@ -1,4 +1,4 @@
-import { navDesktop } from "@/app/theme/animations/navAnimation";
+import { navDesktop } from "@/app/theme/animations/nav-animation";
 import Reveal from "@/app/theme/animations/reveal";
 import { motion } from "framer-motion";
 import { NaviLinksProps } from "./navigation";

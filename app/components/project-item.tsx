@@ -3,7 +3,7 @@ import Image from "next/image";
 import { GoLinkExternal } from "react-icons/go";
 import { imageKitLoader } from "../util/image-kit-loader";
 import ListItem from "../ui/list-item";
-import { sideAnimation } from "../theme/animations/sideAnimation";
+import { sideAnimation } from "../theme/animations/side-animation";
 
 type ProjectProps = {
   id: number;

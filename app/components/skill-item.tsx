@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
-import { getSkillIcons } from "../util/getSkillIcons";
-import { fadeInAnimation } from "../theme/animations/fadeInAnimation";
+import { getSkillIcons } from "../util/get-skill-icons";
+import { fadeInAnimation } from "../theme/animations/fade-in-animation";
 
 type SkillItemProps = {
   id: number;

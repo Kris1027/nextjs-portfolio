@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
-import { fadeInAnimation } from "@/app/theme/animations/fadeInAnimation";
-import { getSocialIcons } from "@/app/util/getSocialIcons";
+import { fadeInAnimation } from "@/app/theme/animations/fade-in-animation";
+import { getSocialIcons } from "@/app/util/get-social-icons";
 
 type SocialsItemProps = {
   id: number;

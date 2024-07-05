@@ -3,7 +3,7 @@ import "./globals.css";
 import { Dosis } from "next/font/google";
 import Navigation from "./components/navigation/navigation";
 import Footer from "./components/footer";
-import { DarkModeProvider } from "./providers/darkMode-Provider";
+import { DarkModeProvider } from "./providers/dark-mode-provider";
 
 const open_sans = Dosis({
   subsets: ["latin"],

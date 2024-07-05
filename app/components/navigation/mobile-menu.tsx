@@ -1,4 +1,4 @@
-import { navMobile, navMobileItem } from "@/app/theme/animations/navAnimation";
+import { navMobile, navMobileItem } from "@/app/theme/animations/nav-animation";
 import { motion } from "framer-motion";
 import { NaviLinksProps } from "./navigation";
 

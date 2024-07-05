@@ -1,10 +1,10 @@
 "use client";
 import { useState } from "react";
-import { useMediaQuery } from "../../util/useMediaQuery";
-import { ThemeSwitcher } from "./themeSwitcher";
+import { useMediaQuery } from "../../util/use-media-query";
+import { ThemeSwitcher } from "./theme-switcher";
 import Burger from "./burger";
-import DesktopMenu from "./desktopMenu";
-import MobileMenu from "./mobileMenu";
+import DesktopMenu from "./desktop-menu";
+import MobileMenu from "./mobile-menu";
 
 export type NaviLinksProps = {
   links: { href: string; text: string; ariaLabel: string }[];
