@@ -10,7 +10,9 @@ export default async function Skills() {
   return (
     <Section id="skills">
       <Heading ariaLabel="skills heading">Known technologies</Heading>
-      <Paragraph>Here are some of the technologies I have used.</Paragraph>
+      <Paragraph ariaLabel="skills description">
+        Here are some of the technologies I have used.
+      </Paragraph>
       <ul className="relative text-8xl tablet:text-9xl flex flex-wrap justify-center items-center gap-2 tablet:gap-4 text-[var(--secondary)] pb-10 tablet:w-2/3 mx-auto">
         {skillsIcons.map((icon) => (
           <SkillItem

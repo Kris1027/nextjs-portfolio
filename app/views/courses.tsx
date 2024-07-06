@@ -11,7 +11,9 @@ export default async function Courses() {
   return (
     <Section id="courses">
       <Heading ariaLabel="courses heading">Courses</Heading>
-      <Paragraph>The most important courses I have completed</Paragraph>
+      <Paragraph ariaLabel="courses description">
+        The most important courses I have completed
+      </Paragraph>
       <List>
         {coursesList.map((course) => (
           <CourseItem
