@@ -17,5 +17,8 @@ test.describe("Skills", () => {
     await expect(description).toContainText(
       "Here are some of the technologies I have used"
     );
+
+    const list = page.getByTestId("skills list");
+    await expect(list).toBeVisible();
   });
 });
