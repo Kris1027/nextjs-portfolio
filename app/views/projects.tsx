@@ -16,7 +16,7 @@ export default async function Projects() {
 
   return (
     <Section id="projects">
-      <Heading>Projects</Heading>
+      <Heading ariaLabel="projects heading">Projects</Heading>
       <Paragraph>Here are some of the projects I&apos;ve worked on.</Paragraph>
       <List>
         {projects.map((project) => (
