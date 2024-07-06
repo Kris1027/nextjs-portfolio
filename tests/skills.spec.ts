@@ -21,4 +21,6 @@ test.describe("Skills", () => {
     const list = page.getByTestId("skills list");
     await expect(list).toBeVisible();
   });
+
+  // for later, build tests for skill-item
 });
