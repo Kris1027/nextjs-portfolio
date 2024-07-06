@@ -10,7 +10,7 @@ export default function Paragraph({
   return (
     <Reveal>
       <p
-        className="text-sm tablet:text-lg pb-5 leading-8 text-[var(--secondary)] text-center"
+        className="text-sm tablet:text-lg pb-5 leading-8 text-[var(--secondary)] text-center mt-2"
         aria-label={ariaLabel}
       >
         {children}

@@ -35,7 +35,7 @@ export default async function Projects() {
         ))}
       </List>
       <Reveal>
-        <p className="text-sm tablet:text-lg leading-8 text-[var(--secondary)] text-center pt-10">
+        <Paragraph ariaLabel="projects github link">
           More you can find on my{" "}
           <a
             className="text-[var(--primary)] hover:underline font-bold"
@@ -46,7 +46,7 @@ export default async function Projects() {
             GitHub
           </a>{" "}
           profile!
-        </p>
+        </Paragraph>
       </Reveal>
     </Section>
   );
