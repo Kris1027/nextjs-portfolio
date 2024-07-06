@@ -16,9 +16,11 @@ export default async function Projects() {
 
   return (
     <Section id="projects">
-      <Heading>Projects</Heading>
-      <Paragraph>Here are some of the projects I&apos;ve worked on.</Paragraph>
-      <List>
+      <Heading ariaLabel="projects heading">Projects</Heading>
+      <Paragraph ariaLabel="projects description">
+        Here are some of the projects I&apos;ve worked on
+      </Paragraph>
+      <List dataTestId="projects list">
         {projects.map((project) => (
           <ProjectItem
             key={project.id}
@@ -33,7 +35,7 @@ export default async function Projects() {
         ))}
       </List>
       <Reveal>
-        <p className="text-sm tablet:text-lg leading-8 text-[var(--secondary)] text-center pt-10">
+        <Paragraph ariaLabel="projects github link">
           More you can find on my{" "}
           <a
             className="text-[var(--primary)] hover:underline font-bold"
@@ -44,7 +46,7 @@ export default async function Projects() {
             GitHub
           </a>{" "}
           profile!
-        </p>
+        </Paragraph>
       </Reveal>
     </Section>
   );

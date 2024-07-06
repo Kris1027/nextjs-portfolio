@@ -6,8 +6,10 @@ import Section from "../ui/section";
 export default function Contact() {
   return (
     <Section id="contact">
-      <Heading>Contact</Heading>
-      <Paragraph>Feel free to get in touch with me.</Paragraph>
+      <Heading ariaLabel="contact heading">Contact</Heading>
+      <Paragraph ariaLabel="contact description">
+        Feel free to get in touch with me.
+      </Paragraph>
       <EmailForm />
     </Section>
   );

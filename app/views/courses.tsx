@@ -10,9 +10,11 @@ export default async function Courses() {
 
   return (
     <Section id="courses">
-      <Heading>Courses</Heading>
-      <Paragraph>The most important courses I have completed</Paragraph>
-      <List>
+      <Heading ariaLabel="courses heading">Courses</Heading>
+      <Paragraph ariaLabel="courses description">
+        The most important courses I have completed
+      </Paragraph>
+      <List dataTestId="courses list">
         {coursesList.map((course) => (
           <CourseItem
             key={course.id}
