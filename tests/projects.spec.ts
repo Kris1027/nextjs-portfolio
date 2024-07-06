@@ -18,6 +18,15 @@ test.describe("Projects", () => {
       "Here are some of the projects I've worked on"
     );
 
+    const githubLink = page.getByLabel("projects github link");
+    await expect(githubLink).toBeVisible();
+    await expect(githubLink).toContainText("More you can find on my");
+
+    const linkInsideParagraph = githubLink.locator("a");
+    await expect(linkInsideParagraph).toBeVisible();
+    await expect(linkInsideParagraph).toHaveAttribute("href");
+    await expect(linkInsideParagraph).toHaveAttribute("href", /github\.com/);
+
     const list = page.getByTestId("projects list");
     await expect(list).toBeVisible();
   });
