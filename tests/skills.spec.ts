@@ -11,5 +11,11 @@ test.describe("Skills", () => {
     const heading = page.getByLabel("skills heading");
     await expect(heading).toBeVisible();
     await expect(heading).toContainText("Known technologies");
+
+    const description = page.getByLabel("skills description");
+    await expect(description).toBeVisible();
+    await expect(description).toContainText(
+      "Here are some of the technologies I have used"
+    );
   });
 });
