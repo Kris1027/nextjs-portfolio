@@ -9,17 +9,26 @@ export default async function AboutTitle() {
   return (
     <>
       <Reveal>
-        <h1 className="text-5xl tablet:text-7xl desktop:text-9xl text-[var(--primary)] font-bold py-2 mobile:py-4 text-center">
+        <h1
+          aria-label="title"
+          className="text-5xl tablet:text-7xl desktop:text-9xl text-[var(--primary)] font-bold py-2 mobile:py-4 text-center"
+        >
           {title?.title}
         </h1>
       </Reveal>
       <Reveal>
-        <h2 className="text-2xl tablet:text-4xl desktop:text-6xl text-center">
+        <h2
+          aria-label="proffesion"
+          className="text-2xl tablet:text-4xl desktop:text-6xl text-center"
+        >
           {subtitle?.title}
         </h2>
       </Reveal>
       <Reveal>
-        <p className="text-sm text-[var(--secondary)] tablet:text-lg desktop:text-xl leading-8 tablet:w-4/5 desktop:w-3/5 mx-auto py-2 tablet:py-5 text-center">
+        <p
+          aria-label="description"
+          className="text-sm text-[var(--secondary)] tablet:text-lg desktop:text-xl leading-8 tablet:w-4/5 desktop:w-3/5 mx-auto py-2 tablet:py-5 text-center"
+        >
           {description?.title}
         </p>
       </Reveal>
