@@ -20,4 +20,17 @@ test.describe("About", () => {
     await expect(description).toBeVisible();
     await expect(description).not.toBeEmpty();
   });
+
+  // for later, build tests for socials
+
+  test("check if render profile image correctly", async ({ page }) => {
+    const imageContainer = page.getByTestId("image container");
+    await expect(imageContainer).toBeVisible();
+
+    const image = page.getByLabel("profile image");
+    await expect(image).toHaveAttribute("src", /profile\.jpeg/);
+    await expect(image).toHaveAttribute("width", "640");
+    await expect(image).toHaveAttribute("height", "640");
+    await expect(image).toBeVisible();
+  });
 });
