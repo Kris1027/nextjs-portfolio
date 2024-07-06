@@ -14,7 +14,7 @@ export default async function Courses() {
       <Paragraph ariaLabel="courses description">
         The most important courses I have completed
       </Paragraph>
-      <List>
+      <List dataTestId="courses list">
         {coursesList.map((course) => (
           <CourseItem
             key={course.id}

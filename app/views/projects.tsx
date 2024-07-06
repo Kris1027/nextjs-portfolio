@@ -18,9 +18,9 @@ export default async function Projects() {
     <Section id="projects">
       <Heading ariaLabel="projects heading">Projects</Heading>
       <Paragraph ariaLabel="projects description">
-        Here are some of the projects I&apos;ve worked on.
+        Here are some of the projects I&apos;ve worked on
       </Paragraph>
-      <List>
+      <List dataTestId="projects list">
         {projects.map((project) => (
           <ProjectItem
             key={project.id}
