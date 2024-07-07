@@ -55,4 +55,21 @@ test.describe("Contact", () => {
 
     await expect(page.getByText("Email sent successfully!")).toBeVisible();
   });
+
+  test("check if show error toast on API failure", async ({ page }) => {
+    await page.getByPlaceholder("Your name").fill("Test User");
+    await page.getByPlaceholder("Your email").fill("test@example.com");
+    await page.getByPlaceholder("Your message").fill("Test message");
+
+    await page.route(
+      "https://api.emailjs.com/api/v1.0/email/send",
+      async (route) => {
+        await route.fulfill({ status: 500 });
+      }
+    );
+
+    await page.locator("#contact").getByRole("button").click();
+
+    await expect(page.getByText("Something went wrong!")).toBeVisible();
+  });
 });
