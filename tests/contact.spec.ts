@@ -31,6 +31,14 @@ test.describe("Contact", () => {
     await expect(page.getByText("Message is required")).toBeVisible();
   });
 
+  test("check if show error for invalid email", async ({ page }) => {
+    await page.getByPlaceholder("Your name").fill("Test User");
+    await page.getByPlaceholder("Your email").fill("invalid-email");
+    await page.getByPlaceholder("Your message").fill("Test message");
+    await page.locator("#contact").getByRole("button").click();
+    await expect(page.getByText("Email is invalid")).toBeVisible();
+  });
+
   test("check if email form is sending correct data", async ({ page }) => {
     await page.getByPlaceholder("Your name").fill("Test User");
     await page.getByPlaceholder("Your email").fill("test@example.com");
