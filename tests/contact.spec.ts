@@ -72,4 +72,27 @@ test.describe("Contact", () => {
 
     await expect(page.getByText("Something went wrong!")).toBeVisible();
   });
+
+  test("check if form is reset after successful submission", async ({
+    page,
+  }) => {
+    await page.getByPlaceholder("Your name").fill("Test User");
+    await page.getByPlaceholder("Your email").fill("test@example.com");
+    await page.getByPlaceholder("Your message").fill("Test message");
+
+    await page.route(
+      "https://api.emailjs.com/api/v1.0/email/send",
+      async (route) => {
+        await route.fulfill({ status: 200 });
+      }
+    );
+
+    await page.locator("#contact").getByRole("button").click();
+
+    await expect(page.getByText("Email sent successfully!")).toBeVisible();
+
+    await expect(page.getByPlaceholder("Your name")).toHaveValue("");
+    await expect(page.getByPlaceholder("Your email")).toHaveValue("");
+    await expect(page.getByPlaceholder("Your message")).toHaveValue("");
+  });
 });
