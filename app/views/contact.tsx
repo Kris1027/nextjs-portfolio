@@ -8,7 +8,7 @@ export default function Contact() {
     <Section id="contact">
       <Heading ariaLabel="contact heading">Contact</Heading>
       <Paragraph ariaLabel="contact description">
-        Feel free to get in touch with me.
+        Feel free to get in touch with me
       </Paragraph>
       <EmailForm />
     </Section>
