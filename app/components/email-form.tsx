@@ -135,6 +135,7 @@ export default function EmailForm() {
       <button
         className="bg-[var(--primary)] text-[var(--background)] font-bold py-2 md:py-4 rounded active:scale-95 flex justify-center items-center"
         type="submit"
+        data-testId="submit-button"
         disabled={isSubmitting}
       >
         {isSubmitting ? (

@@ -17,6 +17,13 @@ test.describe("Contact", () => {
     );
   });
 
+  test("check if render the form correctly", async ({ page }) => {
+    await expect(page.getByPlaceholder("Your name")).toBeVisible();
+    await expect(page.getByPlaceholder("Your email")).toBeVisible();
+    await expect(page.getByPlaceholder("Your message")).toBeVisible();
+    await expect(page.getByTestId("submit-button")).toBeVisible();
+  });
+
   test("check if email form is sending correct data", async ({ page }) => {
     await page.getByPlaceholder("Your name").fill("Test Name");
     await page.getByPlaceholder("Your email").fill("test@email.com");
