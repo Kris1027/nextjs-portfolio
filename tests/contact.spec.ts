@@ -24,6 +24,13 @@ test.describe("Contact", () => {
     await expect(page.getByTestId("submit-button")).toBeVisible();
   });
 
+  test("check if show error messages for empty fields", async ({ page }) => {
+    await page.locator("#contact").getByRole("button").click();
+    await expect(page.getByText("Name is required")).toBeVisible();
+    await expect(page.getByText("Email is invalid")).toBeVisible();
+    await expect(page.getByText("Message is required")).toBeVisible();
+  });
+
   test("check if email form is sending correct data", async ({ page }) => {
     await page.getByPlaceholder("Your name").fill("Test User");
     await page.getByPlaceholder("Your email").fill("test@example.com");
