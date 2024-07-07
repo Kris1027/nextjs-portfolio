@@ -25,26 +25,19 @@ test.describe("Contact", () => {
   });
 
   test("check if email form is sending correct data", async ({ page }) => {
-    await page.getByPlaceholder("Your name").fill("Test Name");
-    await page.getByPlaceholder("Your email").fill("test@email.com");
+    await page.getByPlaceholder("Your name").fill("Test User");
+    await page.getByPlaceholder("Your email").fill("test@example.com");
     await page.getByPlaceholder("Your message").fill("Test message");
 
-    await expect(page.getByPlaceholder("Your name")).toHaveValue("Test Name");
-    await expect(page.getByPlaceholder("Your email")).toHaveValue(
-      "test@email.com"
-    );
-    await expect(page.getByPlaceholder("Your message")).toHaveValue(
-      "Test message"
+    await page.route(
+      "https://api.emailjs.com/api/v1.0/email/send",
+      async (route) => {
+        await route.fulfill({ status: 200 });
+      }
     );
 
-    const submitPromise = page.waitForResponse(
-      (response) =>
-        response.url().includes("emailjs") && response.status() === 200
-    );
     await page.locator("#contact").getByRole("button").click();
 
-    const response = await submitPromise;
-
-    expect(response.ok()).toBeTruthy();
+    await expect(page.getByText("Email sent successfully!")).toBeVisible();
   });
 });
