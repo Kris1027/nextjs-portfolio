@@ -18,6 +18,7 @@ import {
   SiStyledcomponents,
   SiTailwindcss,
   SiTypescript,
+  SiJest,
 } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
 
@@ -59,6 +60,8 @@ export const getSkillIcons = (iconName: string) => {
       return <SiPrisma />;
     case "SiPlaywright":
       return <SiPlaywright />;
+    case "SiJest":
+      return <SiJest />;
     default:
       return null;
   }
