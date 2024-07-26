@@ -20,6 +20,7 @@ import {
    SiTypescript,
    SiJest,
    SiFramer,
+   SiSupabase,
 } from 'react-icons/si';
 import { TbBrandNextjs } from 'react-icons/tb';
 
@@ -65,6 +66,8 @@ export const getSkillIcons = (iconName: string) => {
          return <SiJest />;
       case 'SiFramer':
          return <SiFramer />;
+      case 'SiSupabase':
+         return <SiSupabase />;
       default:
          return null;
    }
