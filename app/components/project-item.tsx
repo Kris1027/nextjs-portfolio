@@ -22,7 +22,7 @@ export default function ProjectItem({
 }: ProjectProps) {
     return (
         <ListItem id={id} variants={sideAnimation}>
-            <div className='flex flex-col justify-between h-full p-6 bg-[var(--background)] rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300'>
+            <div className='flex flex-col justify-between h-full p-6 rounded-lg transition-shadow duration-300'>
                 <h3 className='text-xl tablet:text-2xl font-bold hover:text-[var(--primary)] transition-colors mb-4'>
                     {title}
                 </h3>
