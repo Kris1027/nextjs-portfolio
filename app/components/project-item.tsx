@@ -22,19 +22,19 @@ export default function ProjectItem({
 }: ProjectProps) {
     return (
         <ListItem id={id} variants={sideAnimation}>
-            <div className='flex flex-col justify-between h-full p-4'>
-                <h3 className='text-xl tablet:text-2xl font-semibold hover:text-[var(--primary)] transition-colors'>
+            <div className='flex flex-col justify-between h-full p-6 bg-[var(--background)] rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300'>
+                <h3 className='text-xl tablet:text-2xl font-bold hover:text-[var(--primary)] transition-colors mb-4'>
                     {title}
                 </h3>
-                <ul className='list-disc pl-4 space-y-1 text-xs tablet:text-sm'>
+                <ul className='list-disc pl-5 space-y-1 text-sm tablet:text-base text-gray-600 mb-4'>
                     {description.map((desc, index) => (
                         <li key={index}>{desc}</li>
                     ))}
                 </ul>
-                <ul className='flex items-center justify-center flex-wrap gap-1 mb-2'>
+                <ul className='flex items-center justify-center flex-wrap gap-2 mb-4'>
                     {technologies.map((tech, index) => (
                         <li
-                            className={`border border-[var(--secondary)] rounded-2xl py-1 px-3 hover:text-[var(--primary)] hover:border-[var(--primary)] text-xs`}
+                            className='border border-[var(--secondary)] rounded-full py-1 px-4 text-xs hover:bg-[var(--primary)] hover:text-white transition-colors'
                             key={index}
                         >
                             {tech}
@@ -43,7 +43,7 @@ export default function ProjectItem({
                 </ul>
                 <div className='flex justify-between text-xs tablet:text-base mt-2'>
                     <a
-                        className='flex items-center gap-2 border border-[var(--secondary)] py-1 px-3 cursor-pointer hover:text-[var(--link)] hover:border-[var(--link)]'
+                        className='flex items-center gap-2 border border-[var(--secondary)] py-2 px-4 rounded-lg hover:bg-[var(--link)] hover:text-white transition-colors'
                         href={live}
                         target='_blank'
                         rel='noopener noreferrer'
@@ -52,7 +52,7 @@ export default function ProjectItem({
                         <GoLinkExternal />
                     </a>
                     <a
-                        className='flex items-center gap-2 border border-[var(--secondary)] py-1 px-3 cursor-pointer hover:text-[var(--link)] hover:border-[var(--link)]'
+                        className='flex items-center gap-2 border border-[var(--secondary)] py-2 px-4 rounded-lg hover:bg-[var(--link)] hover:text-white transition-colors'
                         href={github}
                         target='_blank'
                         rel='noopener noreferrer'
