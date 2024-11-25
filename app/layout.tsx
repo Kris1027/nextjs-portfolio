@@ -21,10 +21,10 @@ export default function RootLayout({
 }>) {
     return (
         <html lang='en' suppressHydrationWarning>
-            <body className={`${open_sans.className} max-w-[1280px] mx-auto`}>
+            <body className={open_sans.className}>
                 <DarkModeProvider>
                     <Navigation />
-                    {children}
+                    <div className='max-w-[1280px] mx-auto'>{children}</div>
                     <Footer />
                 </DarkModeProvider>
             </body>
