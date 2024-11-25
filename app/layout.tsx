@@ -1,33 +1,33 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import { Dosis } from "next/font/google";
-import Navigation from "./components/navigation/navigation";
-import Footer from "./components/footer";
-import { DarkModeProvider } from "./providers/dark-mode-provider";
+import type { Metadata } from 'next';
+import './globals.css';
+import { Dosis } from 'next/font/google';
+import Navigation from './components/navigation/navigation';
+import Footer from './components/footer';
+import { DarkModeProvider } from './providers/dark-mode-provider';
 
 const open_sans = Dosis({
-  subsets: ["latin"],
+    subsets: ['latin'],
 });
 
 export const metadata: Metadata = {
-  title: "Kris Portfolio",
-  description: "Frontend developer portfolio",
+    title: 'Kris Portfolio',
+    description: 'Frontend developer portfolio',
 };
 
 export default function RootLayout({
-  children,
+    children,
 }: Readonly<{
-  children: React.ReactNode;
+    children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={open_sans.className}>
-        <DarkModeProvider>
-          <Navigation />
-          {children}
-          <Footer />
-        </DarkModeProvider>
-      </body>
-    </html>
-  );
+    return (
+        <html lang='en' suppressHydrationWarning>
+            <body className={`${open_sans.className} max-w-[1280px] mx-auto`}>
+                <DarkModeProvider>
+                    <Navigation />
+                    {children}
+                    <Footer />
+                </DarkModeProvider>
+            </body>
+        </html>
+    );
 }
