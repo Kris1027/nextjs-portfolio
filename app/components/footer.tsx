@@ -3,7 +3,7 @@ export default function Footer() {
 
     return (
         <footer>
-            <div className='py-2 tablet:py-4 bg-[var(--bar-background)] text-[var(--secondary)]'>
+            <div className='py-2 tablet:py-4 bg-[var(--bar-background)] text-[var(--secondary)] backdrop-blur-sm'>
                 <p className='text-center'>
                     ©{date} All rights reserved. Designed & crafted with love by{' '}
                     <a

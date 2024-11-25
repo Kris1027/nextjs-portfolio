@@ -23,7 +23,7 @@ export default function Navigation() {
     ];
 
     return (
-        <nav className='flex justify-between items-center py-5 px-10 bg-[var(--bar-background)] text-[var(--primary)] fixed z-40 w-full'>
+        <nav className='flex justify-between items-center py-5 px-10 bg-[var(--bar-background)] text-[var(--primary)] fixed z-40 w-full backdrop-blur-sm'>
             {matches && <DesktopMenu links={links} />}
             <ThemeSwitcher />
             {!matches && <Burger setToggled={setToggled} toggled={toggled} />}
