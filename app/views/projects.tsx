@@ -26,7 +26,6 @@ export default async function Projects() {
                         key={project.id}
                         id={project.id}
                         title={project.title}
-                        image={project.image}
                         live={project.live}
                         github={project.github}
                         technologies={project.technologies.map((tech) => tech.name)}

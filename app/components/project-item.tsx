@@ -1,14 +1,11 @@
 'use client';
-import Image from 'next/image';
 import { GoLinkExternal } from 'react-icons/go';
-import { imageKitLoader } from '../util/image-kit-loader';
 import ListItem from '../ui/list-item';
 import { sideAnimation } from '../theme/animations/side-animation';
 
 type ProjectProps = {
     id: number;
     title: string;
-    image: string;
     live: string;
     github: string;
     technologies: string[];
@@ -18,7 +15,6 @@ type ProjectProps = {
 export default function ProjectItem({
     id,
     title,
-    image,
     live,
     github,
     technologies,
@@ -26,17 +22,6 @@ export default function ProjectItem({
 }: ProjectProps) {
     return (
         <ListItem id={id} variants={sideAnimation}>
-            <div className='relative bg-[var(--background)] rounded-lg overflow-hidden mb-4'>
-                <Image
-                    className='object-cover h-80 w-full'
-                    loader={imageKitLoader}
-                    src={image}
-                    sizes='(min-width: 768px) 564px, (min-width: 384px) 224px'
-                    alt={title}
-                    width={564}
-                    height={233}
-                />
-            </div>
             <div className='flex flex-col justify-between h-full p-4'>
                 <h3 className='text-xl tablet:text-2xl font-semibold hover:text-[var(--primary)] transition-colors'>
                     {title}
