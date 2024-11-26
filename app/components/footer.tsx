@@ -2,8 +2,8 @@ export default function Footer() {
     const date = new Date().getFullYear();
 
     return (
-        <footer>
-            <div className='py-2 tablet:py-4 bg-[var(--bar-background)] text-[var(--secondary)] backdrop-blur-sm'>
+        <footer className='w-full bg-[var(--bar-background)] text-[var(--secondary)] backdrop-blur-sm'>
+            <div className='max-w-[1600px] mx-auto py-2 tablet:py-4 px-4'>
                 <p className='text-center'>
                     ©{date} All rights reserved. Designed & crafted with love by{' '}
                     <a
