@@ -42,15 +42,17 @@ export default function ProjectItem({
                     ))}
                 </ul>
                 <div className='flex justify-between text-xs tablet:text-base mt-2'>
-                    <a
-                        className='flex items-center gap-2 border border-[var(--secondary)] py-2 px-4 rounded-lg hover:bg-[var(--link)] hover:text-white transition-colors'
-                        href={live}
-                        target='_blank'
-                        rel='noopener noreferrer'
-                    >
-                        Check Live
-                        <GoLinkExternal />
-                    </a>
+                    {live && (
+                        <a
+                            className='flex items-center gap-2 border border-[var(--secondary)] py-2 px-4 rounded-lg hover:bg-[var(--link)] hover:text-white transition-colors'
+                            href={live}
+                            target='_blank'
+                            rel='noopener noreferrer'
+                        >
+                            Check Live
+                            <GoLinkExternal />
+                        </a>
+                    )}
                     <a
                         className='flex items-center gap-2 border border-[var(--secondary)] py-2 px-4 rounded-lg hover:bg-[var(--link)] hover:text-white transition-colors'
                         href={github}
