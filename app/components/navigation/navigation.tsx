@@ -12,7 +12,7 @@ export type NaviLinksProps = {
 
 export default function Navigation() {
     const [toggled, setToggled] = useState(false);
-    const matches = useMediaQuery('(min-width: 1024px)');
+    const matches = useMediaQuery('(min-width: 1024px)', { defaultValue: false, initializeWithValue: false });
 
     const links = [
         { href: '#about', text: 'About', ariaLabel: 'About' },
